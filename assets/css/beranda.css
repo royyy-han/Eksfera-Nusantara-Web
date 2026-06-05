@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -13,13 +17,24 @@ html, body {
 header {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../gambar/hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
   position: relative;
   padding-top: 90px;
+}
+
+header.hero-beranda {
+  background-image: url(../gambar/bgBeranda.jpg);
+}
+
+header.hero-sampah {
+  background-image: url(../gambar/bgSampah.png);
+}
+
+header.hero-pemeliharaan {
+  background-image: url(../gambar/bgPemeliharaan.png);
 }
 
 header::before {
@@ -45,11 +60,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 70px;
-  /* background: rgba(255,255,255,0.08); */
   background: rgba(0,0,0,0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
+
 .logo-nav {
   display: flex;
   margin-left: -10px;
@@ -97,9 +112,17 @@ nav {
 }
 
 .menu-nav ul li a:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
+.menu-nav ul li a:hover,
+.menu-nav ul li a.active {
+  border-bottom: 2px solid white; 
+  padding-bottom: 6px;           
+  opacity: 1;                   
+}
+
+/* ===== DROPDOWN ===== */
 .dropdown {
   position: relative;
 }
@@ -111,7 +134,6 @@ nav {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   gap: 6px;
@@ -159,6 +181,7 @@ nav {
   transform: rotate(180deg);
 }
 
+/* ===== HERO TAGLINE ===== */
 .tagline {
   position: absolute;
   top: 50%;
@@ -194,6 +217,7 @@ nav {
   color: black;
 }
 
+/* ===== ABOUT SECTION ===== */
 .about {
   background: #f7f3ec;
   padding: clamp(50px, 8vw, 100px);
@@ -266,6 +290,7 @@ nav {
   color: #4a5d23;
 }
 
+/* ===== ISLANDS SECTION ===== */
 .islands {
   background: white;
   padding: clamp(40px, 6vw, 100px);
@@ -326,8 +351,7 @@ nav {
   font-weight: bold;
 }
 
-/* FOOTER */
-
+/* ===== FOOTER ===== */
 .footer {
   background-color: #e7f0dc;
   margin-top: 80px;
@@ -375,12 +399,15 @@ nav {
 .footer-menu ul li {
   margin-bottom: 10px;
   font-size: 15px;
-  
 }
 
 .footer-menu ul li a {
   text-decoration: none;
   color: #1f2f1f;
+}
+
+.footer-menu ul li a:hover {
+  color: #4a5d23;
 }
 
 .footer-bottom {
@@ -394,14 +421,9 @@ nav {
   font-size: 14px;
 }
 
-.footer-menu ul li a:hover {
-  color: #4a5d23;
-}
-
-/* responsive */
+/* ===== RESPONSIVE MEDIA QUERY ===== */
 @media (max-width: 768px) {
-
- nav {
+  nav {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
@@ -424,6 +446,7 @@ nav {
 
   .dropdown-content {
     left: 50%;
+    right: auto;
     transform: translateX(-50%) translateY(10px);
   }
 
