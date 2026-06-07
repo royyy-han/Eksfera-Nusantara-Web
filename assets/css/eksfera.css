@@ -903,9 +903,6 @@ nav {
 
 @media (max-width: 768px) {
     .materi-item {
-        padding: 20px;
-    }
-    ul.list-hijau {
-        padding: 15px 15px 15px 35px;
+      padding: 20px;
     }
 }
