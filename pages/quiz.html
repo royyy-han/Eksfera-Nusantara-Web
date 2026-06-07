@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/eksfera.css">
     <title>Eksfera Nusantara | Kuis</title>
 </head>
+
 <body>
     <header class="header-polos">
         <nav>
             <div class="logo-nav">
-            <img src="../assets/gambar/logo.png" alt="Logo">
+                <img src="../assets/gambar/logo.png" alt="Logo">
 
-            <div class="nama-web">
-            <h2>Eksfera Nusantara</h2>
-            <p>Belajar Alam Indonesia</p>
-        </div>
-    </div>
-    
+                <div class="nama-web">
+                    <h2>Eksfera Nusantara</h2>
+                    <p>Belajar Alam Indonesia</p>
+                </div>
+            </div>
+
             <div class="menu-nav">
                 <ul>
                     <li><a href="beranda.html">Beranda</a></li>
@@ -29,6 +31,50 @@
             </div>
         </nav>
     </header>
+
+     <div class="quiz-shell">
+                <div class="quiz-topbar">
+                    <span class="quiz-title-label">Quiz Interaktif</span>
+                    <button class="quiz-keluar-btn"
+                        onclick="if(confirm('Yakin ingin keluar?')) quizRestart()">Keluar</button>
+                </div>
+
+                <div class="quiz-card" id="quiz-card">
+                    <div class="quiz-meta">
+                        <span class="quiz-q-num" id="quiz-q-num">Soal 1 dari 5</span>
+                        <span class="quiz-streak" id="quiz-streak-el" style="display:none">Streak: 0</span>
+                    </div>
+                    <div class="quiz-progress-bg">
+                        <div class="quiz-progress-fill" id="quiz-prog" style="width:20%"></div>
+                    </div>
+
+                    <p class="quiz-q-text" id="quiz-q-text"></p>
+                    <div class="quiz-options" id="quiz-options"></div>
+                    <div class="quiz-explanation" id="quiz-explanation"></div>
+
+                    <div class="quiz-btn-row">
+                        <span class="quiz-score-info" id="quiz-score-info">Benar: 0 &nbsp;|&nbsp; Salah: 0</span>
+                        <div class="quiz-nav-btns">
+                            <button class="quiz-back-btn" id="quiz-back-btn" onclick="quizGoBack()">Back</button>
+                            <button class="quiz-next-btn" id="quiz-next-btn" onclick="quizGoNext()"
+                                style="display:none">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-kirim-row" id="quiz-kirim-row" style="display:none">
+                        <button class="quiz-kirim-btn" onclick="quizShowResult()">Kirim</button>
+                    </div>
+                </div>
+
+                <div class="quiz-card quiz-result-card" id="quiz-result-card" style="display:none">
+                    <div class="quiz-result-score" id="quiz-r-score"></div>
+                    <p class="quiz-result-label">dari 5 soal benar</p>
+                    <p class="quiz-result-msg" id="quiz-r-msg"></p>
+                    <p class="quiz-result-sub" id="quiz-r-sub"></p>
+                    <button class="quiz-ulangi-btn" onclick="quizRestart()">&#8635; Ulangi Quiz</button>
+                </div>
+            </div>
+
     <footer class="footer">
         <div class="footer-container">
 
@@ -70,5 +116,8 @@
             <p>2025 | copyright by @AntaresGroup</p>
         </div>
     </footer>
+
+    <script src="../assets/js/quiz.js"></script>
 </body>
+
 </html>
