@@ -862,10 +862,11 @@ nav {
 }
 
 /* ============================================================
-   QUIZ INTERAKTIF — tambahkan bagian ini ke eksfera.css
+   QUIZ INTERAKTIF — tambahkan ke bagian bawah eksfera.css
    Semua class pakai prefix "quiz-" agar tidak bentrok
    ============================================================ */
 
+/* ── Shell ── */
 .quiz-shell {
   background: #f0f0e8;
   border-radius: 16px;
@@ -876,7 +877,7 @@ nav {
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* ── Top bar ── */
+/* ── Topbar ── */
 .quiz-topbar {
   display: flex;
   align-items: center;
@@ -913,9 +914,11 @@ nav {
   background: #ffffff;
   border-radius: 12px;
   padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
-/* ── Progress ── */
+/* ── Meta & progress ── */
 .quiz-meta {
   display: flex;
   justify-content: space-between;
@@ -925,18 +928,124 @@ nav {
 
 .quiz-q-num {
   font-size: 12px;
-  color: #666666;
+  color: #666;
 }
 
-.quiz-streak {
+/* ── STREAK BADGE ── */
+.quiz-streak-badge {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px 4px 8px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  border: 2px solid #EF9F27;
+  animation: quizStreakPop 0.45s cubic-bezier(0.34, 1.6, 0.64, 1);
+  box-shadow: 0 0 0 0 rgba(239, 159, 39, 0.5);
+}
+
+.quiz-streak-badge.quiz-show {
+  display: flex;
+}
+
+.quiz-streak-badge.quiz-bump {
+  animation: quizStreakBump 0.35s cubic-bezier(0.34, 1.6, 0.64, 1);
+}
+
+/* Pulsa terus saat streak aktif */
+.quiz-streak-badge.quiz-show {
+  animation: quizStreakPop 0.45s cubic-bezier(0.34, 1.6, 0.64, 1),
+    quizStreakPulse 1.8s ease-in-out 0.5s infinite;
+}
+
+.quiz-streak-badge.quiz-bump {
+  animation: quizStreakBump 0.35s cubic-bezier(0.34, 1.6, 0.64, 1),
+    quizStreakPulse 1.8s ease-in-out 0.4s infinite;
+}
+
+.quiz-streak-fire {
+  font-size: 18px;
+  display: inline-block;
+  animation: quizFireDance 0.5s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+.quiz-streak-num {
+  font-size: 16px;
+  font-weight: 700;
+  color: #633806;
+  min-width: 16px;
+}
+
+.quiz-streak-label {
   font-size: 12px;
-  background: #d4eac4;
-  color: #27500a;
-  border-radius: 6px;
-  padding: 3px 10px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #854F0B;
+  letter-spacing: 0.02em;
 }
 
+@keyframes quizStreakPop {
+  0% {
+    transform: scale(0.3) rotate(-15deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.2) rotate(5deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(0.95) rotate(-2deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes quizStreakBump {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.3) rotate(-5deg);
+  }
+
+  70% {
+    transform: scale(0.95) rotate(3deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes quizStreakPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 159, 39, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 7px rgba(239, 159, 39, 0);
+  }
+}
+
+@keyframes quizFireDance {
+  0% {
+    transform: rotate(-12deg) scaleY(1);
+  }
+
+  100% {
+    transform: rotate(12deg) scaleY(1.15);
+  }
+}
+
+/* ── Progress bar ── */
 .quiz-progress-bg {
   height: 5px;
   background: #e0ddd5;
@@ -948,10 +1057,10 @@ nav {
   height: 5px;
   background: #4a7a38;
   border-radius: 99px;
-  transition: width 0.4s ease;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Soal ── */
+/* ── Question text ── */
 .quiz-q-text {
   font-size: 15px;
   color: #1a1a0e;
@@ -960,7 +1069,7 @@ nav {
   font-weight: 400;
 }
 
-/* ── Pilihan jawaban ── */
+/* ── Options ── */
 .quiz-options {
   display: flex;
   flex-direction: column;
@@ -982,12 +1091,13 @@ nav {
   text-align: left;
   font-family: inherit;
   width: 100%;
-  transition: background 0.15s, border-color 0.15s;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
 }
 
 .quiz-opt:hover:not(:disabled) {
   background: #eae9e0;
   border-color: #9a9888;
+  transform: translateX(4px);
 }
 
 .quiz-opt:disabled {
@@ -998,12 +1108,14 @@ nav {
   background: #d4eac4;
   border-color: #4a7a38;
   color: #173404;
+  animation: quizCorrectPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .quiz-opt.wrong {
   background: #fde8e8;
   border-color: #c05050;
   color: #501313;
+  animation: quizWrongShake 0.45s ease;
 }
 
 .quiz-opt.reveal {
@@ -1011,6 +1123,44 @@ nav {
   border-color: #4a7a38;
   color: #173404;
   opacity: 0.8;
+}
+
+@keyframes quizCorrectPop {
+  0% {
+    transform: scale(0.97);
+  }
+
+  60% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes quizWrongShake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-7px);
+  }
+
+  40% {
+    transform: translateX(7px);
+  }
+
+  60% {
+    transform: translateX(-4px);
+  }
+
+  80% {
+    transform: translateX(4px);
+  }
 }
 
 /* ── Radio dot ── */
@@ -1024,6 +1174,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
 }
 
 .quiz-opt.correct .quiz-radio-dot {
@@ -1055,7 +1206,7 @@ nav {
   display: block;
 }
 
-/* ── Penjelasan ── */
+/* ── Explanation ── */
 .quiz-explanation {
   background: #edf6e4;
   border-left: 3px solid #4a7a38;
@@ -1066,9 +1217,22 @@ nav {
   margin-bottom: 1.25rem;
   line-height: 1.55;
   display: none;
+  animation: quizFadeSlide 0.3s ease;
 }
 
-/* ── Tombol navigasi ── */
+@keyframes quizFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Bottom nav ── */
 .quiz-btn-row {
   display: flex;
   align-items: center;
@@ -1077,7 +1241,7 @@ nav {
 
 .quiz-score-info {
   font-size: 13px;
-  color: #444444;
+  color: #444;
   font-weight: 500;
 }
 
@@ -1113,81 +1277,205 @@ nav {
   cursor: pointer;
   font-family: inherit;
   font-weight: 500;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.1s;
 }
 
 .quiz-next-btn:hover {
   background: #3a6028;
+  transform: scale(1.04);
 }
 
-/* ── Tombol Kirim ── */
-.quiz-kirim-row {
-  text-align: right;
-  margin-top: 1rem;
+/* ── RESULT SCREEN ── */
+.quiz-result-card {
+  overflow: hidden;
 }
 
-.quiz-kirim-btn {
+#quiz-confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.quiz-result-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0.5rem 0 0.5rem;
+}
+
+/* Ring */
+.quiz-ring-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-ring-svg {
+  width: 130px;
+  height: 130px;
+}
+
+.quiz-ring-bg {
+  fill: none;
+  stroke: #e0ddd5;
+  stroke-width: 9;
+}
+
+.quiz-ring-fill {
+  fill: none;
+  stroke: #4a7a38;
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-dasharray: 264;
+  stroke-dashoffset: 264;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 1.3s cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 0.5s ease;
+}
+
+.quiz-ring-fill.quiz-ring-perfect {
+  stroke: #EF9F27;
+}
+
+.quiz-ring-fill.quiz-ring-low {
+  stroke: #c05050;
+}
+
+.quiz-ring-score {
+  font-size: 20px;
+  font-weight: 700;
+  fill: #1a1a0e;
+  text-anchor: middle;
+  dominant-baseline: auto;
+}
+
+.quiz-ring-pct {
+  font-size: 12px;
+  fill: #888;
+  text-anchor: middle;
+  dominant-baseline: auto;
+}
+
+/* Emoji mascot */
+.quiz-result-emoji {
+  font-size: 42px;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  animation: quizEmojiDrop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+
+@keyframes quizEmojiDrop {
+  0% {
+    transform: scale(0) translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.quiz-result-msg {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a0e;
+  margin-bottom: 4px;
+  animation: quizFadeSlide 0.5s ease 0.5s both;
+}
+
+.quiz-result-sub {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 1rem;
+  animation: quizFadeSlide 0.5s ease 0.65s both;
+}
+
+/* Stat boxes */
+.quiz-result-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+  animation: quizFadeSlide 0.5s ease 0.75s both;
+}
+
+.quiz-stat-box {
+  background: #f5f4ee;
+  border-radius: 10px;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.quiz-stat-val {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.quiz-stat-green {
+  color: #3a6028;
+}
+
+.quiz-stat-red {
+  color: #c05050;
+}
+
+.quiz-stat-amber {
+  color: #854F0B;
+}
+
+.quiz-stat-lbl {
+  font-size: 11px;
+  color: #888;
+  margin-top: 3px;
+}
+
+/* Result buttons */
+.quiz-result-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  animation: quizFadeSlide 0.5s ease 0.9s both;
+}
+
+.quiz-ulangi-btn {
   background: #4a7a38;
   border: none;
   border-radius: 8px;
-  padding: 9px 26px;
+  padding: 10px 20px;
   font-size: 14px;
   color: #ffffff;
   cursor: pointer;
   font-family: inherit;
   font-weight: 500;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.1s;
 }
 
-.quiz-kirim-btn:hover {
+.quiz-ulangi-btn:hover {
   background: #3a6028;
+  transform: scale(1.03);
 }
 
-/* ── Layar hasil ── */
-.quiz-result-card {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.quiz-result-score {
-  font-size: 56px;
-  font-weight: 600;
-  color: #4a7a38;
-  line-height: 1;
-}
-
-.quiz-result-label {
-  font-size: 14px;
-  color: #666666;
-  margin: 6px 0 1rem;
-}
-
-.quiz-result-msg {
-  font-size: 16px;
-  font-weight: 600;
-  color: #1a1a0e;
-  margin-bottom: 6px;
-}
-
-.quiz-result-sub {
-  font-size: 13px;
-  color: #555555;
-  margin-bottom: 1.5rem;
-}
-
-.quiz-ulangi-btn {
+.quiz-home-btn {
   background: #ffffff;
   border: 1.5px solid #b0ae9e;
   border-radius: 8px;
-  padding: 9px 22px;
+  padding: 10px 20px;
   font-size: 14px;
   color: #1a1a0e;
   cursor: pointer;
   font-family: inherit;
   font-weight: 500;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.1s;
 }
 
-.quiz-ulangi-btn:hover {
+.quiz-home-btn:hover {
   background: #f0efe6;
+  transform: scale(1.03);
 }

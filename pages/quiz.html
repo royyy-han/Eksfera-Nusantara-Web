@@ -32,48 +32,76 @@
         </nav>
     </header>
 
-     <div class="quiz-shell">
-                <div class="quiz-topbar">
-                    <span class="quiz-title-label">Quiz Interaktif</span>
-                    <button class="quiz-keluar-btn"
-                        onclick="if(confirm('Yakin ingin keluar?')) quizRestart()">Keluar</button>
-                </div>
+    <div class="quiz-shell">
+        <div class="quiz-topbar">
+            <span class="quiz-title-label">Quiz Interaktif</span>
+            <button class="quiz-keluar-btn" onclick="quizKeluar()">Keluar</button>
+        </div>
 
-                <div class="quiz-card" id="quiz-card">
-                    <div class="quiz-meta">
-                        <span class="quiz-q-num" id="quiz-q-num">Soal 1 dari 5</span>
-                        <span class="quiz-streak" id="quiz-streak-el" style="display:none">Streak: 0</span>
-                    </div>
-                    <div class="quiz-progress-bg">
-                        <div class="quiz-progress-fill" id="quiz-prog" style="width:20%"></div>
-                    </div>
-
-                    <p class="quiz-q-text" id="quiz-q-text"></p>
-                    <div class="quiz-options" id="quiz-options"></div>
-                    <div class="quiz-explanation" id="quiz-explanation"></div>
-
-                    <div class="quiz-btn-row">
-                        <span class="quiz-score-info" id="quiz-score-info">Benar: 0 &nbsp;|&nbsp; Salah: 0</span>
-                        <div class="quiz-nav-btns">
-                            <button class="quiz-back-btn" id="quiz-back-btn" onclick="quizGoBack()">Back</button>
-                            <button class="quiz-next-btn" id="quiz-next-btn" onclick="quizGoNext()"
-                                style="display:none">Next</button>
-                        </div>
-                    </div>
-
-                    <div class="quiz-kirim-row" id="quiz-kirim-row" style="display:none">
-                        <button class="quiz-kirim-btn" onclick="quizShowResult()">Kirim</button>
-                    </div>
-                </div>
-
-                <div class="quiz-card quiz-result-card" id="quiz-result-card" style="display:none">
-                    <div class="quiz-result-score" id="quiz-r-score"></div>
-                    <p class="quiz-result-label">dari 5 soal benar</p>
-                    <p class="quiz-result-msg" id="quiz-r-msg"></p>
-                    <p class="quiz-result-sub" id="quiz-r-sub"></p>
-                    <button class="quiz-ulangi-btn" onclick="quizRestart()">&#8635; Ulangi Quiz</button>
+        <!-- Soal -->
+        <div class="quiz-card" id="quiz-card">
+            <div class="quiz-meta">
+                <span class="quiz-q-num" id="quiz-q-num">Soal 1 dari 10</span>
+                <div class="quiz-streak-badge" id="quiz-streak-badge">
+                    <span class="quiz-streak-fire" id="quiz-streak-fire">🔥</span>
+                    <span class="quiz-streak-num" id="quiz-streak-num">2</span>
+                    <span class="quiz-streak-label">streak!</span>
                 </div>
             </div>
+            <div class="quiz-progress-bg">
+                <div class="quiz-progress-fill" id="quiz-prog" style="width:10%"></div>
+            </div>
+
+            <p class="quiz-q-text" id="quiz-q-text"></p>
+            <div class="quiz-options" id="quiz-options"></div>
+            <div class="quiz-explanation" id="quiz-explanation"></div>
+
+            <div class="quiz-btn-row">
+                <span class="quiz-score-info" id="quiz-score-info">Benar: 0 &nbsp;|&nbsp; Salah: 0</span>
+                <div class="quiz-nav-btns">
+                    <button class="quiz-back-btn" id="quiz-back-btn" onclick="quizGoBack()">Back</button>
+                    <button class="quiz-next-btn" id="quiz-next-btn" onclick="quizGoNext()"
+                        style="display:none">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hasil -->
+        <div class="quiz-card quiz-result-card" id="quiz-result-card" style="display:none">
+            <canvas id="quiz-confetti" aria-hidden="true"></canvas>
+            <div class="quiz-result-inner">
+                <div class="quiz-ring-wrap">
+                    <svg class="quiz-ring-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="quiz-ring-bg" cx="50" cy="50" r="42" />
+                        <circle class="quiz-ring-fill" id="quiz-ring-fill" cx="50" cy="50" r="42" />
+                        <text class="quiz-ring-score" id="quiz-ring-score" x="50" y="47">0/10</text>
+                        <text class="quiz-ring-pct" id="quiz-ring-pct" x="50" y="60">0%</text>
+                    </svg>
+                </div>
+                <div class="quiz-result-emoji" id="quiz-result-emoji"></div>
+                <p class="quiz-result-msg" id="quiz-result-msg"></p>
+                <p class="quiz-result-sub" id="quiz-result-sub"></p>
+                <div class="quiz-result-stats">
+                    <div class="quiz-stat-box">
+                        <div class="quiz-stat-val quiz-stat-green" id="quiz-stat-correct">0</div>
+                        <div class="quiz-stat-lbl">Benar</div>
+                    </div>
+                    <div class="quiz-stat-box">
+                        <div class="quiz-stat-val quiz-stat-red" id="quiz-stat-wrong">0</div>
+                        <div class="quiz-stat-lbl">Salah</div>
+                    </div>
+                    <div class="quiz-stat-box">
+                        <div class="quiz-stat-val quiz-stat-amber" id="quiz-stat-streak">0</div>
+                        <div class="quiz-stat-lbl">Max Streak</div>
+                    </div>
+                </div>
+                <div class="quiz-result-btns">
+                    <button class="quiz-ulangi-btn" onclick="quizRestart()">&#8635; Ulangi Quiz</button>
+                    <button class="quiz-home-btn" onclick="window.location.href='beranda.html'">&#8962; Beranda</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
