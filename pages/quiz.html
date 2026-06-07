@@ -32,25 +32,57 @@
         </nav>
     </header>
 
-    <div class="quiz-shell">
+    <!-- ── HALAMAN PILIH KATEGORI ── -->
+    <div class="quiz-shell" id="quiz-kategori-screen">
         <div class="quiz-topbar">
             <span class="quiz-title-label">Quiz Interaktif</span>
-            <button class="quiz-keluar-btn" onclick="quizKeluar()">Keluar</button>
+        </div>
+        <div class="quiz-card">
+            <p class="quiz-kat-intro">Pilih kategori soal yang ingin kamu kerjakan:</p>
+            <div class="quiz-kat-grid">
+                <button class="quiz-kat-btn" onclick="quizMulai('biota')">
+                    <span class="quiz-kat-icon">🌿</span>
+                    <span class="quiz-kat-name">Biota</span>
+                    <span class="quiz-kat-desc">Konservasi, klasifikasi hewan & tumbuhan</span>
+                </button>
+                <button class="quiz-kat-btn" onclick="quizMulai('sampah')">
+                    <span class="quiz-kat-icon">♻️</span>
+                    <span class="quiz-kat-name">Sampah</span>
+                    <span class="quiz-kat-desc">Jenis sampah, 3R, dan pengelolaan</span>
+                </button>
+                <button class="quiz-kat-btn" onclick="quizMulai('pemeliharaan')">
+                    <span class="quiz-kat-icon">🐾</span>
+                    <span class="quiz-kat-name">Pemeliharaan</span>
+                    <span class="quiz-kat-desc">Perawatan hewan & tumbuhan</span>
+                </button>
+                <button class="quiz-kat-btn quiz-kat-all" onclick="quizMulai('semua')">
+                    <span class="quiz-kat-icon">🎯</span>
+                    <span class="quiz-kat-name">Semua Kategori</span>
+                    <span class="quiz-kat-desc">Campuran semua soal secara acak</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── HALAMAN QUIZ ── -->
+    <div class="quiz-shell" id="quiz-main-screen" style="display:none">
+        <div class="quiz-topbar">
+            <span class="quiz-title-label" id="quiz-title-label">Quiz Interaktif</span>
         </div>
 
-        <!-- Soal -->
         <div class="quiz-card" id="quiz-card">
             <div class="quiz-meta">
                 <span class="quiz-q-num" id="quiz-q-num">Soal 1 dari 10</span>
                 <div class="quiz-streak-badge" id="quiz-streak-badge">
-                    <span class="quiz-streak-fire" id="quiz-streak-fire">🔥</span>
+                    <span class="quiz-streak-fire">🔥</span>
                     <span class="quiz-streak-num" id="quiz-streak-num">2</span>
-                    <span class="quiz-streak-label">streak!</span>
+                    <span class="quiz-streak-label" id="quiz-streak-label">streak!</span>
                 </div>
             </div>
             <div class="quiz-progress-bg">
                 <div class="quiz-progress-fill" id="quiz-prog" style="width:10%"></div>
             </div>
+            <div class="quiz-category-tag" id="quiz-category-tag"></div>
 
             <p class="quiz-q-text" id="quiz-q-text"></p>
             <div class="quiz-options" id="quiz-options"></div>
@@ -96,7 +128,8 @@
                     </div>
                 </div>
                 <div class="quiz-result-btns">
-                    <button class="quiz-ulangi-btn" onclick="quizRestart()">&#8635; Ulangi Quiz</button>
+                    <button class="quiz-ulangi-btn" onclick="quizRestart()">&#8635; Ulangi</button>
+                    <button class="quiz-home-btn" onclick="quizBackToKategori()">&#8592; Kategori</button>
                     <button class="quiz-home-btn" onclick="window.location.href='beranda.html'">&#8962; Beranda</button>
                 </div>
             </div>

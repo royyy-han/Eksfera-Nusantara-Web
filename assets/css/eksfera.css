@@ -1479,3 +1479,108 @@ nav {
   background: #f0efe6;
   transform: scale(1.03);
 }
+
+/* ============================================================
+   QUIZ KATEGORI — tambahkan ke bagian bawah eksfera.css
+   (di bawah CSS quiz yang sudah ada sebelumnya)
+   ============================================================ */
+
+/* ── Halaman pilih kategori ── */
+.quiz-kat-intro {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.quiz-kat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.quiz-kat-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  background: #f5f4ee;
+  border: 2px solid #c8c5b8;
+  border-radius: 12px;
+  padding: 16px 14px;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.quiz-kat-btn:hover {
+  background: #eae9e0;
+  border-color: #4a7a38;
+  transform: translateY(-2px);
+}
+
+.quiz-kat-btn.quiz-kat-all {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  background: #edf6e4;
+  border-color: #4a7a38;
+}
+
+.quiz-kat-btn.quiz-kat-all:hover {
+  background: #d4eac4;
+}
+
+.quiz-kat-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.quiz-kat-btn.quiz-kat-all .quiz-kat-icon {
+  font-size: 24px;
+}
+
+.quiz-kat-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a0e;
+}
+
+.quiz-kat-desc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.quiz-kat-btn.quiz-kat-all .quiz-kat-name {
+  font-size: 15px;
+}
+
+/* ── Category tag pada soal ── */
+.quiz-category-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.quiz-tag-biota {
+  background: #d4eac4;
+  color: #27500A;
+}
+
+.quiz-tag-sampah {
+  background: #dceefb;
+  color: #0C447C;
+}
+
+.quiz-tag-pemeliharaan {
+  background: #faeeda;
+  color: #633806;
+}
