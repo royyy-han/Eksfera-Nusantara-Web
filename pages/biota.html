@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biota | Eksfera Nusantara</title>
+    <link rel="stylesheet" href="../assets/css/eksfera.css">
+</head>
+<body>
+        <nav>
+            <div class="logo-nav">
+                <img src="../assets/gambar/logo.png" alt="Logo">
+
+                <div class="nama-web">
+                    <h2>Eksfera Nusantara</h2>
+                    <p>Belajar Alam Indonesia</p>
+                </div>
+            </div>
+
+            <div class="menu-nav">
+                <ul>
+                    <li><a href="beranda.html">Beranda</a></li>
+                    <li><a href="biota.html">Biota</a></li>
+                    <li><a href="sampah.html">Sampah</a></li>
+                    <li><a href="pemeliharaan.html">Pemeliharaan</a></li>
+                    <li><a href="quiz.html" class="active">Kuis</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+    <!-- MAP CONTAINER -->
+      <div class="map-container">
+    <img src="../assets/gambar/atlas.png" alt="Peta Indonesia">
+    <!-- Titik klik -->
+    <div class="marker" style="top:60%; left:40%;" onclick="scrollToSection('jawa')"></div>
+    <div class="label" style="top:60%; left:40%;">Jawa</div>
+    <div class="marker" style="top:45%; left:25%;" onclick="scrollToSection('sumatera')"></div>
+    <div class="label" style="top:45%; left:25%;">Sumatera</div>
+    <div class="marker" style="top:40%; left:45%;" onclick="scrollToSection('kalimantan')"></div>
+    <div class="label" style="top:40%; left:45%;">Kalimantan</div>
+    <div class="marker" style="top:46%; left:52%;" onclick="scrollToSection('sulawesi')"></div>
+    <div class="label" style="top:46%; left:52%;">Sulawesi</div>
+    <div class="marker" style="top:50%; left:80%;" onclick="scrollToSection('papua')"></div>
+    <div class="label" style="top:50%; left:80%;">Papua</div>
+  </div>
+
+  <div id="jawa" class="section">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <img class="Mpulau" src="../assets/gambar/jawa.png" alt="Pulau Jawa">
+
+            <div class="hero-text">
+                <h1 class="Mnama-pulau">Pulau Jawa</h1>
+                <p class="Mdeskrip-pulau">
+                    Pulau Jawa adalah pusat pemerintahan dan kegiatan ekonomi Indonesia
+                    dengan kepadatan penduduk tertinggi. Pulau ini memiliki budaya yang
+                    beragam, sejarah panjang, serta bentang alam yang didominasi
+                    pegunungan, gunung berapi, dan dataran subur.
+                </p>
+            </div>
+        </section>
+
+
+        <div class="Mline"></div>
+
+        <!-- TANAMAN -->
+        <section class="section-block">
+
+            <div class="Mflora-fauna">Vegetasi Jawa</div>
+            <p class="Mdeskrip-pulau-2">
+                Pulau Kalimantan memiliki keanekaragaman fauna yang khas dan sebagian bersifat
+                    endemik.Fauna Kalimantan berperan penting dalam menjaga keseimbangan ekosistem hutan dan merupakan kekayaan
+                    hayati Indonesia yang perlu dilestarikan.
+            </p>
+
+            <div class="container jawa">
+                <div class="card1" onclick="toggle(this)">
+                    <h3 class="title">Cempaka putih</h3>
+                    <div class="content">
+                        <h2>Cempaka putih</h2>
+                        <p>Bunga cempaka putih (Magnolia alba) adalah bunga berwarna putih dengan aroma harum lembut. Bunga cempaka putih melambangkan kemurnian dan keindahan serta sering digunakan dalam upacara adat karena nilai simbolisnya yang tinggi. Aromanya yang harum membuat bunga ini menjadi favorit dalam rangkaian bunga yang digunakan dalam upacara adat.</p>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="card1" onclick="toggle(this)">
+                    <h3 class="title">Edelweis Jawa</h3>
+                    <div class="content">
+                        <h2>Edelweis Jawa</h2>
+                        <p>Edelweis Jawa (Anaphalis javanica) adalah tumbuhan endemik pegunungan tinggi Indonesia yang kini tergolong langka. Bunganya tahan lama mekar dan sering disebut “bunga abadi” karena kelopaknya tidak mudah rontok. Selain berperan mencegah erosi, edelweis juga memiliki nilai budaya penting dalam upacara adat masyarakat pegunungan.
+    </p>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="card1" onclick="toggle(this)">
+                    <h3 class="title">Kokoleceran</h3>
+                    <div class="content">
+                        <h2>Kokoleceran</h2>
+                        <p>Kokolenceran adalah tradisi arak-arakan pengantin khas Sunda yang dilakukan setelah akad nikah. Rombongan pengantin diiringi musik tradisional, tarian, dan hiasan meriah sebagai simbol kebahagiaan serta penghormatan. Tradisi ini juga menjadi ajang silaturahmi dan hiburan bagi masyarakat sekitar.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- HEWAN -->
+        <section class="section-block">
+
+            <div class="Mflora-fauna">Wildlife Jawa</div>
+            <p class="Mdeskrip-pulau-2">Pulau Kalimantan memiliki keanekaragaman fauna yang khas dan sebagian bersifat
+                    endemik.Fauna Kalimantan berperan penting dalam menjaga keseimbangan ekosistem hutan dan merupakan kekayaan
+                    hayati Indonesia yang perlu dilestarikan.</p>
+
+            <div class="card2-container">
+                <!-- Card 1 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://i.pinimg.com/originals/24/36/7f/24367ff728b2eec1db73f594dcac6e2f.jpg');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Badak Jawa</h3>
+                        <p class="card2-text">Badak Jawa (Rhinoceros sondaicus) adalah salah satu mamalia paling langka di dunia yang hanya tersisa di Taman Nasional Ujung Kulon. Hewan ini bercirikan satu cula kecil dan kulit tebal berlipat seperti baju zirah. Populasinya sangat terancam akibat perburuan dan kerusakan habitat.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://asset-2.tribunnews.com/medan/foto/bank/originals/macan-tutul-bukan-jawa.jpg');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Macan Tutul Jawa</h3>
+                        <p class="card2-text">Macan Tutul Jawa (Panthera pardus melas) adalah subspesies macan tutul endemik Pulau Jawa yang berperan sebagai predator puncak ekosistem hutan. Satwa ini memiliki corak totol khas dengan warna yang bervariasi dari kuning keemasan hingga hitam pekat. Populasinya kini terancam punah akibat hilangnya habitat dan perburuan liar.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://www.balisafarimarinepark.com/wp-content/uploads/2023/04/sigib1.jpeg');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Owa Jawa</h3>
+                        <p class="card2-text">Owa Jawa (Hylobates moloch) adalah primata endemik Pulau Jawa yang dikenal dengan suara panggilannya yang nyaring dan melengking. Satwa ini hidup berpasangan atau dalam kelompok kecil di hutan hujan pegunungan. Populasinya terancam akibat deforestasi dan perburuan ilegal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card2-container" style="margin-top: 30px;">
+                <!-- Card 4 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://as2.ftcdn.net/v2/jpg/00/97/37/69/1000_F_97376990_hQ06UIE2D2YVR1KaElDanHIfPTJugVUE.jpg');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Banteng Jawa</h3>
+                        <p class="card2-text">Banteng Jawa (Bos javanicus) merupakan satwa asli Pulau Jawa yang hidup di
+                            hutan,
+                            savana, dan padang rumput. Hewan ini memiliki tubuh besar dan kuat, dengan warna bulu cokelat
+                            kehitaman pada jantan dan cokelat kemerahan pada betina. Banteng berperan penting dalam
+                            keseimbangan
+                            ekosistem, namun populasinya kini terancam akibat perburuan dan penyempitan habitat.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://cdn0-production-images-kly.akamaized.net/h6HKpKhtar5-rJEqQFQMp4tN7SQ=/640x360/smart/filters:quality(75):strip_icc()/kly-media-production/medias/730433/original/057755700_1409512921-elang_jawa.jpg');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Elang Jawa</h3>
+                        <p class="card2-text">Elang Jawa (Nisaetus bartelsi) adalah burung pemangsa endemik Pulau Jawa yang menjadi simbol lambang negara Indonesia, Garuda. Ciri khasnya adalah jambul tegak di kepala dan bulu cokelat keemasan dengan dada bercorak. Populasinya sangat terbatas akibat hilangnya habitat, sehingga berstatus terancam punah dan dilindungi secara ketat.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.RKbabAiR9LwdsSObi5ed8QHaHa?w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Apa yang lainnya?</h3>
+                        <p class="card2-text">Kami akan membahas lebih lanjut tentang satwa endemik lainnya di Pulau
+                            Sumatera.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="sumatera" class="section">
+        <!-- acc -->
+    <section class="hero">
+        <img class="Mpulau" src="../assets/gambar/sumatra.png" alt="Pulau Sumatera">
+
+        <div class="hero-text">
+            <h1 class="Mnama-pulau">Pulau Sumatera</h1>
+            <p class="Mdeskrip-pulau">
+                Pulau Sumatera adalah pulau terbesar kedua di Indonesia, memiliki keanekaragaman alam dan flora yang sangat tinggi. Wilayah ini dikenal dengan hutan hujan tropisnya yang luas, serta kekayaan flora endemik yang unik dan langka. Pulau ini juga memiliki sejumlah besar satwa liar endemik dan merupakan habitat penting bagi berbagai spesies langka.
+            </p>
+        </div>
+    </section>
+
+    <div class="Mline"></div>
+
+    <!-- TANAMAN -->
+    <section class="section-block">
+        <div class="Mflora-fauna">Vegetasi Sumatera</div>
+        <p class="Mdeskrip-pulau-2">Flora khas Sumatera merupakan vegetasi hutan hujan tropis yang sangat beragam dan
+            lebat.Tumbuhan di wilayah ini beradaptasi dengan iklim lembap dan curah hujan tinggi, membentuk ekosistem penting
+            yang menjaga keseimbangan lingkungan.</p>
+
+        <div class="container">
+            <div class="card1" onclick="toggle(this)">
+                <div class="arrow">></div>
+                <div class="line"></div>
+                <h3 class="title">Bunga Raflesia</h3>
+                <div class="content">
+                    <h2>Bunga Raflesia</h2>
+                    <hr>
+                    <br>
+                    <p>* Deskripsi Singkat: Bunga Rafflesia ditandai dengan kelopak merah bercorak putih, ukuran bunga bisa mencapai 1 meter, dan menghasilkan aroma busuk tajam untuk menarik serangga penyerbuk. Tumbuhan ini sepenuhnya hidup dari nutrisi inang (Tetrastigma), sehingga tidak melakukan fotosintesis.
+                    <br>* Habitat: Rafflesia tumbuh di hutan tropis Asia Tenggara, termasuk Sumatera, Kalimantan, dan Jawa, pada wilayah lembap dan teduh yang memiliki tanaman inang. Kondisi hutan yang stabil dan minim gangguan mendukung kelangsungan hidupnya.
+                    <br>* Strategi Bertahan Hidup: Bunga tumbuh langsung pada akar inang, biji tersebar melalui hewan penggali tanah atau tubuh manusia, dan siklus hidupnya yang lama membuat perbungaannya jarang muncul namun tetap efektif dalam reproduksi.
+                    <br>* Nilai Ekologis dan Konservasi: Rafflesia berperan dalam ekosistem sebagai indikator kesehatan hutan, menarik wisata edukasi, dan memiliki nilai ilmiah tinggi. Karena populasi terbatas, perlindungan habitat dan konservasi sangat penting untuk kelestariannya.
+                    <br>* Ringkasnya, Bunga Rafflesia adalah tanaman parasit unik dan raksasa yang simbolis bagi keanekaragaman hutan tropis</p>
+                    
+                </div>
+            </div>
+            <div class="card1" onclick="toggle(this)">
+                <div class="arrow">></div>
+                <div class="line"></div>
+                <h3 class="title">Bunga Kenanga</h3>
+                <div class="content">
+                    <h2>Bunga Kenanga</h2>
+                    <hr>
+                    <br>
+                    <p>* Deskripsi Singkat: Bunga Kenanga memiliki minyak atsiri kuat pada kelopaknya, pohon dapat mencapai 20 meter, dengan daun hijau lebat dan bunga hijau kekuningan yang memikat. Aroma bunga ini dimanfaatkan dalam industri parfum dan upacara adat.
+                    <br>* Habitat: Tumbuhan ini tumbuh di Asia Tenggara, termasuk Indonesia, pada ketinggian di bawah 1.200 meter, di tanah lempung berpasir atau vulkanik dengan pH 4,5-8. Kondisi hangat dan lembap mendukung pertumbuhannya. 
+                    <br>* Strategi Bertahan Hidup: Biji tersebar melalui buah yang dimakan hewan, daun lebat mengurangi penguapan, dan tanaman tahan terhadap hama ringan. Kenanga juga menyediakan habitat bagi serangga.
+                    <br>* Nilai Ekologis dan Ekonomi: Pohon ini membantu menjaga keseimbangan ekosistem, mencegah erosi, dan mendukung keanekaragaman hayati. Memiliki nilai budaya dan ekonomi melalui parfum, pengobatan tradisional, dan upacara adat.
+                    <br>* Ringkasnya, Bunga Kenanga (Cananga odorata) adalah tanaman tropis cantik dan harum yang memainkan peran penting dalam ekosistem, budaya, dan ekonomi lokal.</p>
+                    
+                </div>
+            </div>
+            <div class="card1" onclick="toggle(this)">
+                <div class="arrow">></div>
+                <h3 class="title">Anggrek tien</h3>
+                <div class="line"></div>
+                <div class="content">
+                    <h2>Anggrek tien</h2>
+                    <hr>
+                    <br>
+                    <p>* Deskripsi Singkat: Anggrek Tien memiliki bunga cantik dengan kelopak halus berwarna cerah dan aroma ringan, tumbuh menempel pada batang atau cabang pohon (epifit), memanfaatkan akar udara untuk menempel dan menyerap kelembapan dari udara. Ukuran dan warna bunga bervariasi sesuai spesies.
+                    <br>* Habitat: Tumbuhan ini tumbuh di hutan tropis Sumatera yang lembap dan teduh, baik di dataran rendah maupun pegunungan, memerlukan kanopi hutan rapat dan kondisi lingkungan stabil untuk berkembang.
+                    <br>* Strategi Bertahan Hidup: Menempel pada pohon inang, memanfaatkan sinar matahari yang menembus kanopi, dan mengandalkan serangga sebagai penyerbuk. Adaptif terhadap kelembapan tinggi dengan kemampuan tahan kekeringan singkat.
+                    <br>* Nilai Ekologis dan Konservasi: Anggrek Tien menjadi indikator keanekaragaman hayati hutan Sumatera, memiliki nilai edukasi dan wisata botani, serta memerlukan perlindungan habitat dan upaya perbanyakan untuk menjaga kelestariannya.
+                    <br>* Ringkasnya, Anggrek Tien adalah simbol keindahan dan keanekaragaman flora Sumatera yang unik, menawan, dan perlu dilindungi.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- HEWAN -->
+    <section class="section-block">
+        <div class="Mflora-fauna">Wildlife Sumatera</div>
+        <p class="Mdeskrip-pulau-2">Fauna Sumatera ditandai oleh banyaknya satwa darat berukuran besar dan tingkat
+            keanekaragaman yang tinggi. Hewan-hewan di pulau ini hidup di hutan hujan tropis dan memiliki peran penting dalam rantai makanan serta keseimbangan ekosistem alami.</p>
+
+        <div class="card2-container">
+            <!-- Card 1 -->
+            <div class="card2">
+                <div class="card2-image"
+                    style="background-image: url('https://okuselatan.disway.id/upload/8729bbdc4b48a09d327c33f01c576999.jpg');">
+                </div>
+                <div class="card2-content">
+                    <h3 class="card2-title">Harimau Sumatera</h3>
+                    <p class="card2-text">Harimau Sumatera (Panthera tigris sumatrae) adalah subspesies harimau terkecil yang hanya ditemukan di Pulau Sumatra. Ciri khasnya adalah tubuh ramping dengan loreng rapat dan surai tipis di leher jantan. Satwa ini berstatus kritis akibat perburuan dan hilangnya habitat, sehingga menjadi fokus utama upaya konservasi di Indonesia.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card2">
+                <div class="card2-image"
+                    style="background-image: url('https://www.chesterzoo.org/_next/image?url=https:%2F%2Fapp-czn-prod-uks-headless.azurewebsites.net%2Fmedia%2Fwt3faxno%2Fkesuma-the-sumatran-orangutan.jpg%3Fwidth%3D1920&w=3840&q=75');">
+                </div>
+                <div class="card2-content">
+                    <h3 class="card2-title">Orang utan Sumatera</h3>
+                    <p class="card2-text">Orangutan Sumatera (Pongo abelii) adalah spesies orangutan yang hanya hidup di hutan hujan Sumatra bagian utara. Mereka memiliki tubuh lebih ramping, wajah lebih pucat, dan rambut lebih panjang dibandingkan kerabatnya di Kalimantan. Satwa ini berstatus kritis karena kehilangan habitat dan perburuan, sehingga menjadi prioritas utama dalam program konservasi.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card2">
+                <div class="card2-image"
+                    style="background-image: url('https://tse3.mm.bing.net/th/id/OIP.LS13oxVR8OqeMcgJITURzgHaFj?rs=1&pid=ImgDetMain&o=7&rm=3');">
+                </div>
+                <div class="card2-content">
+                    <h3 class="card2-title">Badak Sumatera</h3>
+                    <p class="card2-text">Badak Sumatera (Dicerorhinus sumatrensis) adalah spesies badak terkecil di dunia dan satu-satunya badak Asia yang memiliki dua cula. Tubuhnya ditutupi rambut cokelat kemerahan tipis, dan hidup di hutan hujan lebat Sumatra serta Kalimantan. Populasinya sangat terancam punah akibat perburuan dan kerusakan habitat, sehingga dilindungi secara ketat.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card2-container" style="margin-top: 30px;">
+            <!-- Card 4 -->
+            <div class="card2">
+                <div class="card2-image"
+                    style="background-image: url('https://th.bing.com/th/id/R.ca793bf9f0eddd88efbe1466bcd9f521?rik=Ot9cGQ3u7%2fQJsw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-Q3ATei5QdjU%2fVrK6RfTvoXI%2fAAAAAAAAEYo%2fR6d4LZa5uVw%2fs640%2fgajah-sumatera-elephas-maximus-sumatranus.jpg&ehk=JOyBjGe7GrbqHNQ2HuvmGRi%2bP3lUp%2f%2fNDHLxKFbHEKw%3d&risl=&pid=ImgRaw&r=0');">
+                </div>
+                <div class="card2-content">
+                    <h3 class="card2-title">Gajah Sumatera</h3>
+                    <p class="card2-text">Gajah Sumatera (Elephas maximus sumatranus) adalah subspesies gajah Asia yang berukuran lebih kecil dibandingkan gajah Asia lainnya. Satwa ini memiliki telinga relatif besar, gading panjang pada jantan, dan hidup di hutan dataran rendah Sumatra. Populasinya terus menurun akibat perburuan dan alih fungsi lahan, sehingga masuk kategori kritis dan dilindungi penuh.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card2">
+                <div class="card2-image"
+                    style="background-image: url('https://indomgb.s3.amazonaws.com/wp-content/uploads/2022/06/22023828/Kedih4.jpg');">
+                </div>
+                <div class="card2-content">
+                    <h3 class="card2-title">Monyet Kedih</h3>
+                    <p class="card2-text">Monyet kedih (Presbytis thomasi) adalah primata endemik Aceh dan Sumatra Utara yang mudah dikenali dari wajahnya yang berwarna putih dengan rambut kepala tegak menyerupai mahkota. Satwa ini hidup berkelompok di hutan hujan tropis dan memakan daun, buah, serta bunga. Statusnya terancam akibat hilangnya habitat dan perburuan, sehingga termasuk satwa yang dilindungi.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card2">
+                <div class="card2-image"
+                    style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.RKbabAiR9LwdsSObi5ed8QHaHa?w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3');">
+                </div>
+                <div class="card2-content">
+                    <h3 class="card2-title">Apa yang lainnya?</h3>
+                    <p class="card2-text">Kami akan membahas lebih lanjut tentang satwa endemik lainnya di Pulau
+                        Sumatera.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    </div>
+    
+    <div id="kalimantan" class="section">
+        <section class="hero">
+            <img class="Mpulau" src="../assets/gambar/kalimantan.png" alt="Pulau Kalimantan">
+
+            <div class="hero-text">
+                <h1 class="Mnama-pulau">Pulau Kalimantan</h1>
+                <p class="Mdeskrip-pulau">
+                    Pulau Kalimantan adalah pulau terbesar di Indonesia yang dikenal dengan hutan hujan
+                    tropisnya yang luas dan kaya keanekaragaman hayati. Pulau ini memiliki banyak sungai besar, seperti
+                    Sungai Kapuas, serta menjadi habitat satwa khas seperti orangutan, bekantan, dan burung enggang.
+
+                </p>
+            </div>
+        </section>
+
+
+        <div class="Mline"></div>
+
+        <!-- TANAMAN -->
+        <section class="section-block">
+
+            <div class="Mflora-fauna">Vegetasi Kalimantan</div>
+            <p class="Mdeskrip-pulau-2">Pulau Kalimantan memiliki keanekaragaman flora yang sangat tinggi dan didominasi
+                oleh
+                hutan hujan tropis. Flora Kalimantan berperan penting dalam menjaga keseimbangan ekosistem dan menjadi salah
+                satu kekayaan alam Indonesia.</p>
+
+            <div class="container alt">
+                <div class="card1" onclick="toggle(this)">
+                    <div class="arrow">></div>
+                    <div class="line"></div>
+                    <h3 class="title">Kantong semar berbulu</h3>
+                    <div class="content">
+                        <h2>Kantong semar berbulu</h2>
+                        <p>Kantong semar berbulu (Nepenthes hirsuta) merupakan tumbuhan karnivora khas Pulau Kalimantan.
+                            Tanaman
+                            ini memiliki kantong perangkap yang ditutupi bulu halus, berfungsi untuk menangkap dan mencerna
+                            serangga sebagai sumber nutrisi. Kantong semar berbulu tumbuh di hutan tropis lembap dan
+                            mencerminkan keunikan serta keanekaragaman flora Kalimantan..</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="card1" onclick="toggle(this)">
+                    <div class="arrow">></div>
+                    <div class="line"></div>
+                    <h3 class="title">Tenggaring</h3>
+                    <div class="content">
+                        <h2>Tenggaring</h2>
+                        <p>Tenggaring merupakan ikan air tawar khas Pulau Kalimantan yang banyak ditemukan di sungai dan
+                            perairan pedalaman. Ikan ini memiliki tubuh pipih memanjang dengan warna keperakan dan hidup
+                            berkelompok. Tenggaring sering dimanfaatkan sebagai sumber pangan masyarakat lokal serta menjadi
+                            bagian dari keanekaragaman fauna perairan Kalimantan.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="card1" onclick="toggle(this)">
+                    <div class="arrow">></div>
+                    <h3 class="title">Tengkawang</h3>
+                    <div class="line"></div>
+                    <div class="content">
+                        <h2>Tengkawang</h2>
+                        <p>Tengkawang merupakan pohon khas Pulau Kalimantan dari marga Shorea yang tumbuh di hutan hujan
+                            tropis.
+                            Buah tengkawang menghasilkan lemak nabati (minyak tengkawang) yang dimanfaatkan untuk bahan
+                            pangan,
+                            obat tradisional, dan kosmetik. Pohon ini memiliki nilai ekonomi dan ekologis penting, namun
+                            keberadaannya perlu dijaga karena terancam oleh kerusakan hutan.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        
+
+            <!-- HEWAN -->
+            <section class="section-block">
+
+                <div class="Mflora-fauna">Wildlife Kalimantan</div>
+                <p class="Mdeskrip-pulau-2">Pulau Kalimantan memiliki keanekaragaman fauna yang khas dan sebagian bersifat
+                    endemik.Fauna Kalimantan berperan penting dalam menjaga keseimbangan ekosistem hutan dan merupakan kekayaan
+                    hayati Indonesia yang perlu dilestarikan.</p>
+
+                <div class="card2-container">
+                    <!-- Card 1 -->
+                    <div class="card2">
+                        <div class="card2-image"
+                            style="background-image: url('https://th.bing.com/th/id/R.67dc48e92929e22a48f500b4ed516125?rik=dTw%2bSajXf6h78Q&riu=http%3a%2f%2fwww.borneotourgigant.com%2fdreamingorangutan.JPG&ehk=itSzj65HS0QkKZIMl5sgPuMymX%2fNmlBJxvzhMrVUG2k%3d&risl=1&pid=ImgRaw&r=0');">
+                        </div>
+                        <div class="card2-content">
+                            <h3 class="card2-title">Orangutan Kalimantan</h3>
+                            <p class="card2-text">Orangutan Kalimantan (Pongo pygmaeus) adalah kera besar endemik Pulau Kalimantan dengan tubuh kekar, rambut cokelat kemerahan, dan lengan panjang yang kuat. Mereka dikenal cerdas, mampu menggunakan alat, dan sebagian besar hidup soliter di hutan hujan tropis. Populasinya terancam akibat deforestasi dan perburuan, sehingga termasuk satwa yang dilindungi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card2">
+                        <div class="card2-image"
+                            style="background-image: url('https://tse1.mm.bing.net/th/id/OIP.jWTZC4GkQhKvNPPnRyrIDAHaEK?w=1200&h=675&rs=1&pid=ImgDetMain&o=7&rm=3');">
+                        </div>
+                        <div class="card2-content">
+                            <h3 class="card2-title">Pesut Mahakam</h3>
+                            <p class="card2-text">Pesut Mahakam (Orcaella brevirostris) merupakan mamalia air tawar khas
+                                Sungai
+                                Mahakam, Kalimantan Timur. Hewan ini mirip lumba-lumba, dengan kepala bulat tanpa moncong
+                                panjang
+                                dan warna tubuh abu-abu. Pesut Mahakam hidup di perairan sungai dan danau, berperan penting
+                                dalam
+                                ekosistem perairan, namun kini sangat terancam punah akibat pencemaran, aktivitas manusia,
+                                dan
+                                kerusakan habitat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card2">
+                        <div class="card2-image"
+                            style="background-image: url('https://2.bp.blogspot.com/-NfwtnkVw08I/VwTUaEKU41I/AAAAAAAAAJk/E6A6VuKtPqErkcWwNx0e6FdYHQxzRNIYQ/s1600/bekantan-kalimantan.jpg');">
+                        </div>
+                        <div class="card2-content">
+                            <h3 class="card2-title">Bekantan</h3>
+                            <p class="card2-text">Bekantan (Nasalis larvatus) adalah monyet endemik Kalimantan yang terkenal dengan hidung panjang dan besar pada jantan dewasa. Satwa ini hidup di hutan bakau, rawa, dan tepi sungai, serta pandai berenang. Populasinya menurun akibat kerusakan habitat, sehingga masuk daftar satwa terancam punah dan dilindungi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card2-container" style="margin-top: 30px;">
+                    <!-- Card 4 -->
+                    <div class="card2">
+                        <div class="card2-image"
+                            style="background-image: url('https://s.kaskus.id/images/2017/06/12/9235218_20170612024640.jpg');">
+                        </div>
+                        <div class="card2-content">
+                            <h3 class="card2-title">Kucing Merah Kalimantan</h3>
+                            <p class="card2-text">Kucing merah Kalimantan (Catopuma badia) merupakan kucing liar endemik
+                                Pulau
+                                Kalimantan yang sangat langka. Hewan ini memiliki bulu cokelat kemerahan dengan tubuh
+                                ramping
+                                dan
+                                ekor panjang. Kucing merah hidup di hutan hujan tropis dan bersifat pemalu serta sulit
+                                ditemui,
+                                sehingga masih jarang diketahui. Keberadaannya kini terancam oleh kerusakan hutan dan
+                                perburuan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="card2">
+                        <div class="card2-image"
+                            style="background-image: url('https://imgs.mongabay.com/wp-content/uploads/sites/20/2018/01/30123026/Picture4.jpg');">
+                        </div>
+                        <div class="card2-content">
+                            <h3 class="card2-title">Gajah Kalimantan</h3>
+                            <p class="card2-text">Gajah Kalimantan (Elephas maximus borneensis) merupakan subspesies gajah
+                                Asia
+                                yang
+                                hidup di Pulau Kalimantan, terutama di Kalimantan Utara dan Sabah. Gajah ini memiliki tubuh
+                                lebih
+                                kecil, telinga lebih lebar, dan sifat yang relatif jinak dibanding gajah Asia lainnya. Gajah
+                                Kalimantan hidup di hutan tropis dan dataran rendah, serta berperan penting dalam menjaga
+                                keseimbangan ekosistem, namun populasinya terancam akibat hilangnya habitat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="card2">
+                        <div class="card2-image"
+                            style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.RKbabAiR9LwdsSObi5ed8QHaHa?w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3');">
+                        </div>
+                        <div class="card2-content">
+                            <h3 class="card2-title">Apa yang lainnya?</h3>
+                            <p class="card2-text">Kami akan membahas lebih lanjut tentang satwa endemik lainnya di Pulau
+                                Sumatera.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </section>
+
+  </div>
+
+    <div id="sulawesi" class="section">
+        <section class="hero">
+            <img class="Mpulau" src="../assets/gambar/sulawesi.png" alt="Pulau Sulawesi">
+
+            <div class="hero-text">
+                <h1 class="Mnama-pulau">Pulau Sulawesi</h1>
+                <p class="Mdeskrip-pulau">
+                    Pulau Sulawesi adalah pulau yang terletak di Indonesia bagian tengah, memiliki bentang alam yang sangat
+                    beragam dan keanekaragaman flora serta fauna yang tinggi. Pulau ini dikenal dengan kekayaan sumber daya
+                    alamnya, termasuk hutan tropis, sungai, dan laut yang kaya akan kehidupan laut. Sulawesi juga memiliki
+                    budaya yang khas dengan berbagai etnis dan tradisi lokal yang unik.
+                </p>
+            </div>
+        </section>
+
+        <div class="Mline"></div>
+
+        <!-- TANAMAN -->
+        <section class="section-block">
+
+            <div class="Mflora-fauna">Vegetasi Sulawesi</div>
+            <p class="Mdeskrip-pulau-2">Pulau Sulawesi memiliki keanekaragaman flora yang khas dan berbeda dari pulau-pulau
+                lain di Indonesia. Banyak tumbuhan yang bersifat endemik dan hanya dapat ditemukan di Sulawesi. Flora ini
+                berperan penting dalam menjaga keseimbangan alam serta mendukung kehidupan berbagai makhluk hidup di pulau tersebut.
+            </p>
+
+            <div class="container sulawesi">
+                <div class="card1" onclick="toggle(this)">
+                    <div class="arrow">></div>
+                    <div class="line"></div>
+                    <h3 class="title">Nepenthes glabrata</h3>
+                    <div class="content">
+                        <h2>Nepenthes glabrata</h2>
+                        <p>Nepenthes glabrata merupakan tumbuhan kantong semar endemik Pulau Sulawesi. Tanaman karnivora ini
+                            memiliki kantong perangkap berwarna cerah dan halus yang berfungsi untuk menangkap serangga
+                            sebagai sumber nutrisi. Nepenthes glabrata tumbuh di hutan tropis lembap dan dataran tinggi,
+                            mencerminkan keunikan flora Sulawesi.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="card1" onclick="toggle(this)">
+                    <div class="arrow">></div>
+                    <div class="line"></div>
+                    <h3 class="title">Nepenthes hamata</h3>
+                    <div class="content">
+                        <h2>Nepenthes hamata</h2>
+                        <p>Nepenthes hamata merupakan tumbuhan kantong semar yang terkenal dengan kantong perangkap
+                            berujung bergerigi seperti kail. Tanaman karnivora ini menangkap serangga sebagai sumber nutrisi
+                            dan tumbuh di hutan pegunungan tropis yang lembap. Keunikan bentuknya menjadikan Nepenthes hamata
+                            salah satu flora khas Sulawesi yang bernilai tinggi.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="card1" onclick="toggle(this)">
+                    <div class="arrow">></div>
+                    <h3 class="title">Diospyros celebica:</h3>
+                    <div class="line"></div>
+                    <div class="content">
+                        <h2>Diospyros celebica</h2>
+                        <p>Diospyros celebica atau Kayu Hitam Sulawesi merupakan pohon yang tumbuh di hutan tropis.
+                            Pohon ini dikenal dengan kayu sangat keras, gelap, dan bernilai tinggi untuk mebel, kerajinan,
+                            dan alat musik. Diospyros celebica berperan penting dalam ekosistem hutan sebagai habitat berbagai
+                            flora.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- HEWAN -->
+        <section class="section-block">
+            <div class="Mflora-fauna">Wildlife Sulawesi</div>
+            <p class="Mdeskrip-pulau-2">Pulau Sulawesi memiliki keanekaragaman fauna yang sangat khas dan didominasi oleh
+                spesies endemik. Fauna Sulawesi hidup di berbagai ekosistem, mulai dari hutan hujan tropis, hutan
+                pegunungan, savana, hingga wilayah pesisir. Kondisi geografis yang terisolasi membuat fauna di Sulawesi berkembang
+                secara unik dan berbeda dari pulau lain.</p>
+
+            <div class="card2-container">
+                <!-- Card 1 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://klikhijau.com/wp-content/uploads/2019/04/Maleo-Burung-Langka-yang-Paling-Setia-Pada-Pasangannya-dan-6-Fakta-Unik-Tentangnya.jpg');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">burung maleo</h3>
+                        <p class="card2-text">Burung Maleo (Macrocephalon maleo) merupakan burung endemik Pulau Sulawesi
+                            yang terkenal dengan cara bertelur unik. Maleo meletakkan telurnya di pasir panas atau tanah
+                            berpemanas alami, seperti pantai dan kawasan vulkanik. Burung ini memiliki tubuh hitam-putih dengan jambul
+                            di kepala dan kini dilindungi karena populasinya terancam akibat perusakan habitat dan pengambilan
+                            telur.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://static.inaturalist.org/photos/71505229/large.jpg');"></div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Babirusa</h3>
+                        <p class="card2-text">Babirusa (Babyrousa sp.) adalah mamalia endemik Sulawesi dan pulau-pulau sekitarnya, dikenal dengan gading melengkung unik yang menembus kulit hidung jantan. Hewan ini termasuk keluarga babi, namun memiliki tubuh lebih ramping dan kaki panjang. Populasinya terancam akibat perburuan dan hilangnya habitat, sehingga memerlukan perlindungan ketat.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.FhRAiKS8ifEmuecUcaB9HQHaFK?rs=1&pid=ImgDetMain&o=7&rm=3');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Yaki</h3>
+                        <p class="card2-text">Yaki (Macaca nigra) merupakan primata endemik Sulawesi Utara yang dikenal
+                            dengan bulu hitam pekat dan jambul di kepala. Yaki hidup berkelompok di hutan tropis dan memakan buah,
+                            biji, serta serangga. Satwa ini berperan penting dalam penyebaran biji, namun kini terancam
+                            punah akibat perburuan dan hilangnya habitat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card2-container" style="margin-top: 30px;">
+                <!-- Card 4 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://1.bp.blogspot.com/-pm07qUMmlkI/XzJoSout0rI/AAAAAAAADdg/S2PYe0fzVwor7Nisr9uTJVIIQvnOPvOGQCLcBGAsYHQ/s1600/Anoa%2B%2B3.jpg');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Anoa</h3>
+                        <p class="card2-text">Anoa merupakan satwa endemik Pulau Sulawesi yang dikenal sebagai kerbau
+                            kerdil.
+                            Hewan ini memiliki tubuh kecil, tanduk lurus, dan bulu gelap. Anoa hidup di hutan tropis
+                            pegunungan
+                            dan dataran rendah, bersifat pemalu, serta berperan penting dalam menjaga keseimbangan
+                            ekosistem,
+                            namun kini terancam punah akibat perburuan dan kerusakan habitat.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://i.pinimg.com/originals/72/f3/c3/72f3c3e1e2e6670908808cedc0da08b5.jpg');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Tarsius</h3>
+                        <p class="card2-text">Tarsius merupakan primata kecil endemik Pulau Sulawesi yang aktif pada malam
+                            hari
+                            (nokturnal). Hewan ini memiliki mata sangat besar, telinga lebar, dan jari panjang yang
+                            membantunya
+                            melompat antar dahan. Tarsius hidup di hutan tropis dan memakan serangga, serta berperan penting
+                            dalam menjaga keseimbangan ekosistem, namun keberadaannya terancam akibat kerusakan habitat.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.RKbabAiR9LwdsSObi5ed8QHaHa?w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Apa yang lainnya?</h3>
+                        <p class="card2-text">Kami akan membahas lebih lanjut tentang satwa endemik lainnya di Pulau
+                            Sumatera.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+  </div>
+
+    <div id="papua" class="section">
+        <section class="hero">
+            <img class="Mpulau" src="../assets/gambar/papua.png" alt="Pulau Papua">
+
+            <div class="hero-text">
+                <h1 class="Mnama-pulau">Pulau Papua</h1>
+                <p class="Mdeskrip-pulau">
+                    Pulau Papua adalah wilayah terluar Indonesia yang memiliki keanekaragaman alam dan flora yang sangat tinggi.
+                    Wilayah ini dikenal dengan hutan hujan tropisnya yang luas, serta kekayaan flora endemik yang unik dan langka.
+                    Pulau ini juga memiliki sejumlah besar satwa liar endemik dan merupakan habitat penting bagi berbagai spesies langka.
+                </p>
+            </div>
+        </section>
+
+        <div class="Mline"></div>
+
+        <!-- TANAMAN -->
+        <section class="section-block">
+
+            <div class="Mflora-fauna">Vegetasi Papua</div>
+            <p class="Mdeskrip-pulau-2">Pulau Papua memiliki keanekaragaman flora yang sangat tinggi dan termasuk salah satu
+                wilayah dengan hutan tropis paling luas di dunia. Flora Papua mencakup hutan dataran rendah hingga hutan
+                pegunungan, dengan banyak tumbuhan endemik dan beragam jenis pohon, bunga, dan tanaman obat. Keanekaragaman
+                flora ini berperan penting dalam menjaga ekosistem, menyediakan sumber daya alam, dan mendukung kehidupan
+                masyarakat serta satwa liar di Papua.</p>
+
+            <div class="container Papua">
+                <div class="card1" onclick="toggle(this)">
+                    <div class="arrow">></div>
+                    <div class="line"></div>
+                    <h3 class="title">Anggrek hitam</h3>
+                    <div class="content">
+                        <h2>Anggrek hitam</h2>
+                        <p>Anggrek hitam merupakan anggrek khas Pulau Papua yang tumbuh di hutan hujan tropis. Anggrek ini
+                            dikenal memiliki kelopak berwarna gelap kehitaman dengan bagian tengah yang mencolok, sehingga
+                            terlihat eksotis dan bernilai tinggi sebagai tanaman hias. Keberadaannya mencerminkan kekayaan
+                            flora Papua dan perlu dijaga karena habitat alaminya semakin berkurang.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="card1" onclick="toggle(this)">
+                    <div class="arrow">></div>
+                    <div class="line"></div>
+                    <h3 class="title">Eukaliptus</h3>
+                    <div class="content">
+                        <h2>Eukaliptus</h2>
+                        <p>Eukaliptus merupakan tumbuhan khas Pulau Papua yang banyak tumbuh di daerah kering hingga savana.
+                            Pohon ini memiliki daun memanjang beraroma khas dan dimanfaatkan sebagai sumber minyak kayu
+                            putih yang berguna untuk kesehatan. Eukaliptus berperan penting dalam ekosistem Papua serta memiliki
+                            nilai ekonomi bagi masyarakat setempat.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="card1" onclick="toggle(this)">
+                    <div class="arrow">></div>
+                    <h3 class="title">Bintangur</h3>
+                    <div class="line"></div>
+                    <div class="content">
+                        <h2>Bintangur</h2>
+                        <p>Bintangur merupakan pohon khas wilayah timur Indonesia, termasuk Pulau Papua, yang tumbuh di
+                            hutan pantai dan dataran rendah. Tanaman ini dikenal memiliki kayu kuat dan buah berbentuk bulat,
+                            serta dimanfaatkan sebagai bahan bangunan dan obat tradisional. Bintangur mencerminkan kekayaan flora
+                            Papua dan berperan dalam menjaga ekosistem pesisir.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- HEWAN -->
+        <section class="section-block">
+            <div class="Mflora-fauna">Wildlife Papua</div>
+            <p class="Mdeskrip-pulau-2">Pulau Papua memiliki fauna yang sangat kaya dan unik, dengan banyak spesies endemik
+                yang tidak ditemukan di tempat lain. Fauna Papua hidup di berbagai ekosistem, mulai dari hutan hujan tropis,
+                pegunungan, hingga daerah pesisir dan rawa. Keanekaragaman fauna ini memainkan peran penting dalam menjaga
+                keseimbangan ekosistem.</p>
+
+            <div class="card2-container">
+                <!-- Card 1 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://th.bing.com/th/id/R.63cf0fdb134c84a8f0b69884cb2d6173?rik=N4kosDUdisQEDA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-ymUS1tVGOSg%2fTw3Jkr2SwbI%2fAAAAAAAABK8%2fMjnQgV1k558%2fs1600%2fParadisaea-minor.jpg&ehk=gsAiJg%2fPPy001%2fA5pmIGy91ywuu2HfWuUTKfc7T7xC8%3d&risl=&pid=ImgRaw&r=0');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Cendrawasih</h3>
+                        <p class="card2-text"> Cendrawasih adalah burung eksotis khas Papua yang terkenal dengan bulu indah berwarna cerah dan ekor menjuntai anggun. Burung ini sering disebut “burung surga” karena tarian kawinnya yang memukau dan warna bulunya yang mempesona. Keindahannya menjadikannya simbol budaya Papua sekaligus ikon konservasi satwa liar Indonesia. Burung ini hidup di hutan hujan tropis dan terkenal dengan tarian unik saat menarik pasangan.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.qNwQPP_To68DrabzEaW0bgHaEK?w=2048&h=1152&rs=1&pid=ImgDetMain&o=7&rm=3');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Kasuari gelambir tunggal</h3>
+                        <p class="card2-text">Kasuari gelambir tunggal adalah burung besar tak terbang yang hidup di hutan hujan Papua dan sebagian Australia utara. Ciri utamanya adalah hanya memiliki satu gelambir berwarna cerah di leher, serta helm keras di kepalanya. Hewan ini berperan penting dalam penyebaran biji tumbuhan hutan, namun populasinya terancam akibat perburuan dan kerusakan habitat.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://cdn.idntimes.com/content-images/community/2024/02/kuskus-waigeo-cd8962aed2ff7cf80fbad3bec874d1b2-748daf3a7108e11c4834643256031833_600x400.jpg');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Kukus waigo</h3>
+                        <p class="card2-text">Kuskus Waigeo (Scham-Scham) memiliki bobot rata-rata sekitar 2,65 kg, dengan panjang tubuh 497–560 mm pada jantan dan 472 mm pada betina, sedangkan Kuskus Tutul Hitam lebih besar, mencapai 6–7 kg dengan panjang 60–70 cm. Pola bulu Kuskus Waigeo didominasi warna putih keabu-abuan dengan totol hitam yang samar dan unik pada tiap individu, sedangkan Kuskus Tutul Hitam memiliki bulu gelap dengan totol hitam yang lebih kontras, berfungsi sebagai kamuflase di hutan Papua.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card2-container" style="margin-top: 30px;">
+                <!-- Card 4 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://1.bp.blogspot.com/-jZc7ssxnGFc/Xwt92IXdpQI/AAAAAAAALTQ/_wczd37x_UssqTMnY8L7-ZW0oMHykmrVQCNcBGAsYHQ/w1200-h630-p-k-no-nu/kangguru%2Bpohon.jpg');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Kanguru pohon</h3>
+                        <p class="card2-text">Kanguru pohon (Dendrolagus sp.) adalah marsupial langka yang hidup di hutan hujan Papua dan Australia utara, dengan kemampuan memanjat pohon secara gesit. Memiliki tubuh berotot, ekor panjang untuk keseimbangan, dan kaki lebih pendek dibanding kanguru darat. Populasinya terancam akibat hilangnya habitat dan perburuan, sehingga memerlukan perlindungan serius.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://th.bing.com/th/id/R.c29ec54030aff587200f3b4b900249e7?rik=pkYkVeWQn5ozIA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Jy1595KRZC0%2fUlYfLBGm--I%2fAAAAAAAADFg%2fZTXox4jd4qc%2fs1600%2fhiu%2bkarpet%2bberbintik.jpg&ehk=sxGeLt1WKMTIHKXz4Rv1X11zTmYQpvPif1Sy6h8UAJE%3d&risl=&pid=ImgRaw&r=0');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Hiu karpet berbintik</h3>
+                        <p class="card2-text">Hiu karpet berbintik (Hemiscyllium sp.) merupakan jenis hiu kecil yang hidup
+                            di perairan Indonesia timur, termasuk Papua. Hiu ini memiliki tubuh memanjang dengan pola
+                            bintik-bintik khas dan sering ditemukan di terumbu karang perairan dangkal. Keunikannya, hiu karpet dapat
+                            “berjalan” di dasar laut menggunakan siripnya, serta berperan penting dalam menjaga keseimbangan
+                            ekosistem laut.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card2">
+                    <div class="card2-image"
+                        style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.RKbabAiR9LwdsSObi5ed8QHaHa?w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3');">
+                    </div>
+                    <div class="card2-content">
+                        <h3 class="card2-title">Apa yang lainnya?</h3>
+                        <p class="card2-text">Kami akan membahas lebih lanjut tentang satwa endemik lainnya di Pulau
+                            Sumatera.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+  </div>
+
+    <script src="../assets/js/biota.js"></script>
+</body>
+</html>
