@@ -653,6 +653,9 @@ nav {
 }
 
 /* pemeliharaan css */
+#panduan {
+  scroll-margin-top: 130px;
+}
 .pemeliharaan-container {
   background-color: #FAF6ED;
   padding: 80px 5%;
