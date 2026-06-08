@@ -653,9 +653,6 @@ nav {
 }
 
 /* pemeliharaan css */
-#panduan {
-  scroll-margin-top: 130px;
-}
 .pemeliharaan-container {
   background-color: #FAF6ED;
   padding: 80px 5%;
@@ -1483,281 +1480,107 @@ nav {
   transform: scale(1.03);
 }
 
-/* ==================== MAP CONTAINER ============================== */
-.map-container {
-  position:relative;
-  margin-top:60px;
-  text-align:center;
-}
-.map-container img {
-  width:80%;
-  height:70vh;
-}
-.marker {
-  position:absolute;
-  width:15px;
-  height:15px;
-  background:red;
-  border-radius:50%;
-  cursor:pointer;
-  transform:translate(-50%, -50%);
-}
-.label {
-  position:absolute;
-  color:black;
-  font-weight:bold;
-  background:white;
-  padding:2px 5px;
-  border-radius:3px;
-  transform:translate(-50%, -150%);
-  font-size:12px;
-}
-.section {
-  min-height:600px;
-  padding:80px 50px 50px;
-  border-top:1px solid #ccc;
-  margin-bottom:30px;
-  scroll-margin-top:90px;
-}
-/* ==================== HERO SECTION ============================== */
-.hero {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: clamp(50px, 8vw, 80px) var(--side-padding);
+/* ============================================================
+   QUIZ KATEGORI — tambahkan ke bagian bawah eksfera.css
+   (di bawah CSS quiz yang sudah ada sebelumnya)
+   ============================================================ */
 
-  display: flex;
-  align-items: center;
-  gap: clamp(2rem, 5vw, 4rem);
+/* ── Halaman pilih kategori ── */
+.quiz-kat-intro {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
 }
 
-.Mpulau {
-  height: clamp(140px, 20vw, 220px);
-  flex-shrink: 0;
-}
-
-.hero-text {
-  max-width: 600px;
-}
-
-.Mnama-pulau {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  margin-bottom: 20px;
-}
-
-.Mdeskrip-pulau {
-  font-weight: 300;
-  line-height: 1.7;
-}
-
-.Mline {
-  width: 100%;
-  height: 5px;
-  background: var(--primary);
-  margin: 40px 0;
-}
-
-.Mflora-fauna {
-  max-width: var(--max-width);
-  margin: 60px auto 10px;
-  padding: 0 var(--side-padding);
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-}
-
-.Mdeskrip-pulau-2 {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 0 var(--side-padding) 40px;
-  line-height: 1.7;
-  font-weight: 300;
-}
-
-/* ==================================================
-   VEGETASI (EXPAND CARD)
-================================================== */
-.container {
-  max-width: var(--max-width);
-  margin: 80px auto 0;
-  padding: 0 var(--side-padding);
-
-  display: flex;
-  gap: 24px;
-}
-
-.card1 {
-  flex: 1;
-  height: 420px;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  transition: 0.4s ease;
-}
-
-.card1::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transition: filter 0.3s;
-}
-
-.card1 .title {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  color: #fff;
-  font-weight: 600;
-  z-index: 2;
-}
-
-.card1 .content {
-  display: none;
-  position: absolute;
-  inset: 0;
-  padding: 30px;
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-}
-
-.card1.expanded {
-  flex: 3;
-}
-
-.card1.expanded::before {
-  filter: brightness(80%);
-}
-
-.card1.expanded .content {
-  display: block;
-}
-
-.card1.expanded .title {
-  display: none;
-}
-
-/* ==================================================
-   WILDLIFE
-================================================== */
-.card2-container {
-  max-width: var(--max-width);
-  margin: 90px auto ;
-  padding: 0 var(--side-padding);
-
+.quiz-kat-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
-.card2 {
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+.quiz-kat-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  background: #f5f4ee;
+  border: 2px solid #c8c5b8;
+  border-radius: 12px;
+  padding: 16px 14px;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
 }
 
-.card2:hover {
-  transform: translateY(-6px);
+.quiz-kat-btn:hover {
+  background: #eae9e0;
+  border-color: #4a7a38;
+  transform: translateY(-2px);
 }
 
-.card2-image {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
+.quiz-kat-btn.quiz-kat-all {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  background: #edf6e4;
+  border-color: #4a7a38;
 }
 
-.card2-content {
-  padding: 16px;
+.quiz-kat-btn.quiz-kat-all:hover {
+  background: #d4eac4;
 }
 
-.card2-title {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+.quiz-kat-icon {
+  font-size: 28px;
+  line-height: 1;
 }
 
-.card2-text {
-  font-size: 0.95rem;
-  color: #555;
+.quiz-kat-btn.quiz-kat-all .quiz-kat-icon {
+  font-size: 24px;
 }
 
-/* gambar page sumatera */
-.card1:nth-child(1)::before {
-    /* raflesia */
-    background-image: url('https://geopinas.com/wp-content/uploads/2024/09/declining_rafflesia_species_populations.jpg');
+.quiz-kat-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a0e;
 }
 
-.card1:nth-child(2)::before {
-    /* kenanga */
-    background-image: url('https://res.cloudinary.com/dk0z4ums3/image/upload/v1604245157/attached_image/manfaat-bunga-kenanga-untuk-kesehatan.jpg');
+.quiz-kat-desc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
 }
 
-.card1:nth-child(3)::before {
-    /* anggrek tien*/
-    background-image: url('https://tse1.mm.bing.net/th/id/OIP.UvqMCouzHgdS8C0z-wovagHaE8?w=745&h=497&rs=1&pid=ImgDetMain&o=7&rm=3');
+.quiz-kat-btn.quiz-kat-all .quiz-kat-name {
+  font-size: 15px;
 }
 
-/* gambar page kalimantan */
-.container.alt .card1:nth-child(1)::before {
-    /* kantong semar berbulu */
-    background-image: url('https://www.borneohouseboat.com/assets/photos/photo_30.jpg');
+/* ── Category tag pada soal ── */
+.quiz-category-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.container.alt .card1:nth-child(2)::before {
-    /* tenggaring */
-    background-image: url('https://4.bp.blogspot.com/-40kvkd_Z2Pw/VhdGuGBTuUI/AAAAAAAAHgs/E-wQy_mdztU/s1600/Tanaman-Kapulasan.jpg');
+.quiz-tag-biota {
+  background: #d4eac4;
+  color: #27500A;
 }
 
-.container.alt .card1:nth-child(3)::before {
-    /* tengkawang */
-    background-image: url('https://th.bing.com/th/id/R.15eeaed3f6c429190deb1684462a0c38?rik=1V7J0xz3%2fb1s2Q&riu=http%3a%2f%2feditorial.femaledaily.com%2fwp-content%2fuploads%2f2023%2f11%2ftengkawang-3.jpg&ehk=aB8f%2f3%2bnLr72xa2UYRmKehE9H6Ks0ztysovdLcBQdFw%3d&risl=&pid=ImgRaw&r=0');
+.quiz-tag-sampah {
+  background: #dceefb;
+  color: #0C447C;
 }
 
-/* gambar page jawa */
-.container.jawa .card1:nth-child(1)::before {
-    /* cempaka putih */
-    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijh9fPA1JsC3X8A23YZPtTBTq5vTh934Rn6N2yjk5UdPIYDJVKweMVo7OdaXzoB4fl12ppQlYv4fiegaeEpTUh8vefNIKJI04-CmjycKt3lykcnr1HoloUNY_mOiBNoZ4KpTl6udiSC-HwIehHKHdnNWnHLUSCJLMbROzpVn2BZeNKIzJDjYkB9uVgpSA2/s1600/cempaka%20putih.JPG');
-}
-
-.container.jawa .card1:nth-child(2)::before {
-    /* edelweis jawa */
-    background-image: url('https://pict.sindonews.net/dyn/732/pena/news/2023/03/08/766/1041363/mengenal-edelweis-bunga-abadi-soe-hok-gie-dan-ranca-upas-ntd.JPG');
-}
-
-.container.jawa .card1:nth-child(3)::before {
-    /* kokoleceran */
-    background-image: url('https://cdngnfi2.sgp1.digitaloceanspaces.com/gnfi/uploads/articles/large-mengenal-kokoleceran-flora-identitas-provinsi-banten-yang-terancam-punah-ef9WALssLC.jpg');
-}
-
-/* gambar page sulawesi */
-.container.sulawesi .card1:nth-child(1)::before {
-    /* Nepenthes glabrata */
-    background-image: url('https://cdn11.bigcommerce.com/s-4kt71d4v98/images/stencil/600x600/products/150/1159/glabrataaristolo1__89404.1610058431.jpg?c=1');
-}
-
-.container.sulawesi .card1:nth-child(2)::before {
-    /* Nepenthes hamata */
-    background-image: url('https://i.pinimg.com/originals/30/19/fc/3019fc31d3b104ddc6195737c4f5102e.jpg');
-}
-
-.container.sulawesi .card1:nth-child(3)::before {
-    /* Diospyros celebica:*/
-    background-image: url('https://tse1.mm.bing.net/th/id/OIP.JxhUwOg2bmK1znRgDBmgQQHaJ3?rs=1&pid=ImgDetMain&o=7&rm=3');
-}
-
-/* gambar page papua */
-.container.Papua .card1:nth-child(1)::before {
-    /* Anggrek hitam */
-    background-image: url('https://tse4.mm.bing.net/th/id/OIP.lcEt39QUEPEkcvkMrHqcPAAAAA?w=300&h=300&rs=1&pid=ImgDetMain&o=7&rm=3');
-}
-
-.container.Papua .card1:nth-child(2)::before {
-    /* Eukaliptus */
-    background-image: url('https://tse2.mm.bing.net/th/id/OIP.hGJLj1kcgKv2_j7862ID5wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3');
-}
-
-.container.Papua .card1:nth-child(3)::before {
-    /* Bintangur */
-    background-image: url('https://yayasanmqis.or.id/wp-content/uploads/2018/01/BUAH-NYAMPLUNG-BINTANGUR-2-calophyllum-inophyllum.jpg');
+.quiz-tag-pemeliharaan {
+  background: #faeeda;
+  color: #633806;
 }
