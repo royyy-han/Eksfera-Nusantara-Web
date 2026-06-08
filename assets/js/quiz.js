@@ -921,7 +921,7 @@ function quizLaunchConfetti(isPerfect) {
 // ── NAVIGASI TOMBOL ───────────────────────────────────────────────────────
 function quizKeluar() {
   if (confirm("Yakin ingin keluar dari quiz? Progresmu tidak akan tersimpan.")) {
-    window.location.href = "beranda.html";
+    window.location.href = "quiz.html";
   }
 }
 
