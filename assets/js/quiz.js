@@ -942,9 +942,6 @@ function quizLaunchConfetti(isPerfect) {
   draw();
 }
 
-<<<<<<< HEAD
-// ── TOMBOL NAVIGASI ───────────────────────────────────────────────────────
-=======
 // ── NAVIGASI TOMBOL ───────────────────────────────────────────────────────
 function quizKeluar() {
   if (confirm("Yakin ingin keluar dari quiz? Progresmu tidak akan tersimpan.")) {
@@ -952,7 +949,6 @@ function quizKeluar() {
   }
 }
 
->>>>>>> 09352ce8dbca17630674d5168947c7162200f0d5
 function quizBackToKategori() {
   window.quizSedangBerjalan = false;
   document.getElementById("quiz-card").style.display             = "block";
