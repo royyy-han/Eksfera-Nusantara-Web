@@ -1,654 +1,686 @@
 // ============================================================
 //  QUIZ INTERAKTIF — quiz.js
-//  90 soal total: 30 Biota | 30 Sampah | 30 Pemeliharaan
+//  90 soal sesuai materi TeraNusa
+//  30 Biota | 30 Sampah | 30 Pemeliharaan
 // ============================================================
 
 // ── BANK SOAL: BIOTA (30 soal) ────────────────────────────────────────────
 const quizBankBiota = [
+  // --- KONSERVASI ---
+  {
+    kat: "biota",
+    text: "IUCN adalah singkatan dari ...",
+    opts: ["International Union for Conservation of Nature", "Indonesian Union for Conservation of Nature", "International Unit for Climate and Nature", "Indonesian Unit for Climate Network"],
+    ans: 0,
+    exp: "IUCN (International Union for Conservation of Nature) adalah organisasi internasional yang menjadi otoritas global dalam bidang konservasi alam dan keanekaragaman hayati."
+  },
   {
     kat: "biota",
     text: "Konservasi yang dilakukan langsung di habitat asli satwa disebut ...",
-    opts: ["Rehabilitasi", "Konservasi Ex Situ", "Konservasi In Situ", "Penangkaran"],
+    opts: ["Konservasi Ex Situ", "Rehabilitasi", "Konservasi In Situ", "Penangkaran"],
     ans: 2,
-    exp: "Konservasi In Situ dilakukan di habitat asli satwa, seperti taman nasional dan cagar alam."
+    exp: "Konservasi In Situ dilakukan di habitat asli satwa, seperti taman nasional, cagar alam, dan suaka margasatwa."
   },
   {
     kat: "biota",
     text: "Contoh konservasi Ex Situ adalah ...",
-    opts: ["Hutan lindung", "Suaka margasatwa", "Kebun binatang", "Taman nasional"],
+    opts: ["Taman nasional", "Suaka margasatwa", "Kebun binatang dan penangkaran", "Cagar alam"],
     ans: 2,
-    exp: "Konservasi Ex Situ dilakukan di luar habitat asli, misalnya kebun binatang dan penangkaran."
+    exp: "Konservasi Ex Situ dilakukan di luar habitat asli, misalnya di kebun binatang, penangkaran, dan kebun botani."
   },
   {
     kat: "biota",
-    text: "Tujuan rehabilitasi satwa adalah ...",
-    opts: ["Menjual satwa langka", "Mengembalikan satwa yang telah pulih ke alam", "Menangkap satwa liar", "Mempersempit habitat satwa"],
+    text: "Perjanjian internasional untuk mengendalikan perdagangan satwa dan tumbuhan liar adalah ...",
+    opts: ["UNESCO", "CITES", "ASEAN", "WWF"],
     ans: 1,
-    exp: "Satwa yang sakit atau terluka dirawat agar dapat hidup kembali di habitatnya."
+    exp: "CITES adalah kerja sama internasional yang mengatur perdagangan satwa dan tumbuhan liar agar tidak terancam punah."
   },
   {
     kat: "biota",
-    text: "Perjanjian internasional yang mengatur perdagangan satwa liar adalah ...",
-    opts: ["ASEAN", "UNESCO", "CITES", "FIFA"],
+    text: "Status konservasi IUCN yang paling kritis dan hampir punah adalah ...",
+    opts: ["Vulnerable", "Near Threatened", "Critically Endangered", "Least Concern"],
     ans: 2,
-    exp: "CITES mengendalikan perdagangan satwa dan tumbuhan liar agar tidak terancam punah."
+    exp: "Critically Endangered (Kritis) adalah status IUCN untuk spesies yang menghadapi risiko kepunahan sangat tinggi dalam waktu dekat."
   },
   {
     kat: "biota",
-    text: "Mengembalikan ekosistem yang rusak ke kondisi semula disebut ...",
-    opts: ["Restorasi habitat", "Rehabilitasi", "Penangkaran", "Edukasi"],
+    text: "Rehabilitasi satwa bertujuan untuk ...",
+    opts: ["Menjual satwa langka", "Merawat satwa sakit agar bisa kembali ke alam", "Menangkap satwa liar", "Memindahkan satwa ke kebun binatang"],
+    ans: 1,
+    exp: "Rehabilitasi merawat satwa yang sakit atau terluka agar pulih dan dapat hidup kembali di habitatnya."
+  },
+  {
+    kat: "biota",
+    text: "Restorasi habitat bertujuan untuk ...",
+    opts: ["Memburu satwa liar", "Mengembalikan ekosistem yang rusak ke kondisi semula", "Mendirikan kebun binatang", "Mengekspor satwa langka"],
+    ans: 1,
+    exp: "Restorasi habitat memperbaiki ekosistem yang rusak agar satwa punya tempat hidup yang layak kembali."
+  },
+  // --- FAUNA SUMATERA ---
+  {
+    kat: "biota",
+    text: "Harimau Sumatera (Panthera tigris sumatrae) memiliki status konservasi ...",
+    opts: ["Rentan (Vulnerable)", "Hampir Terancam (Near Threatened)", "Kritis (Critically Endangered)", "Tidak Terancam (Least Concern)"],
+    ans: 2,
+    exp: "Harimau Sumatera berstatus Kritis (Critically Endangered) menurut IUCN akibat perburuan dan deforestasi."
+  },
+  {
+    kat: "biota",
+    text: "Orang Utan Sumatera memiliki nama ilmiah ...",
+    opts: ["Pongo pygmaeus", "Pongo abelii", "Panthera tigris sumatrae", "Elephas maximus sumatranus"],
+    ans: 1,
+    exp: "Orang Utan Sumatera bernama ilmiah Pongo abelii, berbeda dengan Orang Utan Kalimantan (Pongo pygmaeus)."
+  },
+  {
+    kat: "biota",
+    text: "Badak Sumatera adalah satu-satunya badak di dunia yang memiliki ...",
+    opts: ["Satu cula besar", "Dua cula dan tubuh berbulu", "Kulit berlipat seperti perisai", "Warna putih di seluruh tubuh"],
+    ans: 1,
+    exp: "Badak Sumatera (Dicerorhinus sumatrensis) memiliki dua cula kecil dan tubuh ditutupi rambut kasar, menjadikannya unik di antara spesies badak."
+  },
+  {
+    kat: "biota",
+    text: "Gajah Sumatera (Elephas maximus sumatranus) berperan penting dalam ekosistem sebagai ...",
+    opts: ["Predator puncak", "Penyebar biji dan pembuka jalur hutan", "Pengendali populasi serangga", "Penyaring air sungai"],
+    ans: 1,
+    exp: "Gajah Sumatera menyebarkan biji melalui kotorannya dan membuka jalur di hutan, sehingga membantu regenerasi vegetasi hutan."
+  },
+  {
+    kat: "biota",
+    text: "Monyet Kedih (Presbytis thomasi) endemik dari wilayah ...",
+    opts: ["Kalimantan Timur", "Papua Barat", "Sulawesi Utara", "Aceh dan Sumatera Utara"],
+    ans: 3,
+    exp: "Monyet Kedih adalah primata endemik Sumatra bagian utara, terutama di wilayah Aceh dan Sumatera Utara."
+  },
+  // --- FLORA SUMATERA ---
+  {
+    kat: "biota",
+    text: "Rafflesia dikenal sebagai tanaman parasit karena ...",
+    opts: ["Memiliki daun sangat lebar", "Hidup menempel pada akar inang tanpa daun, batang, atau akar sendiri", "Tumbuh di air", "Menghasilkan racun mematikan"],
+    ans: 1,
+    exp: "Rafflesia tidak memiliki daun, batang, atau akar yang jelas dan sepenuhnya bergantung pada inang Tetrastigma untuk bertahan hidup."
+  },
+  {
+    kat: "biota",
+    text: "Anggrek Tien tumbuh dengan cara menempel pada pohon menggunakan ...",
+    opts: ["Sulur panjang", "Akar udara", "Benang sari", "Rambut akar bawah tanah"],
+    ans: 1,
+    exp: "Anggrek Tien adalah tanaman epifit yang menggunakan akar udara untuk menempel pada pohon inang di hutan tropis Sumatera."
+  },
+  // --- FAUNA KALIMANTAN ---
+  {
+    kat: "biota",
+    text: "Pesut Mahakam (Orcaella brevirostris) adalah mamalia air yang hidup di ...",
+    opts: ["Laut Selatan Jawa", "Sungai Mahakam, Kalimantan Timur", "Danau Toba, Sumatera Utara", "Selat Sunda"],
+    ans: 1,
+    exp: "Pesut Mahakam adalah lumba-lumba air tawar yang hanya ditemukan di Sungai Mahakam, Kalimantan Timur, dan berstatus Kritis (Critically Endangered)."
+  },
+  {
+    kat: "biota",
+    text: "Bekantan (Nasalis larvatus) dikenal dengan ciri fisik yang sangat khas yaitu ...",
+    opts: ["Bulu hitam pekat dan jambul di kepala", "Hidung panjang pada jantan dewasa", "Tanduk melengkung di kepala", "Mata besar seperti piring"],
+    ans: 1,
+    exp: "Bekantan dikenal dengan hidung panjang khas yang dimiliki jantan dewasa, menjadikannya primata yang mudah dikenali."
+  },
+  {
+    kat: "biota",
+    text: "Kucing Merah Kalimantan (Catopuma badia) berstatus ...",
+    opts: ["Least Concern", "Vulnerable", "Endangered (Terancam Punah)", "Near Threatened"],
+    ans: 2,
+    exp: "Kucing Merah Kalimantan berstatus Endangered (Terancam Punah) menurut IUCN karena populasinya sangat kecil dan habitatnya terus berkurang."
+  },
+  // --- FLORA KALIMANTAN ---
+  {
+    kat: "biota",
+    text: "Kantong Semar (Nepenthes) mendapatkan nutrisi dengan cara ...",
+    opts: ["Berfotosintesis sangat cepat", "Menyerap mineral dari tanah subur", "Mencerna serangga yang terperangkap dalam kantongnya", "Menyerap air hujan lewat daun"],
+    ans: 2,
+    exp: "Kantong Semar adalah tanaman karnivora yang menggunakan cairan enzim dalam kantongnya untuk mencerna serangga sebagai sumber nitrogen."
+  },
+  {
+    kat: "biota",
+    text: "Pohon Tengkawang (Shorea spp.) khas Kalimantan menghasilkan ...",
+    opts: ["Kayu hitam ebony", "Minyak nabati bernilai tinggi dari bijinya", "Getah karet alam", "Buah durian hutan"],
+    ans: 1,
+    exp: "Tengkawang menghasilkan minyak nabati (minyak tengkawang) dari bijinya yang memiliki nilai ekonomi dan ekologis tinggi."
+  },
+  // --- FAUNA JAWA ---
+  {
+    kat: "biota",
+    text: "Badak Jawa (Rhinoceros sondaicus) berbeda dari Badak Sumatera karena ...",
+    opts: ["Memiliki dua cula dan tubuh berbulu", "Hanya memiliki satu cula kecil dan tidak berbulu", "Hidup di hutan pegunungan tinggi", "Berwarna putih dan sangat besar"],
+    ans: 1,
+    exp: "Badak Jawa hanya memiliki satu cula kecil dan kulit berlipat menyerupai perisai, berbeda dari Badak Sumatera yang memiliki dua cula dan berbulu."
+  },
+  {
+    kat: "biota",
+    text: "Elang Jawa (Nisaetus bartelsi) dikenal sebagai simbol nasional karena ...",
+    opts: ["Merupakan burung terbesar di dunia", "Dijadikan inspirasi lambang negara Garuda Pancasila", "Dapat terbang paling cepat di Indonesia", "Merupakan satu-satunya elang di Asia"],
+    ans: 1,
+    exp: "Elang Jawa diyakini menjadi inspirasi lambang negara Indonesia, Garuda Pancasila, dan menjadi satwa identitas nasional."
+  },
+  {
+    kat: "biota",
+    text: "Owa Jawa (Hylobates moloch) bergerak di antara pepohonan menggunakan ...",
+    opts: ["Sayap yang kuat", "Lengan panjang untuk bergelantungan", "Ekor prehensil yang kuat", "Kaki belakang yang sangat kuat"],
+    ans: 1,
+    exp: "Owa Jawa memiliki lengan sangat panjang yang memungkinkannya bergelantungan dan bergerak lincah dari satu cabang ke cabang lain."
+  },
+  // --- FLORA JAWA ---
+  {
+    kat: "biota",
+    text: "Edelweis Jawa (Anaphalis javanica) tumbuh di ketinggian ...",
+    opts: ["0–500 meter di daerah pantai", "500–1.000 meter di lereng bawah", "Sekitar 1.800–3.000 meter di pegunungan", "Di bawah laut pada kedalaman tertentu"],
+    ans: 2,
+    exp: "Edelweis Jawa tumbuh di pegunungan Jawa pada ketinggian sekitar 1.800–3.000 meter dengan tanah berpasir atau berbatu dan suhu sejuk."
+  },
+  {
+    kat: "biota",
+    text: "Kokoleceran adalah flora endemik yang menjadi identitas Provinsi ...",
+    opts: ["Jawa Barat", "Jawa Tengah", "Banten", "DI Yogyakarta"],
+    ans: 2,
+    exp: "Kokoleceran endemik Banten, terutama di Taman Nasional Ujung Kulon, dan dijadikan flora identitas Provinsi Banten."
+  },
+  // --- FAUNA SULAWESI ---
+  {
+    kat: "biota",
+    text: "Burung Maleo (Macrocephalon maleo) memiliki perilaku unik dalam berkembang biak, yaitu ...",
+    opts: ["Mengerami telurnya selama 3 bulan", "Mengubur telurnya di pasir pantai atau tanah vulkanik agar menetas dengan panas alami", "Menitipkan telurnya ke sarang burung lain", "Melahirkan anak seperti mamalia"],
+    ans: 1,
+    exp: "Burung Maleo mengubur telurnya di pasir pantai atau tanah vulkanik untuk memanfaatkan panas alami, tanpa dierami induknya."
+  },
+  {
+    kat: "biota",
+    text: "Tarsius adalah primata yang aktif pada malam hari dan dikenal dengan ...",
+    opts: ["Hidung panjang yang khas", "Mata sangat besar yang hampir memenuhi wajah", "Warna bulu hitam pekat", "Tanduk kecil di atas kepala"],
+    ans: 1,
+    exp: "Tarsius memiliki mata yang sangat besar hampir memenuhi seluruh wajahnya, membantu penglihatannya di malam hari."
+  },
+  {
+    kat: "biota",
+    text: "Anoa adalah mamalia endemik Sulawesi yang termasuk keluarga ...",
+    opts: ["Kerbau (Bovidae)", "Rusa (Cervidae)", "Babi hutan (Suidae)", "Kuda (Equidae)"],
     ans: 0,
-    exp: "Restorasi habitat bertujuan memperbaiki ekosistem yang rusak agar dapat kembali berfungsi."
+    exp: "Anoa (Bubalus spp.) termasuk keluarga Bovidae seperti kerbau, namun berukuran jauh lebih kecil sehingga disebut 'kerbau mini'."
   },
+  // --- FAUNA PAPUA ---
   {
     kat: "biota",
-    text: "Gajah termasuk kelompok ...",
-    opts: ["Pisces", "Aves", "Mammalia", "Reptilia"],
-    ans: 2,
-    exp: "Gajah menyusui anaknya sehingga termasuk mamalia."
-  },
-  {
-    kat: "biota",
-    text: "Hewan yang termasuk kelompok Aves adalah ...",
-    opts: ["Kucing", "Ayam", "Lele", "Katak"],
+    text: "Burung Cendrawasih dijuluki 'Bird of Paradise' karena ...",
+    opts: ["Dapat terbang paling tinggi di dunia", "Bulu indah berwarna cerah dan tarian kawin yang memukau", "Bertelur paling besar di antara semua burung", "Hidup paling lama di antara semua burung"],
     ans: 1,
-    exp: "Ayam merupakan salah satu jenis burung yang termasuk kelas Aves."
+    exp: "Cendrawasih dijuluki Bird of Paradise karena keindahan bulunya yang berwarna cerah dan tarian kawin yang sangat memukau."
   },
   {
     kat: "biota",
-    text: "Hiu termasuk kelompok ...",
-    opts: ["Reptilia", "Mammalia", "Pisces", "Mollusca"],
-    ans: 2,
-    exp: "Hiu adalah ikan yang bernapas dengan insang sehingga termasuk kelas Pisces."
-  },
-  {
-    kat: "biota",
-    text: "Buaya termasuk kelompok ...",
-    opts: ["Aves", "Reptilia", "Pisces", "Mollusca"],
+    text: "Kanguru Pohon (Dendrolagus) berbeda dari kanguru darat karena ...",
+    opts: ["Tidak memiliki kantung (marsupium)", "Tubuh lebih kompak dengan ekor panjang untuk keseimbangan di pohon", "Berukuran jauh lebih besar", "Hidup di air dan hutan"],
     ans: 1,
-    exp: "Buaya memiliki kulit bersisik dan berkembang biak dengan bertelur, ciri khas reptil."
+    exp: "Kanguru Pohon memiliki tubuh lebih kompak dan ekor panjang untuk keseimbangan di pohon, serta cakar kuat untuk memanjat."
   },
   {
     kat: "biota",
-    text: "Katak termasuk kelompok ...",
-    opts: ["Amphibia", "Pisces", "Reptilia", "Insecta"],
-    ans: 0,
-    exp: "Katak dapat hidup di dua alam, yaitu air dan darat, sehingga termasuk amfibi."
-  },
-  {
-    kat: "biota",
-    text: "Semut termasuk kelompok ...",
-    opts: ["Mollusca", "Insecta", "Pisces", "Mammalia"],
+    text: "Organisme yang hanya ditemukan di satu wilayah geografis tertentu di dunia disebut ...",
+    opts: ["Parasit", "Endemik", "Invasif", "Migran"],
     ans: 1,
-    exp: "Semut memiliki tubuh bersegmen dan enam kaki, ciri khas serangga (Insecta)."
+    exp: "Endemik berarti organisme tersebut hanya terdapat di daerah geografis tertentu dan tidak ditemukan secara alami di tempat lain."
   },
   {
     kat: "biota",
-    text: "Cumi-cumi termasuk kelompok ...",
-    opts: ["Arthropoda", "Mollusca", "Pisces", "Reptilia"],
+    text: "Menanam kembali hutan yang telah gundul disebut ...",
+    opts: ["Aforestasi", "Reboisasi", "Domestikasi", "Translokasi"],
     ans: 1,
-    exp: "Cumi-cumi merupakan hewan bertubuh lunak yang termasuk kelompok Mollusca."
-  },
-  {
-    kat: "biota",
-    text: "Bintang laut termasuk kelompok ...",
-    opts: ["Insecta", "Pisces", "Echinodermata", "Mammalia"],
-    ans: 2,
-    exp: "Echinodermata adalah kelompok hewan berkulit duri, termasuk bintang laut dan bulu babi."
-  },
-  {
-    kat: "biota",
-    text: "Kepiting termasuk ...",
-    opts: ["Amphibia", "Arthropoda", "Mollusca", "Aves"],
-    ans: 1,
-    exp: "Kepiting memiliki kaki berbuku-buku dan rangka luar, termasuk kelompok Arthropoda."
-  },
-  {
-    kat: "biota",
-    text: "Menanam kembali hutan yang gundul disebut ...",
-    opts: ["Aforestasi", "Reboisasi", "Edukasi", "Pemangkasan"],
-    ans: 1,
-    exp: "Reboisasi dilakukan untuk memulihkan kawasan hutan yang rusak atau gundul."
-  },
-  {
-    kat: "biota",
-    text: "Membuat hutan baru di lahan yang sebelumnya tidak berhutan disebut ...",
-    opts: ["Aforestasi", "Reboisasi", "Penangkaran", "Pemupukan"],
-    ans: 0,
-    exp: "Aforestasi adalah pembuatan hutan baru pada lahan yang sebelumnya tidak berhutan."
-  },
-  {
-    kat: "biota",
-    text: "Upaya menyimpan dan melestarikan tumbuhan langka dapat dilakukan melalui ...",
-    opts: ["Bank benih dan kebun raya", "Akuarium", "Kandang ternak", "Tempat pembuangan akhir"],
-    ans: 0,
-    exp: "Bank benih dan kebun raya digunakan untuk menjaga kelestarian berbagai jenis tumbuhan langka."
-  },
-  {
-    kat: "biota",
-    text: "Hewan yang terancam punah dan dilindungi di Indonesia adalah ...",
-    opts: ["Ayam kampung", "Harimau Sumatera", "Sapi", "Kambing"],
-    ans: 1,
-    exp: "Harimau Sumatera (Panthera tigris sumatrae) termasuk satwa langka yang dilindungi di Indonesia."
-  },
-  {
-    kat: "biota",
-    text: "Orangutan adalah satwa endemik yang berasal dari ...",
-    opts: ["Afrika", "Australia", "Kalimantan dan Sumatera", "Papua Nugini"],
-    ans: 2,
-    exp: "Orangutan hanya ditemukan di hutan hujan tropis Kalimantan dan Sumatera."
-  },
-  {
-    kat: "biota",
-    text: "Tempat perlindungan satwa liar yang dilindungi oleh negara disebut ...",
-    opts: ["Kebun raya", "Suaka margasatwa", "Taman bermain", "Hutan produksi"],
-    ans: 1,
-    exp: "Suaka margasatwa adalah kawasan konservasi yang khusus diperuntukkan bagi perlindungan satwa liar."
-  },
-  {
-    kat: "biota",
-    text: "Proses perpindahan hewan dari satu tempat ke tempat lain untuk tujuan konservasi disebut ...",
-    opts: ["Migrasi", "Translokasi", "Hibernasi", "Domestikasi"],
-    ans: 1,
-    exp: "Translokasi adalah pemindahan hewan ke habitat baru yang lebih aman untuk mendukung kelestariannya."
-  },
-  {
-    kat: "biota",
-    text: "Hewan yang hidup di dua alam (air dan darat) disebut ...",
-    opts: ["Reptil", "Amfibi", "Mamalia", "Aves"],
-    ans: 1,
-    exp: "Amfibi berasal dari bahasa Yunani yang berarti 'dua kehidupan', yaitu di air dan darat."
-  },
-  {
-    kat: "biota",
-    text: "Salah satu ciri hewan mamalia adalah ...",
-    opts: ["Bernapas dengan insang", "Menyusui anaknya", "Berkembang biak dengan bertelur saja", "Berdarah dingin"],
-    ans: 1,
-    exp: "Ciri utama mamalia adalah menyusui anaknya dengan air susu dari kelenjar susu."
-  },
-  {
-    kat: "biota",
-    text: "Komodo merupakan hewan endemik yang hanya ada di ...",
-    opts: ["Jawa", "Bali", "Pulau Komodo dan sekitarnya", "Sulawesi"],
-    ans: 2,
-    exp: "Komodo (Varanus komodoensis) hanya ditemukan di Pulau Komodo, Rinca, dan beberapa pulau kecil sekitarnya."
-  },
-  {
-    kat: "biota",
-    text: "Burung Cendrawasih adalah satwa endemik dari ...",
-    opts: ["Sumatera", "Kalimantan", "Papua", "Jawa"],
-    ans: 2,
-    exp: "Burung Cendrawasih dikenal sebagai 'burung surga' dan merupakan fauna khas Papua."
-  },
-  {
-    kat: "biota",
-    text: "Organisme yang hanya ditemukan di satu wilayah tertentu di dunia disebut ...",
-    opts: ["Parasit", "Endemik", "Simbiosis", "Predator"],
-    ans: 1,
-    exp: "Endemik berarti organisme tersebut hanya terdapat di daerah geografis tertentu dan tidak ditemukan di tempat lain."
-  },
-  {
-    kat: "biota",
-    text: "Status konservasi hewan yang populasinya sangat kritis dan hampir punah adalah ...",
-    opts: ["Least Concern", "Vulnerable", "Critically Endangered", "Near Threatened"],
-    ans: 2,
-    exp: "Critically Endangered (CR) adalah status IUCN untuk spesies yang menghadapi risiko kepunahan sangat tinggi."
-  },
-  {
-    kat: "biota",
-    text: "Taman Nasional Komodo berfungsi untuk melindungi ...",
-    opts: ["Harimau Sumatera", "Komodo dan ekosistemnya", "Orangutan", "Gajah Sumatera"],
-    ans: 1,
-    exp: "Taman Nasional Komodo ditetapkan UNESCO sebagai Situs Warisan Dunia untuk melindungi Komodo dan ekosistem sekitarnya."
-  },
-  {
-    kat: "biota",
-    text: "Laut Indonesia menyimpan keanekaragaman hayati yang sangat tinggi karena berada di kawasan ...",
-    opts: ["Coral Triangle", "Amazon Basin", "Sahara Belt", "Arctic Zone"],
-    ans: 0,
-    exp: "Indonesia berada di pusat Coral Triangle, kawasan dengan keanekaragaman terumbu karang dan biota laut tertinggi di dunia."
-  },
-  {
-    kat: "biota",
-    text: "Hubungan antara dua makhluk hidup yang saling menguntungkan disebut ...",
-    opts: ["Parasitisme", "Komensalisme", "Mutualisme", "Predasi"],
-    ans: 2,
-    exp: "Mutualisme adalah hubungan simbiosis di mana kedua pihak saling mendapatkan manfaat."
+    exp: "Reboisasi adalah kegiatan menanam kembali pohon di kawasan hutan yang telah gundul untuk memulihkan ekosistem."
   }
 ];
 
 // ── BANK SOAL: SAMPAH (30 soal) ───────────────────────────────────────────
 const quizBankSampah = [
+  // --- JENIS SAMPAH ---
   {
     kat: "sampah",
-    text: "Sampah yang mudah terurai secara alami disebut ...",
-    opts: ["Sampah anorganik", "Sampah B3", "Sampah organik", "Sampah elektronik"],
+    text: "Berdasarkan materi TeraNusa, sampah terbagi menjadi berapa jenis utama?",
+    opts: ["2 jenis", "3 jenis", "5 jenis", "7 jenis"],
     ans: 2,
-    exp: "Sampah organik berasal dari makhluk hidup dan mudah membusuk secara alami."
+    exp: "Sampah terbagi menjadi 5 jenis utama: organik, kertas, anorganik, B3 (Bahan Berbahaya dan Beracun), dan residu."
   },
   {
     kat: "sampah",
-    text: "Contoh sampah organik adalah ...",
-    opts: ["Botol plastik", "Kaleng minuman", "Sisa makanan", "Kaca"],
+    text: "Yang termasuk sampah organik adalah ...",
+    opts: ["Botol plastik dan kaca", "Sisa makanan, ranting, dan kotoran hewan", "Baterai dan pestisida", "Popok sekali pakai dan puntung rokok"],
+    ans: 1,
+    exp: "Sampah organik adalah sampah yang mudah terurai seperti sisa makanan, ranting, dan kotoran hewan."
+  },
+  {
+    kat: "sampah",
+    text: "Sampah kertas seperti buku, karton, dan kardus termasuk jenis sampah yang ...",
+    opts: ["Tidak bisa terurai", "Mudah didaur ulang dan terurai", "Termasuk B3", "Tidak bisa didaur ulang"],
+    ans: 1,
+    exp: "Sampah kertas (buku, karton, kardus) termasuk sampah padat yang mudah didaur ulang dan dapat terurai secara alami."
+  },
+  {
+    kat: "sampah",
+    text: "Plastik dan kaca termasuk jenis sampah ...",
+    opts: ["Organik", "Kertas", "Anorganik", "Residu"],
     ans: 2,
-    exp: "Sisa makanan termasuk sampah organik karena dapat terurai secara alami."
+    exp: "Plastik dan kaca termasuk sampah anorganik yang sulit terurai secara alami di lingkungan."
   },
   {
     kat: "sampah",
-    text: "Contoh sampah anorganik adalah ...",
-    opts: ["Daun kering", "Kulit buah", "Botol plastik", "Sisa sayuran"],
+    text: "Baterai, pestisida, dan limbah medis termasuk jenis sampah ...",
+    opts: ["Organik", "Kertas", "Anorganik", "B3 (Bahan Berbahaya dan Beracun)"],
+    ans: 3,
+    exp: "Baterai, pestisida, dan limbah medis termasuk sampah B3 karena mengandung bahan berbahaya dan beracun bagi lingkungan."
+  },
+  {
+    kat: "sampah",
+    text: "Popok sekali pakai dan puntung rokok termasuk jenis sampah ...",
+    opts: ["Organik", "B3", "Residu", "Kertas"],
     ans: 2,
-    exp: "Plastik sulit terurai secara alami sehingga termasuk sampah anorganik."
+    exp: "Popok sekali pakai dan puntung rokok termasuk sampah residu yang tidak dapat didaur ulang."
+  },
+  // --- WAKTU TERURAI ---
+  {
+    kat: "sampah",
+    text: "Berapa lama waktu yang dibutuhkan sisa makanan dan daun kering untuk terurai?",
+    opts: ["2–4 hari", "2–4 minggu", "2–4 bulan", "2–4 tahun"],
+    ans: 1,
+    exp: "Sampah organik seperti sisa makanan dan daun kering membutuhkan waktu 2–4 minggu untuk terurai secara alami."
   },
   {
     kat: "sampah",
-    text: "Baterai bekas termasuk ...",
-    opts: ["Sampah organik", "Sampah B3", "Sampah rumah tangga biasa", "Sampah kompos"],
+    text: "Kertas seperti koran dan kardus membutuhkan waktu berapa lama untuk terurai?",
+    opts: ["2–4 minggu", "2–5 bulan", "5–10 tahun", "100 tahun lebih"],
     ans: 1,
-    exp: "Baterai mengandung bahan berbahaya dan beracun (B3) yang perlu penanganan khusus."
+    exp: "Sampah kertas seperti koran dan kardus membutuhkan waktu sekitar 2–5 bulan untuk terurai."
   },
   {
     kat: "sampah",
-    text: "Reduce dalam konsep 3R berarti ...",
-    opts: ["Mengolah sampah", "Mengurangi penggunaan barang yang menghasilkan sampah", "Mengubur sampah", "Membakar sampah"],
-    ans: 1,
-    exp: "Reduce bertujuan mengurangi jumlah sampah yang dihasilkan sejak awal."
+    text: "Kantong plastik membutuhkan waktu sangat lama untuk terurai, yaitu ...",
+    opts: ["10–50 tahun", "50–100 tahun", "100–1.000 tahun", "Tidak terurai sama sekali"],
+    ans: 2,
+    exp: "Kantong plastik membutuhkan waktu 100 hingga 1.000 tahun untuk terurai, menjadikannya salah satu sampah paling berbahaya bagi lingkungan."
   },
   {
     kat: "sampah",
-    text: "Reuse berarti ...",
-    opts: ["Mengurangi penggunaan barang", "Menggunakan kembali barang yang masih layak pakai", "Membakar sampah", "Mengumpulkan sampah"],
+    text: "Jenis sampah yang praktis tidak dapat terurai di alam adalah ...",
+    opts: ["Daun kering", "Kardus", "Kain katun", "Styrofoam dan kaca"],
+    ans: 3,
+    exp: "Styrofoam dan kaca praktis tidak dapat terurai di alam. Kaca hanya bisa pecah menjadi serpihan lebih kecil, sedangkan Styrofoam tetap bertahan hampir selamanya."
+  },
+  {
+    kat: "sampah",
+    text: "Popok sekali pakai termasuk sampah residu yang membutuhkan waktu terurai sekitar ...",
+    opts: ["5–10 tahun", "50 tahun", "±500 tahun", "1.000 tahun"],
+    ans: 2,
+    exp: "Popok sekali pakai membutuhkan waktu sekitar 500 tahun untuk terurai karena mengandung bahan sintetis yang sangat sulit terurai."
+  },
+  // --- DAMPAK SAMPAH ---
+  {
+    kat: "sampah",
+    text: "Sampah organik yang membusuk dapat menghasilkan gas berbahaya berupa ...",
+    opts: ["Oksigen", "Gas metana", "Karbon dioksida murni", "Nitrogen"],
     ans: 1,
-    exp: "Reuse berarti memanfaatkan kembali barang yang masih layak agar tidak menjadi sampah."
+    exp: "Sampah organik yang membusuk menghasilkan gas metana yang berbau dan berbahaya, serta berkontribusi pada efek rumah kaca."
+  },
+  {
+    kat: "sampah",
+    text: "Dampak kesehatan dari sampah organik yang tidak dikelola adalah ...",
+    opts: ["Menyebabkan kanker secara langsung", "Menjadi sarang lalat dan tikus pemicu penyakit diare, malaria, leptospirosis", "Merusak lapisan ozon", "Menyebabkan gempa bumi"],
+    ans: 1,
+    exp: "Sampah organik yang menumpuk menjadi sarang lalat, tikus, dan nyamuk yang dapat memicu penyakit diare, malaria, dan leptospirosis."
+  },
+  {
+    kat: "sampah",
+    text: "Mikroplastik berbahaya bagi kesehatan manusia karena ...",
+    opts: ["Menyebabkan banjir", "Masuk ke rantai makanan dan berisiko mengganggu hormon", "Menghalangi sinar matahari", "Membuat tanah menjadi subur"],
+    ans: 1,
+    exp: "Mikroplastik dari sampah plastik yang terurai masuk ke rantai makanan melalui air dan makanan, berisiko mengganggu sistem hormon manusia."
+  },
+  {
+    kat: "sampah",
+    text: "Sampah B3 seperti baterai dan pestisida berbahaya karena ...",
+    opts: ["Beratnya besar sehingga merusak jalan", "Mengandung logam berat dan zat kimia beracun yang mencemari tanah dan air", "Berbau sangat menyengat", "Mudah meledak di udara terbuka"],
+    ans: 1,
+    exp: "Sampah B3 mengandung logam berat dan zat kimia beracun yang dapat mencemari tanah dan air, serta menyebabkan keracunan dan kanker."
+  },
+  // --- PRINSIP 3R ---
+  {
+    kat: "sampah",
+    text: "Reduce dalam pengelolaan sampah berarti ...",
+    opts: ["Mendaur ulang sampah menjadi produk baru", "Menggunakan kembali barang bekas", "Mengurangi penggunaan barang sekali pakai sejak awal", "Membakar sampah agar volumenya berkurang"],
+    ans: 2,
+    exp: "Reduce berarti mengurangi penggunaan barang sekali pakai (seperti plastik) sehingga jumlah sampah yang dihasilkan berkurang dari sumbernya."
+  },
+  {
+    kat: "sampah",
+    text: "Contoh penerapan Reuse dalam kehidupan sehari-hari adalah ...",
+    opts: ["Membakar sampah plastik", "Membuang botol minum setelah dipakai", "Membawa tumbler atau tas belanja sendiri yang bisa dipakai berulang", "Mengubur sampah di halaman"],
+    ans: 2,
+    exp: "Reuse berarti memanfaatkan kembali barang yang masih layak pakai, seperti membawa tumbler atau tas belanja sendiri untuk mengurangi sampah."
   },
   {
     kat: "sampah",
     text: "Recycle berarti ...",
-    opts: ["Mendaur ulang sampah menjadi produk baru", "Menyimpan sampah", "Membuang sampah ke sungai", "Membakar sampah"],
-    ans: 0,
-    exp: "Recycle mengubah sampah menjadi barang baru yang bermanfaat melalui proses daur ulang."
-  },
-  {
-    kat: "sampah",
-    text: "Tempat untuk mengumpulkan sampah yang dapat didaur ulang disebut ...",
-    opts: ["TPA", "Bank sampah", "Selokan", "Gudang"],
-    ans: 1,
-    exp: "Bank sampah membantu pengelolaan sampah daur ulang yang bernilai ekonomis."
-  },
-  {
-    kat: "sampah",
-    text: "Pengolahan sampah organik menjadi pupuk disebut ...",
-    opts: ["Daur ulang", "Penghancuran", "Komposting", "Pembakaran"],
+    opts: ["Mengurangi penggunaan barang", "Menggunakan kembali barang bekas", "Mendaur ulang sampah menjadi produk baru", "Membakar sampah dengan teknologi tinggi"],
     ans: 2,
-    exp: "Komposting menghasilkan pupuk kompos dari bahan organik yang terurai."
+    exp: "Recycle adalah proses mendaur ulang sampah menjadi produk baru, misalnya botol plastik menjadi serat kain."
   },
   {
     kat: "sampah",
-    text: "Dampak membuang sampah ke sungai adalah ...",
-    opts: ["Air menjadi bersih", "Mencegah banjir", "Menyebabkan pencemaran dan banjir", "Menambah ikan"],
-    ans: 2,
-    exp: "Sampah dapat menyumbat aliran air dan mencemari sungai sehingga menyebabkan banjir."
-  },
-  {
-    kat: "sampah",
-    text: "Sampah yang paling lama terurai adalah ...",
-    opts: ["Kulit pisang", "Daun kering", "Plastik", "Sisa makanan"],
-    ans: 2,
-    exp: "Plastik membutuhkan waktu ratusan tahun untuk terurai di alam."
-  },
-  {
-    kat: "sampah",
-    text: "Tujuan pemilahan sampah adalah ...",
-    opts: ["Memperbanyak sampah", "Memudahkan pengelolaan dan daur ulang", "Menambah pencemaran", "Mengotori lingkungan"],
+    text: "Composting adalah metode pengelolaan sampah yang mengubah ...",
+    opts: ["Plastik menjadi bahan bakar", "Sampah organik seperti sisa makanan dan daun menjadi pupuk kompos", "Kertas bekas menjadi papan kayu", "Logam bekas menjadi perhiasan"],
     ans: 1,
-    exp: "Sampah yang dipilah sejak awal lebih mudah diolah dan didaur ulang."
+    exp: "Composting mengolah sampah organik (sisa makanan, daun) menjadi pupuk kompos yang menyuburkan tanah."
   },
   {
     kat: "sampah",
-    text: "Sampah elektronik termasuk ...",
-    opts: ["Sampah organik", "Sampah cair", "Sampah anorganik yang perlu penanganan khusus", "Kompos"],
+    text: "Bank sampah berfungsi untuk ...",
+    opts: ["Menyimpan uang milik warga", "Warga menabung sampah anorganik untuk ditukar dengan uang atau barang", "Membakar sampah secara terpusat", "Menyimpan sampah B3 selamanya"],
+    ans: 1,
+    exp: "Bank sampah adalah sistem di mana warga mengumpulkan sampah anorganik bernilai ekonomis untuk ditabung dan ditukar dengan uang atau barang."
+  },
+  // --- METODE PENGELOLAAN ---
+  {
+    kat: "sampah",
+    text: "Metode pengelolaan sampah yang mengubah sampah menjadi energi listrik atau bahan bakar disebut ...",
+    opts: ["Composting", "Sanitary Landfill", "Waste to Energy", "Bank Sampah"],
     ans: 2,
-    exp: "Perangkat elektronik mengandung bahan berbahaya yang perlu dikelola secara khusus."
+    exp: "Waste to Energy adalah metode mengubah sampah menjadi energi listrik atau bahan bakar yang dapat dimanfaatkan kembali."
   },
   {
     kat: "sampah",
-    text: "Salah satu cara mengurangi sampah plastik adalah ...",
-    opts: ["Menggunakan kantong plastik sekali pakai", "Membakar plastik", "Membawa tas belanja sendiri", "Membuang plastik ke laut"],
+    text: "Sanitary Landfill berbeda dari tempat pembuangan biasa karena ...",
+    opts: ["Sampah dibakar semuanya", "Dilengkapi sistem lapisan tanah agar tidak mencemari air tanah", "Sampah disortir secara otomatis dengan mesin", "Semua sampah langsung didaur ulang"],
+    ans: 1,
+    exp: "Sanitary Landfill adalah TPA dengan sistem lapisan tanah khusus yang mencegah cairan sampah (lindi) mencemari air tanah di sekitarnya."
+  },
+  {
+    kat: "sampah",
+    text: "Incinerasi adalah metode pengelolaan sampah dengan cara ...",
+    opts: ["Mengubur sampah dalam tanah", "Membakar sampah dengan teknologi tinggi sambil mengendalikan polusi", "Mendaur ulang plastik menjadi pelet", "Mengomposter semua jenis sampah"],
+    ans: 1,
+    exp: "Incinerasi membakar sampah dengan teknologi tinggi untuk mengurangi volume sampah, sambil mengendalikan emisi polutan yang dihasilkan."
+  },
+  {
+    kat: "sampah",
+    text: "Langkah pertama yang paling penting dalam pengelolaan sampah rumah tangga adalah ...",
+    opts: ["Langsung membuang ke TPA", "Membakar di halaman", "Pemilahan sampah sejak dari rumah menjadi organik, anorganik, B3, dan residu", "Mengumpulkan semua jenis sampah dalam satu wadah"],
     ans: 2,
-    exp: "Tas belanja yang dapat digunakan berulang kali efektif mengurangi sampah plastik."
+    exp: "Pemilahan sampah sejak dari sumber (rumah tangga) adalah langkah pertama dan paling krusial agar sampah dapat dikelola dengan tepat."
   },
   {
     kat: "sampah",
-    text: "Manfaat pengelolaan sampah yang baik adalah ...",
-    opts: ["Lingkungan menjadi kotor", "Menimbulkan penyakit", "Menjaga kebersihan dan kesehatan lingkungan", "Menambah pencemaran"],
+    text: "Gas metana yang dihasilkan dari penguraian sampah organik dapat dimanfaatkan sebagai ...",
+    opts: ["Bahan bangunan", "Sumber energi biogas", "Pupuk kimia", "Pewarna alami"],
+    ans: 1,
+    exp: "Gas metana dari dekomposisi sampah organik dapat dikumpulkan dan digunakan sebagai sumber energi biogas yang ramah lingkungan."
+  },
+  {
+    kat: "sampah",
+    text: "Untuk mencegah sampah organik di dalam komposter menghasilkan gas metana berbau, yang harus dilakukan adalah ...",
+    opts: ["Menutup rapat tanpa lubang udara sama sekali", "Memastikan ada aliran udara yang cukup dan sering dibalik", "Menambahkan air sebanyak mungkin", "Mencampurkan plastik ke dalamnya"],
+    ans: 1,
+    exp: "Komposter harus memiliki aliran udara yang cukup dan rutin dibalik (aerasi) agar proses pembusukan alami berjalan optimal tanpa menghasilkan gas metana berlebih."
+  },
+  {
+    kat: "sampah",
+    text: "Puntung rokok termasuk sampah residu yang berbahaya karena ...",
+    opts: ["Beratnya sangat besar", "Mengandung zat beracun dan sulit terurai di lingkungan", "Mudah terbakar secara spontan", "Menarik hewan liar ke pemukiman"],
+    ans: 1,
+    exp: "Puntung rokok mengandung zat beracun dari tembakau dan filter plastik yang sangat sulit terurai, sehingga mencemari lingkungan dalam jangka panjang."
+  },
+  {
+    kat: "sampah",
+    text: "Tempat sampah minimal harus dibagi menjadi berapa wadah terpisah menurut prinsip dasar pemeliharaan sampah?",
+    opts: ["Satu wadah untuk semua jenis", "Dua wadah: sampah basah dan kering", "Minimal tiga: Organik, Anorganik, dan B3/Residu", "Lima wadah untuk setiap jenis"],
     ans: 2,
-    exp: "Pengelolaan sampah yang baik menciptakan lingkungan yang sehat dan nyaman untuk semua."
+    exp: "Prinsip dasar pemeliharaan sampah mengharuskan minimal tiga wadah terpisah: Organik, Anorganik, dan B3/Residu agar pengelolaan lebih efektif."
   },
   {
     kat: "sampah",
-    text: "Sampah B3 yang berasal dari rumah sakit contohnya adalah ...",
-    opts: ["Sisa nasi", "Jarum suntik bekas", "Kardus", "Botol air minum"],
+    text: "Sampah anorganik seperti botol dan kaleng sebaiknya dibilas dan dikeringkan sebelum dibuang karena ...",
+    opts: ["Agar lebih mudah dibakar", "Agar tidak berbau dan tidak mengotori sampah lain", "Supaya lebih berat dan mudah ditimbang", "Agar dapat terurai lebih cepat"],
     ans: 1,
-    exp: "Jarum suntik bekas termasuk limbah medis yang berbahaya dan harus dikelola secara khusus."
+    exp: "Sampah anorganik perlu dibilas dan dikeringkan agar tidak berbau busuk dan tidak mengotori sampah lain di tempat penampungan."
   },
   {
     kat: "sampah",
-    text: "Gas metana yang dihasilkan dari tumpukan sampah organik dapat dimanfaatkan sebagai ...",
-    opts: ["Bahan bangunan", "Bahan bakar biogas", "Pupuk kimia", "Cat tembok"],
+    text: "Dampak membuang sampah plastik ke laut bagi satwa adalah ...",
+    opts: ["Menjadi makanan bergizi bagi ikan", "Plastik termakan satwa laut seperti penyu dan ikan sehingga membahayakan hidupnya", "Membuat laut lebih bersih", "Menjadi tempat berlindung hewan kecil"],
     ans: 1,
-    exp: "Gas metana dari dekomposisi sampah organik dapat dikumpulkan dan digunakan sebagai sumber energi biogas."
-  },
-  {
-    kat: "sampah",
-    text: "Warna tempat sampah yang digunakan untuk sampah organik umumnya adalah ...",
-    opts: ["Merah", "Kuning", "Hijau", "Biru"],
-    ans: 2,
-    exp: "Tempat sampah hijau umumnya digunakan untuk menampung sampah organik yang mudah terurai."
-  },
-  {
-    kat: "sampah",
-    text: "Plastik yang dibuang ke laut mengancam kehidupan ...",
-    opts: ["Pohon bakau", "Hewan laut", "Awan", "Tanah pertanian"],
-    ans: 1,
-    exp: "Plastik di laut dapat termakan oleh hewan laut seperti penyu dan ikan sehingga membahayakan hidupnya."
-  },
-  {
-    kat: "sampah",
-    text: "Prinsip zero waste bertujuan untuk ...",
-    opts: ["Memproduksi lebih banyak sampah", "Mengurangi sampah hingga seminimal mungkin", "Membakar semua sampah", "Mengimpor sampah dari luar negeri"],
-    ans: 1,
-    exp: "Zero waste adalah gaya hidup yang berupaya mengurangi jumlah sampah yang dibuang ke lingkungan."
-  },
-  {
-    kat: "sampah",
-    text: "Apa yang dimaksud dengan upcycling?",
-    opts: ["Membakar sampah", "Mengubur sampah", "Mengubah sampah menjadi produk bernilai lebih tinggi", "Mengangkut sampah ke TPA"],
-    ans: 2,
-    exp: "Upcycling adalah proses mengubah sampah atau barang bekas menjadi produk baru yang bernilai lebih tinggi."
-  },
-  {
-    kat: "sampah",
-    text: "Sampah yang dihasilkan dari kegiatan pertanian disebut ...",
-    opts: ["Limbah industri", "Sampah domestik", "Limbah agraris", "Sampah B3"],
-    ans: 2,
-    exp: "Limbah agraris adalah sampah yang berasal dari kegiatan pertanian seperti sisa panen dan sekam padi."
-  },
-  {
-    kat: "sampah",
-    text: "Manfaat pupuk kompos dari sampah organik adalah ...",
-    opts: ["Merusak tanah", "Menyuburkan tanah dan tanaman", "Mencemari air tanah", "Mengurangi kadar oksigen"],
-    ans: 1,
-    exp: "Pupuk kompos meningkatkan kesuburan tanah secara alami dan ramah lingkungan."
-  },
-  {
-    kat: "sampah",
-    text: "TPA singkatan dari ...",
-    opts: ["Tempat Pembuangan Akhir", "Tempat Penampungan Air", "Taman Pemeliharaan Alam", "Tempat Pengolahan Anorganik"],
-    ans: 0,
-    exp: "TPA (Tempat Pembuangan Akhir) adalah lokasi akhir pembuangan dan pengolahan sampah."
-  },
-  {
-    kat: "sampah",
-    text: "Limbah cair berbahaya dari pabrik yang dibuang ke sungai dapat menyebabkan ...",
-    opts: ["Air menjadi lebih bersih", "Pencemaran air dan kematian biota sungai", "Pertumbuhan tanaman lebih subur", "Hujan lebih sering"],
-    ans: 1,
-    exp: "Limbah cair pabrik mengandung zat kimia berbahaya yang dapat mencemari air dan membunuh makhluk hidup di sungai."
-  },
-  {
-    kat: "sampah",
-    text: "Kegiatan membersihkan sampah di pantai secara bersama-sama disebut ...",
-    opts: ["Demonstrasi", "Beach cleanup", "Reforestasi", "Komposting"],
-    ans: 1,
-    exp: "Beach cleanup adalah kegiatan sukarela membersihkan sampah di pantai untuk menjaga kebersihan ekosistem laut."
-  },
-  {
-    kat: "sampah",
-    text: "Botol kaca bekas dapat dikurangi dampaknya dengan cara ...",
-    opts: ["Dibakar", "Dibuang ke sungai", "Digunakan kembali atau didaur ulang", "Dikubur di tanah"],
-    ans: 2,
-    exp: "Botol kaca dapat digunakan kembali atau didaur ulang menjadi produk kaca baru sehingga mengurangi limbah."
-  },
-  {
-    kat: "sampah",
-    text: "Sampah yang dihasilkan oleh kegiatan rumah tangga sehari-hari disebut ...",
-    opts: ["Limbah industri", "Sampah domestik", "Sampah B3", "Limbah nuklir"],
-    ans: 1,
-    exp: "Sampah domestik adalah sampah yang dihasilkan dari kegiatan sehari-hari di rumah tangga."
-  },
-  {
-    kat: "sampah",
-    text: "Cara paling tepat untuk membuang minyak goreng bekas adalah ...",
-    opts: ["Dibuang ke saluran air", "Dibakar langsung", "Dikumpulkan dan diserahkan ke pengepul daur ulang", "Dituang ke tanah"],
-    ans: 2,
-    exp: "Minyak goreng bekas sebaiknya dikumpulkan dan diserahkan ke pengepul yang dapat mendaur ulangnya menjadi biodiesel."
-  },
-  {
-    kat: "sampah",
-    text: "Gerakan mengurangi penggunaan sedotan plastik bertujuan untuk ...",
-    opts: ["Mengurangi pendapatan pabrik", "Melindungi satwa laut dari bahaya plastik", "Membuat minuman lebih mahal", "Mengurangi jumlah minuman"],
-    ans: 1,
-    exp: "Sedotan plastik sering berakhir di laut dan dapat melukai atau termakan satwa laut seperti penyu."
+    exp: "Plastik yang dibuang ke laut dapat termakan oleh satwa laut seperti penyu, ikan, dan burung laut sehingga menyebabkan kematian atau cedera serius."
   }
 ];
 
 // ── BANK SOAL: PEMELIHARAAN (30 soal) ─────────────────────────────────────
 const quizBankPemeliharaan = [
+  // --- PEMELIHARAAN VEGETASI: POHON ---
   {
     kat: "pemeliharaan",
-    text: "Makanan hewan peliharaan harus diberikan sesuai ...",
-    opts: ["Warna bulu", "Bentuk kandang", "Usia, ras, dan kesehatan", "Ukuran rumah"],
+    text: "Jarak tanam minimal antar pohon yang baik adalah ...",
+    opts: ["10–50 cm", "1–2 meter", "3–5 meter", "10 meter ke atas"],
     ans: 2,
-    exp: "Kebutuhan nutrisi hewan berbeda sesuai usia, ras, dan kondisi kesehatannya."
+    exp: "Pohon wajib diberi jarak minimal 3–5 meter antar pohon agar memiliki ruang tumbuh yang cukup untuk akar dan tajuknya."
   },
   {
     kat: "pemeliharaan",
-    text: "Vaksinasi pada hewan peliharaan dilakukan untuk ...",
-    opts: ["Menambah warna bulu", "Menjaga kesehatan dan mencegah penyakit", "Memperbesar tubuh", "Mengubah perilaku"],
+    text: "Tujuan pemangkasan (pruning) pada pohon adalah ...",
+    opts: ["Menghilangkan semua daun agar pohon istirahat", "Memotong cabang yang kering dan mati agar energi fokus ke pertumbuhan sehat", "Mempercepat berbuah dengan memotong batang utama", "Mengurangi tinggi pohon agar tidak terlalu besar"],
     ans: 1,
-    exp: "Vaksin membantu melindungi hewan dari berbagai penyakit menular."
+    exp: "Pemangkasan bertujuan memotong cabang kering dan mati sehingga energi pohon dapat difokuskan ke pertumbuhan bagian yang sehat."
   },
   {
     kat: "pemeliharaan",
-    text: "Filter pada akuarium harus bekerja selama ...",
-    opts: ["2 jam", "6 jam", "12 jam", "24 jam"],
-    ans: 3,
-    exp: "Filter membantu menjaga kualitas air dan menyaring amonia sepanjang waktu."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Fungsi aerasi pada akuarium adalah ...",
-    opts: ["Mengurangi cahaya", "Menambah oksigen dalam air", "Mengurangi makanan", "Mengganti warna air"],
+    text: "Jenis pupuk yang dianjurkan untuk pemeliharaan pohon adalah ...",
+    opts: ["Pupuk kimia sintetis konsentrasi tinggi", "Pupuk organik seperti kompos atau pupuk kandang", "Cairan pestisida yang diencerkan", "Garam dapur yang dilarutkan dalam air"],
     ans: 1,
-    exp: "Aerasi membantu menyediakan oksigen yang cukup bagi hewan akuatik."
+    exp: "Untuk pohon, disarankan memberikan pupuk organik seperti kompos atau pupuk kandang yang lebih ramah lingkungan dan aman bagi ekosistem sekitar."
   },
   {
     kat: "pemeliharaan",
-    text: "Makanan pokok yang umum diberikan pada unggas adalah ...",
-    opts: ["Daging mentah", "Rumput", "Biji-bijian", "Lumut"],
+    text: "Penyiraman pohon yang masih bibit sebaiknya dilakukan ...",
+    opts: ["Sekali sebulan saja", "Secara teratur hingga pohon tumbuh cukup kuat", "Tidak perlu disiram karena pohon tahan kering", "Hanya saat musim kemarau"],
+    ans: 1,
+    exp: "Bibit pohon perlu disiram secara teratur karena akarnya belum cukup kuat untuk menyerap air dari dalam tanah secara mandiri."
+  },
+  // --- PEMELIHARAAN VEGETASI: SEMAK ---
+  {
+    kat: "pemeliharaan",
+    text: "Perawatan utama dan paling penting untuk tanaman semak hias adalah ...",
+    opts: ["Pemberian pupuk kimia setiap hari", "Pemangkasan rutin", "Penggantian tanah setiap minggu", "Penyimpanan di dalam ruangan"],
+    ans: 1,
+    exp: "Pemangkasan rutin adalah kunci utama merawat semak karena menjaga bentuk, mendorong pertumbuhan tunas baru, dan menjaga kesehatan tanaman."
+  },
+  {
+    kat: "pemeliharaan",
+    text: "Sebagian besar tanaman semak hias membutuhkan ...",
+    opts: ["Tempat gelap tanpa cahaya", "Sinar matahari penuh", "Suhu di bawah 10 derajat Celcius", "Air laut untuk penyiraman"],
+    ans: 1,
+    exp: "Sebagian besar tanaman semak hias membutuhkan sinar matahari penuh untuk tumbuh optimal dan menghasilkan warna daun yang indah."
+  },
+  {
+    kat: "pemeliharaan",
+    text: "Frekuensi penyiraman tanaman semak yang ideal adalah ...",
+    opts: ["Sekali sebulan", "Sekali seminggu", "1–2 kali sehari tergantung cuaca", "Setiap 2 jam sekali"],
     ans: 2,
-    exp: "Biji-bijian merupakan sumber nutrisi utama bagi banyak jenis unggas."
+    exp: "Tanaman semak sebaiknya disiram 1–2 kali sehari, disesuaikan dengan kondisi cuaca agar tanah tidak terlalu kering atau terlalu basah."
   },
+  // --- PEMELIHARAAN VEGETASI: HERBA ---
   {
     kat: "pemeliharaan",
-    text: "Burung perlu dijemur untuk mendapatkan ...",
-    opts: ["Vitamin dan kesehatan tubuh", "Warna baru", "Suara keras", "Berat badan turun"],
-    ans: 0,
-    exp: "Sinar matahari membantu menjaga kesehatan unggas dan memperkuat tulang."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Pemeliharaan utama hewan eksotik adalah ...",
-    opts: ["Habitat sesuai suhu dan kelembapan", "Air hujan setiap hari", "Makanan manusia", "Kandang terbuka"],
-    ans: 0,
-    exp: "Hewan eksotik membutuhkan kondisi lingkungan yang mirip habitat aslinya."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Jarak tanam yang baik untuk pohon adalah ...",
-    opts: ["10 cm", "50 cm", "1 meter", "3–5 meter"],
-    ans: 3,
-    exp: "Jarak tanam yang cukup memberi ruang tumbuh yang optimal bagi pohon."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Pemangkasan pada pohon bertujuan untuk ...",
-    opts: ["Menghilangkan akar", "Memotong cabang kering dan mati", "Mengurangi tanah", "Menambah air"],
-    ans: 1,
-    exp: "Pemangkasan cabang kering dan mati membantu pertumbuhan yang lebih sehat."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Perawatan utama tanaman semak adalah ...",
-    opts: ["Penggantian air", "Pemangkasan rutin", "Penjemuran akar", "Pembakaran daun"],
-    ans: 1,
-    exp: "Pemangkasan rutin menjaga bentuk dan kesehatan tanaman semak."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Media tanam yang baik untuk tanaman herba adalah ...",
-    opts: ["Tanah keras", "Pasir saja", "Media gembur kaya bahan organik", "Batu kerikil"],
+    text: "Media tanam terbaik untuk tanaman herba adalah ...",
+    opts: ["Pasir murni tanpa campuran", "Tanah keras dan padat", "Media gembur yang kaya bahan organik", "Kerikil dan batu bata hancur"],
     ans: 2,
-    exp: "Herba tumbuh optimal pada media yang subur, gembur, dan kaya bahan organik."
+    exp: "Tanaman herba tumbuh optimal di media tanam yang gembur dan kaya bahan organik sehingga akar dapat berkembang dengan baik dan menyerap nutrisi maksimal."
   },
   {
     kat: "pemeliharaan",
-    text: "Salah satu cara merawat tumbuhan air adalah ...",
-    opts: ["Mengeringkan kolam", "Menjaga kualitas air", "Mengurangi cahaya sepenuhnya", "Memotong akar setiap hari"],
+    text: "Untuk tanaman herba konsumsi seperti kemangi atau mint, perawatan khusus yang perlu dilakukan adalah ...",
+    opts: ["Menyiram dengan air garam", "Pemanenan atau pemetikan rutin untuk merangsang pertumbuhan daun baru", "Dipindahkan ke tempat gelap setelah berbunga", "Diberi pupuk kimia dosis tinggi"],
     ans: 1,
-    exp: "Air yang bersih dan berkualitas mendukung pertumbuhan tumbuhan air dengan baik."
+    exp: "Herba konsumsi seperti kemangi perlu dipanen atau dipetik secara rutin agar tanaman terus menghasilkan daun baru yang segar dan segar."
+  },
+  // --- PEMELIHARAAN VEGETASI: TUMBUHAN AIR ---
+  {
+    kat: "pemeliharaan",
+    text: "Hal paling penting dalam merawat tumbuhan air adalah ...",
+    opts: ["Mengasinkan air dengan garam laut", "Menjaga kualitas air tetap bersih dari limbah sabun dan zat kimia", "Menutup kolam agar tidak terkena sinar matahari", "Membiarkan air mengalir deras setiap saat"],
+    ans: 1,
+    exp: "Kualitas air sangat penting bagi tumbuhan air. Air harus dijaga tetap bersih dan bebas dari limbah sabun atau zat kimia berbahaya."
   },
   {
     kat: "pemeliharaan",
-    text: "Pupuk yang membantu pertumbuhan daun adalah pupuk yang kaya unsur ...",
-    opts: ["Fosfor", "Kalium", "Nitrogen", "Besi"],
+    text: "Daun atau bunga tumbuhan air yang sudah membusuk harus segera ...",
+    opts: ["Dibiarkan saja sebagai pupuk alami di dalam air", "Diangkat dan dibersihkan dari kolam", "Ditenggelamkan ke dasar kolam", "Dipindahkan ke pot tanah kering"],
+    ans: 1,
+    exp: "Daun dan bunga tumbuhan air yang membusuk harus segera diangkat agar tidak mencemari kualitas air dan menyebarkan penyakit ke tanaman lain."
+  },
+  // --- PRINSIP DASAR PEMELIHARAAN VEGETASI ---
+  {
+    kat: "pemeliharaan",
+    text: "Dalam pemupukan tanaman, nitrogen (N) berperan penting untuk ...",
+    opts: ["Pertumbuhan buah dan biji", "Pertumbuhan bunga", "Pertumbuhan daun dan batang", "Pertumbuhan akar dalam"],
     ans: 2,
-    exp: "Nitrogen berperan penting dalam pertumbuhan daun dan batang tanaman."
+    exp: "Nitrogen berperan penting dalam pertumbuhan daun dan batang tanaman, sehingga dibutuhkan terutama pada fase vegetatif."
   },
   {
     kat: "pemeliharaan",
-    text: "Frekuensi pemberian makan anak kucing yang ideal adalah ...",
-    opts: ["Sekali sehari", "Dua kali sehari", "Tiga hingga empat kali sehari", "Seminggu sekali"],
+    text: "Fosfor (P) dalam pupuk berperan untuk mendukung ...",
+    opts: ["Pertumbuhan daun hijau lebat", "Pertumbuhan bunga dan biji", "Penyerapan air oleh batang", "Produksi klorofil tanaman"],
+    ans: 1,
+    exp: "Fosfor berperan dalam pertumbuhan bunga, biji, dan perkembangan sistem perakaran yang kuat pada tanaman."
+  },
+  {
+    kat: "pemeliharaan",
+    text: "Kalium (K) dalam pupuk berfungsi untuk mendukung ...",
+    opts: ["Pertumbuhan daun", "Pertumbuhan batang cepat", "Pertumbuhan buah dan ketahanan tanaman", "Produksi bau harum bunga"],
     ans: 2,
-    exp: "Anak kucing membutuhkan lebih banyak nutrisi untuk tumbuh sehingga diberi makan 3–4 kali sehari."
+    exp: "Kalium berperan dalam pertumbuhan buah dan meningkatkan ketahanan tanaman terhadap penyakit dan kondisi lingkungan yang tidak menguntungkan."
   },
   {
     kat: "pemeliharaan",
-    text: "Kandang hewan peliharaan harus dibersihkan secara ...",
-    opts: ["Setahun sekali", "Sebulan sekali", "Rutin agar terhindar dari kuman dan penyakit", "Tidak perlu dibersihkan"],
+    text: "Pengendalian hama secara alami yang dianjurkan dalam pemeliharaan vegetasi adalah ...",
+    opts: ["Menyiram tanaman dengan herbisida konsentrasi tinggi", "Menggunakan pestisida alami seperti neem oil atau larutan bawang putih", "Memotong semua bagian tanaman yang terserang", "Menaburkan garam di sekitar tanaman"],
+    ans: 1,
+    exp: "Pengendalian hama secara alami menggunakan neem oil atau larutan bawang putih lebih aman bagi lingkungan dan tidak merusak ekosistem sekitar."
+  },
+  // --- PEMELIHARAAN HEWAN PELIHARAAN ---
+  {
+    kat: "pemeliharaan",
+    text: "Pemberian makanan hewan peliharaan harus disesuaikan dengan ...",
+    opts: ["Warna bulu dan ukuran kandang", "Usia, ras, dan kondisi kesehatan hewan", "Harga makanan yang tersedia", "Selera pemiliknya"],
+    ans: 1,
+    exp: "Setiap hewan peliharaan memiliki kebutuhan nutrisi berbeda tergantung usia, ras, dan kondisi kesehatannya, sehingga pemberian makan harus disesuaikan."
+  },
+  {
+    kat: "pemeliharaan",
+    text: "Vaksinasi pada hewan peliharaan dijadwalkan secara ...",
+    opts: ["Hanya sekali seumur hidup", "Setiap bulan tanpa jeda", "Rutin setiap tahun sesuai jadwal dokter hewan", "Hanya saat hewan terlihat sakit"],
     ans: 2,
-    exp: "Kebersihan kandang sangat penting untuk mencegah pertumbuhan bakteri dan penyakit pada hewan peliharaan."
+    exp: "Vaksinasi rutin tahunan penting untuk menjaga kekebalan hewan peliharaan terhadap berbagai penyakit menular."
   },
   {
     kat: "pemeliharaan",
-    text: "Penyakit rabies pada anjing dapat dicegah dengan ...",
-    opts: ["Pemberian vitamin C", "Vaksinasi anti-rabies", "Pemberian susu", "Mandi rutin"],
+    text: "Hewan domestik seperti kucing dan anjing juga membutuhkan ...",
+    opts: ["Dibiarkan menyendiri tanpa interaksi", "Stimulasi mental dan interaksi sosial", "Dikurung di kandang 24 jam penuh", "Diberi makan hanya sekali sehari"],
     ans: 1,
-    exp: "Vaksinasi anti-rabies adalah cara paling efektif mencegah penyakit rabies pada anjing dan hewan peliharaan lainnya."
+    exp: "Hewan domestik membutuhkan stimulasi mental dan interaksi sosial untuk menjaga kesehatan psikologis dan mencegah stres."
   },
   {
     kat: "pemeliharaan",
-    text: "Penggantian air akuarium sebaiknya dilakukan sebanyak ...",
-    opts: ["100% sekaligus", "10–20% secara berkala", "Tidak perlu diganti", "50% setiap hari"],
-    ans: 1,
-    exp: "Mengganti 10–20% air secara berkala menjaga kualitas air tanpa mengganggu keseimbangan ekosistem akuarium."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Tanaman yang membutuhkan sedikit air dan cocok ditanam di daerah kering adalah ...",
-    opts: ["Teratai", "Kaktus", "Padi", "Kangkung"],
-    ans: 1,
-    exp: "Kaktus menyimpan air di batangnya sehingga dapat bertahan di lingkungan kering dengan sedikit penyiraman."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Penyiraman tanaman sebaiknya dilakukan pada waktu ...",
-    opts: ["Tengah hari saat matahari terik", "Pagi atau sore hari", "Tengah malam", "Tidak ada waktu khusus"],
-    ans: 1,
-    exp: "Penyiraman pagi atau sore hari mencegah penguapan berlebihan dan mencegah daun terbakar sinar matahari."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Fungsi pemupukan pada tanaman adalah ...",
-    opts: ["Mengurangi pertumbuhan", "Memenuhi kebutuhan nutrisi dan menyuburkan tanaman", "Mengurangi air tanah", "Membunuh hama"],
-    ans: 1,
-    exp: "Pupuk memberikan unsur hara yang dibutuhkan tanaman untuk tumbuh subur dan sehat."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Hama yang sering menyerang tanaman hias dan cara membasminya adalah ...",
-    opts: ["Cacing tanah dengan pestisida", "Kutu daun dengan insektisida atau semprotan air sabun", "Lebah dengan herbisida", "Burung dengan fungisida"],
-    ans: 1,
-    exp: "Kutu daun (Aphid) adalah hama umum tanaman hias yang dapat dibasmi dengan insektisida ringan atau semprotan air sabun."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Tanda tanaman kekurangan air adalah ...",
-    opts: ["Daun berwarna hijau cerah", "Batang membesar", "Daun layu dan menggulung", "Bunga bermekaran"],
+    text: "Kebersihan kandang dan litter box hewan peliharaan sebaiknya dibersihkan ...",
+    opts: ["Sekali setahun", "Sebulan sekali", "Setiap hari", "Hanya saat terlihat sangat kotor"],
     ans: 2,
-    exp: "Daun yang layu dan menggulung adalah tanda tanaman kekurangan air dan memerlukan penyiraman segera."
+    exp: "Kandang dan litter box harus dibersihkan setiap hari untuk mencegah penumpukan bakteri dan menjaga kesehatan hewan peliharaan."
   },
+  // --- PEMELIHARAAN HEWAN AKUATIK ---
   {
     kat: "pemeliharaan",
-    text: "Sterilisasi hewan peliharaan bertujuan untuk ...",
-    opts: ["Menambah berat badan", "Mengendalikan populasi dan mencegah penyakit tertentu", "Membuat hewan lebih agresif", "Mengurangi nafsu makan"],
-    ans: 1,
-    exp: "Sterilisasi membantu mengendalikan populasi hewan peliharaan dan mengurangi risiko penyakit tertentu."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Tanaman yang dapat tumbuh di dalam ruangan dengan cahaya minimal disebut ...",
-    opts: ["Tanaman gurun", "Tanaman hias indoor", "Tanaman pangan", "Tanaman air"],
-    ans: 1,
-    exp: "Tanaman hias indoor seperti lidah mertua dan pothos dapat tumbuh dengan cahaya minimal di dalam ruangan."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Makanan yang TIDAK boleh diberikan kepada kucing adalah ...",
-    opts: ["Daging ayam rebus", "Ikan kukus", "Cokelat dan bawang", "Makanan khusus kucing"],
+    text: "Filter akuarium harus bekerja selama ...",
+    opts: ["6 jam sehari", "12 jam sehari", "24 jam penuh setiap hari", "Hanya saat ikan terlihat sakit"],
     ans: 2,
-    exp: "Cokelat dan bawang mengandung zat yang beracun bagi kucing dan dapat menyebabkan gangguan kesehatan serius."
+    exp: "Filter akuarium harus bekerja 24 jam penuh untuk menyaring amonia dari sisa kotoran dan menjaga kualitas air tetap baik bagi ikan."
   },
   {
     kat: "pemeliharaan",
-    text: "Cara tepat merawat ikan koi di kolam adalah ...",
-    opts: ["Memberi makan berlebihan setiap jam", "Menjaga kualitas air dan memberi makan secukupnya", "Mengisi kolam dengan air laut", "Menutup kolam agar tidak terkena sinar matahari"],
+    text: "Filtrasi dan aerasi pada akuarium berfungsi untuk ...",
+    opts: ["Menambah warna air agar menarik", "Menyaring amonia dan menambah oksigen dalam air", "Menghangatkan air akuarium", "Memberi cahaya tambahan bagi ikan"],
     ans: 1,
-    exp: "Ikan koi membutuhkan air yang bersih, oksigen cukup, dan pemberian makan yang teratur dan tidak berlebihan."
+    exp: "Filtrasi menyaring zat berbahaya seperti amonia, sedangkan aerasi memastikan oksigen terlarut cukup untuk kebutuhan hewan akuatik."
   },
   {
     kat: "pemeliharaan",
-    text: "Proses pemindahan tanaman dari pot kecil ke pot lebih besar disebut ...",
-    opts: ["Stek", "Repotting", "Okulasi", "Cangkok"],
-    ans: 1,
-    exp: "Repotting adalah proses memindahkan tanaman ke pot yang lebih besar agar akarnya dapat berkembang dengan leluasa."
-  },
-  {
-    kat: "pemeliharaan",
-    text: "Tanaman anggrek membutuhkan media tanam berupa ...",
-    opts: ["Tanah liat padat", "Pasir halus", "Akar pakis atau kulit kayu", "Batu bata"],
+    text: "Penggantian air akuarium yang baik dilakukan dengan mengganti ...",
+    opts: ["100% air sekaligus agar benar-benar bersih", "50% air setiap hari", "10–20% air secara berkala", "Tidak perlu diganti selama filter berjalan"],
     ans: 2,
-    exp: "Anggrek tumbuh baik pada media akar pakis, kulit kayu, atau arang karena membutuhkan sirkulasi udara yang baik di akar."
+    exp: "Mengganti 10–20% air secara berkala menjaga kualitas air tanpa mengganggu keseimbangan bakteri baik dan ekosistem di dalam akuarium."
   },
+  // --- PEMELIHARAAN HEWAN UNGGAS ---
   {
     kat: "pemeliharaan",
-    text: "Tanda hewan peliharaan sedang sakit yang perlu diwaspadai adalah ...",
-    opts: ["Aktif bergerak dan nafsu makan baik", "Lesu, tidak nafsu makan, dan perubahan perilaku", "Tidur lebih awal dari biasanya", "Minum air lebih banyak saat cuaca panas"],
+    text: "Makanan pokok yang umum diberikan kepada hewan unggas adalah ...",
+    opts: ["Daging mentah dan ikan segar", "Biji-bijian berkualitas sebagai makanan utama", "Rumput laut dan lumut", "Serangga hidup saja"],
     ans: 1,
-    exp: "Hewan yang lesu, tidak mau makan, dan berubah perilaku biasanya menunjukkan tanda-tanda sakit dan perlu dibawa ke dokter hewan."
+    exp: "Biji-bijian berkualitas merupakan makanan pokok bagi sebagian besar jenis unggas dan menjadi sumber nutrisi utama mereka."
   },
   {
     kat: "pemeliharaan",
-    text: "Pemberian pupuk berlebihan pada tanaman dapat menyebabkan ...",
-    opts: ["Tanaman tumbuh lebih subur", "Keracunan pupuk dan kematian tanaman", "Bunga lebih banyak", "Akar semakin kuat"],
+    text: "Burung kicau memerlukan perawatan khusus berupa ...",
+    opts: ["Dikurung di tempat gelap agar fokus", "Pemasteran suara dan interaksi rutin", "Diberi makan hanya sekali seminggu", "Dilarang terkena sinar matahari"],
     ans: 1,
-    exp: "Pemberian pupuk berlebihan menyebabkan penumpukan garam mineral yang merusak akar dan dapat mematikan tanaman."
+    exp: "Burung kicau memerlukan pemasteran suara (diperdengarkan suara burung lain) dan interaksi rutin untuk meningkatkan kualitas kicauannya."
   },
   {
     kat: "pemeliharaan",
-    text: "Cara perbanyakan tanaman dengan menggunakan potongan batang disebut ...",
-    opts: ["Cangkok", "Okulasi", "Stek batang", "Merunduk"],
+    text: "Vitamin dan suplemen untuk unggas sebaiknya diberikan melalui ...",
+    opts: ["Disuntikkan langsung ke tubuh burung", "Dicampurkan ke dalam air minum", "Dioleskan ke bulu burung", "Disemprotkan ke kandang"],
+    ans: 1,
+    exp: "Suplemen vitamin untuk unggas umumnya diberikan dengan mencampurkannya ke dalam air minum agar mudah dikonsumsi oleh burung."
+  },
+  // --- PEMELIHARAAN HEWAN EKSOTIK ---
+  {
+    kat: "pemeliharaan",
+    text: "Yang dimaksud mikroklimat dalam pemeliharaan hewan eksotik adalah ...",
+    opts: ["Ukuran kandang yang sangat kecil", "Manipulasi suhu dan kelembapan di dalam kandang sesuai habitat asli hewan", "Jenis makanan yang diberikan", "Warna kandang yang menyerupai alam"],
+    ans: 1,
+    exp: "Mikroklimat dalam pemeliharaan hewan eksotik berarti memanipulasi suhu dan kelembapan kandang agar menyerupai kondisi habitat asli hewan tersebut."
+  },
+  {
+    kat: "pemeliharaan",
+    text: "Mayoritas hewan eksotik seperti reptil dan tarantula membutuhkan pakan berupa ...",
+    opts: ["Makanan kemasan kering seperti pelet", "Pakan hidup sesuai kebiasaan alami di alam", "Buah-buahan segar sebagai satu-satunya makanan", "Dedaunan kering tanpa kandungan protein"],
+    ans: 1,
+    exp: "Hewan eksotik seperti reptil dan tarantula membutuhkan pakan hidup (seperti jangkrik atau ulat) karena sesuai dengan instink berburu di alam liarnya."
+  },
+  {
+    kat: "pemeliharaan",
+    text: "Kandang hewan eksotik harus memiliki ...",
+    opts: ["Ukuran sekecil mungkin agar hemat tempat", "Sistem penguncian yang sangat aman agar hewan tidak dapat keluar", "Jendela besar tanpa kunci untuk sirkulasi udara", "Bahan dari kayu lunak yang mudah dikunyah"],
+    ans: 1,
+    exp: "Kandang hewan eksotik wajib memiliki sistem penguncian yang sangat aman untuk mencegah hewan melarikan diri, demi keselamatan hewan dan manusia di sekitarnya."
+  },
+  // --- UPAYA KONSERVASI VEGETASI ---
+  {
+    kat: "pemeliharaan",
+    text: "Kebun Raya dan Bank Benih berfungsi untuk ...",
+    opts: ["Menjual tanaman langka secara komersial", "Menyimpan dan membiakkan vegetasi langka agar tidak punah", "Menyimpan benih sayuran untuk pertanian", "Mengolah hasil hutan menjadi produk kayu"],
+    ans: 1,
+    exp: "Kebun Raya dan Bank Benih adalah fasilitas konservasi ex situ yang menyimpan dan membiakkan vegetasi langka untuk mencegah kepunahan."
+  },
+  {
+    kat: "pemeliharaan",
+    text: "Tanda bahwa tanaman sedang kekurangan air adalah ...",
+    opts: ["Daun berwarna hijau cerah dan segar", "Muncul bunga baru secara tiba-tiba", "Daun layu, menggulung, dan tampak lesu", "Batang semakin membesar dan keras"],
     ans: 2,
-    exp: "Stek batang adalah cara memperbanyak tanaman dengan menanam potongan batang hingga tumbuh akar baru."
+    exp: "Daun yang layu, menggulung, dan tampak lesu merupakan tanda jelas bahwa tanaman kekurangan air dan perlu segera disiram."
+  },
+  {
+    kat: "pemeliharaan",
+    text: "Pemberian pupuk yang berlebihan pada tanaman dapat menyebabkan ...",
+    opts: ["Tanaman tumbuh lebih subur dan cepat", "Penumpukan garam mineral yang merusak akar dan dapat mematikan tanaman", "Bunga bermekaran lebih banyak", "Daun menjadi lebih hijau dan mengkilap"],
+    ans: 1,
+    exp: "Pemupukan berlebihan menyebabkan penumpukan garam mineral di tanah yang merusak akar tanaman melalui proses osmosis terbalik, bahkan dapat mematikan tanaman."
   }
 ];
 
@@ -656,15 +688,15 @@ const quizBankPemeliharaan = [
 const TOTAL_SOAL = 10;
 
 const LABEL_KATEGORI = {
-  biota: "🌿 Biota",
-  sampah: "♻️ Sampah",
+  biota:        "🌿 Biota",
+  sampah:       "♻️ Sampah",
   pemeliharaan: "🐾 Pemeliharaan",
-  semua: "🎯 Semua Kategori"
+  semua:        "🎯 Semua Kategori"
 };
 
 const TAG_CLASS = {
-  biota: "quiz-tag-biota",
-  sampah: "quiz-tag-sampah",
+  biota:        "quiz-tag-biota",
+  sampah:       "quiz-tag-sampah",
   pemeliharaan: "quiz-tag-pemeliharaan"
 };
 
@@ -678,19 +710,19 @@ let quizAnsweredState = [];
 // ── STREAK HELPERS ────────────────────────────────────────────────────────
 function quizGetStreakLevel(s) {
   if (s >= 10) return 5;
-  if (s >= 8) return 4;
-  if (s >= 6) return 3;
-  if (s >= 4) return 2;
-  if (s >= 2) return 1;
+  if (s >= 8)  return 4;
+  if (s >= 6)  return 3;
+  if (s >= 4)  return 2;
+  if (s >= 2)  return 1;
   return 0;
 }
 function quizGetStreakLabel(s) {
   if (s >= 10) return "ULTRA!";
-  if (s >= 8) return "STREAK!";
+  if (s >= 8)  return "STREAK!";
   return "streak!";
 }
 function quizApplyStreakLevel(sb, level) {
-  sb.classList.remove("quiz-lv1", "quiz-lv2", "quiz-lv3", "quiz-lv4", "quiz-lv5");
+  sb.classList.remove("quiz-lv1","quiz-lv2","quiz-lv3","quiz-lv4","quiz-lv5");
   if (level > 0) sb.classList.add("quiz-lv" + level);
 }
 
@@ -707,10 +739,9 @@ function quizShuffle(arr) {
 // ── MULAI QUIZ ────────────────────────────────────────────────────────────
 function quizMulai(kategori) {
   quizKategoriAktif = kategori;
-
   let pool = [];
-  if (kategori === "biota") pool = quizBankBiota;
-  else if (kategori === "sampah") pool = quizBankSampah;
+  if (kategori === "biota")             pool = quizBankBiota;
+  else if (kategori === "sampah")       pool = quizBankSampah;
   else if (kategori === "pemeliharaan") pool = quizBankPemeliharaan;
   else pool = [...quizBankBiota, ...quizBankSampah, ...quizBankPemeliharaan];
 
@@ -719,11 +750,10 @@ function quizMulai(kategori) {
   quizStreak = 0; quizMaxStreak = 0; quizAnswered = false;
   quizAnsweredState = new Array(quizData.length).fill(null);
 
-  document.getElementById("quiz-title-label").textContent =
-    LABEL_KATEGORI[kategori] || "Quiz Interaktif";
+  document.getElementById("quiz-title-label").textContent = LABEL_KATEGORI[kategori] || "Quiz Interaktif";
   document.getElementById("quiz-kategori-screen").style.display = "none";
-  document.getElementById("quiz-main-screen").style.display = "block";
-
+  document.getElementById("quiz-main-screen").style.display     = "block";
+  window.quizSedangBerjalan = true;
   quizRender();
 }
 
@@ -732,29 +762,28 @@ function quizRender() {
   const q = quizData[quizCur];
   const total = quizData.length;
 
-  document.getElementById("quiz-q-num").textContent = `Soal ${quizCur + 1} dari ${total}`;
-  document.getElementById("quiz-prog").style.width = `${((quizCur + 1) / total) * 100}%`;
+  document.getElementById("quiz-q-num").textContent  = `Soal ${quizCur + 1} dari ${total}`;
+  document.getElementById("quiz-prog").style.width   = `${((quizCur + 1) / total) * 100}%`;
   document.getElementById("quiz-q-text").textContent = q.text;
-  document.getElementById("quiz-score-info").textContent =
-    `Benar: ${quizCorrect} \u00a0|\u00a0 Salah: ${quizWrong}`;
+  document.getElementById("quiz-score-info").textContent = `Benar: ${quizCorrect} \u00a0|\u00a0 Salah: ${quizWrong}`;
   document.getElementById("quiz-explanation").style.display = "none";
-  document.getElementById("quiz-next-btn").style.display = "none";
+  document.getElementById("quiz-next-btn").style.display    = "none";
 
   const tag = document.getElementById("quiz-category-tag");
   tag.textContent = LABEL_KATEGORI[q.kat] || q.kat;
-  tag.className = "quiz-category-tag " + (TAG_CLASS[q.kat] || "");
+  tag.className   = "quiz-category-tag " + (TAG_CLASS[q.kat] || "");
 
   quizAnswered = quizAnsweredState[quizCur] !== null;
 
   const sb = document.getElementById("quiz-streak-badge");
   const lv = quizGetStreakLevel(quizStreak);
   if (quizStreak >= 2) {
-    document.getElementById("quiz-streak-num").textContent = quizStreak;
+    document.getElementById("quiz-streak-num").textContent   = quizStreak;
     document.getElementById("quiz-streak-label").textContent = quizGetStreakLabel(quizStreak);
     quizApplyStreakLevel(sb, lv);
     sb.classList.add("quiz-show");
   } else {
-    sb.classList.remove("quiz-show", "quiz-lv1", "quiz-lv2", "quiz-lv3", "quiz-lv4", "quiz-lv5");
+    sb.classList.remove("quiz-show","quiz-lv1","quiz-lv2","quiz-lv3","quiz-lv4","quiz-lv5");
   }
 
   const optDiv = document.getElementById("quiz-options");
@@ -776,13 +805,10 @@ function quizRender() {
   if (quizAnswered) {
     document.getElementById("quiz-explanation").textContent = q.exp;
     document.getElementById("quiz-explanation").style.display = "block";
-    document.getElementById("quiz-next-btn").style.display = "block";
-    document.getElementById("quiz-next-btn").textContent =
-      quizCur === total - 1 ? "Lihat Hasil" : "Next";
+    document.getElementById("quiz-next-btn").style.display    = "block";
+    document.getElementById("quiz-next-btn").textContent = quizCur === total - 1 ? "Lihat Hasil" : "Next";
   }
-
-  document.getElementById("quiz-back-btn").style.display =
-    quizCur > 0 ? "inline-block" : "none";
+  document.getElementById("quiz-back-btn").style.display = quizCur > 0 ? "inline-block" : "none";
 }
 
 // ── PILIH JAWABAN ─────────────────────────────────────────────────────────
@@ -805,13 +831,12 @@ function quizSelect(idx, btn) {
     allBtns[q.ans].classList.add("reveal");
   }
 
-  document.getElementById("quiz-score-info").textContent =
-    `Benar: ${quizCorrect} \u00a0|\u00a0 Salah: ${quizWrong}`;
+  document.getElementById("quiz-score-info").textContent = `Benar: ${quizCorrect} \u00a0|\u00a0 Salah: ${quizWrong}`;
 
   const sb = document.getElementById("quiz-streak-badge");
   if (quizStreak >= 2) {
     const lv = quizGetStreakLevel(quizStreak);
-    document.getElementById("quiz-streak-num").textContent = quizStreak;
+    document.getElementById("quiz-streak-num").textContent   = quizStreak;
     document.getElementById("quiz-streak-label").textContent = quizGetStreakLabel(quizStreak);
     quizApplyStreakLevel(sb, lv);
     if (!sb.classList.contains("quiz-show")) {
@@ -822,14 +847,13 @@ function quizSelect(idx, btn) {
       sb.classList.add("quiz-bump");
     }
   } else {
-    sb.classList.remove("quiz-show", "quiz-bump", "quiz-lv1", "quiz-lv2", "quiz-lv3", "quiz-lv4", "quiz-lv5");
+    sb.classList.remove("quiz-show","quiz-bump","quiz-lv1","quiz-lv2","quiz-lv3","quiz-lv4","quiz-lv5");
   }
 
   document.getElementById("quiz-explanation").textContent = q.exp;
   document.getElementById("quiz-explanation").style.display = "block";
-  document.getElementById("quiz-next-btn").style.display = "block";
-  document.getElementById("quiz-next-btn").textContent =
-    quizCur === quizData.length - 1 ? "Lihat Hasil" : "Next";
+  document.getElementById("quiz-next-btn").style.display    = "block";
+  document.getElementById("quiz-next-btn").textContent = quizCur === quizData.length - 1 ? "Lihat Hasil" : "Next";
 }
 
 // ── NAVIGASI ──────────────────────────────────────────────────────────────
@@ -843,48 +867,48 @@ function quizGoBack() {
 
 // ── TAMPILKAN HASIL ───────────────────────────────────────────────────────
 function quizShowResult() {
-  document.getElementById("quiz-card").style.display = "none";
+  window.quizSedangBerjalan = false;
+  document.getElementById("quiz-card").style.display        = "none";
   document.getElementById("quiz-result-card").style.display = "block";
 
   const total = quizData.length;
-  const pct = quizCorrect / total;
+  const pct   = quizCorrect / total;
   const circumference = 264;
-  const ring = document.getElementById("quiz-ring-fill");
+  const ring  = document.getElementById("quiz-ring-fill");
   ring.style.strokeDashoffset = circumference;
-  ring.classList.remove("quiz-ring-perfect", "quiz-ring-low");
-  if (pct === 1) ring.classList.add("quiz-ring-perfect");
+  ring.classList.remove("quiz-ring-perfect","quiz-ring-low");
+  if (pct === 1)      ring.classList.add("quiz-ring-perfect");
   else if (pct < 0.4) ring.classList.add("quiz-ring-low");
   setTimeout(() => { ring.style.strokeDashoffset = circumference - circumference * pct; }, 150);
 
-  document.getElementById("quiz-ring-score").textContent = `${quizCorrect}/${total}`;
-  document.getElementById("quiz-ring-pct").textContent = `${Math.round(pct * 100)}%`;
+  document.getElementById("quiz-ring-score").textContent  = `${quizCorrect}/${total}`;
+  document.getElementById("quiz-ring-pct").textContent    = `${Math.round(pct * 100)}%`;
   document.getElementById("quiz-stat-correct").textContent = quizCorrect;
-  document.getElementById("quiz-stat-wrong").textContent = quizWrong;
-  document.getElementById("quiz-stat-streak").textContent = quizMaxStreak;
+  document.getElementById("quiz-stat-wrong").textContent   = quizWrong;
+  document.getElementById("quiz-stat-streak").textContent  = quizMaxStreak;
 
   let emoji, msg, sub;
-  if (pct === 1) { emoji = "🏆"; msg = "Sempurna! Luar biasa!"; sub = "Semua jawaban benar. Kamu jenius!"; }
-  else if (pct >= 0.8) { emoji = "🎉"; msg = "Bagus sekali!"; sub = "Hampir sempurna, tinggal sedikit lagi!"; }
-  else if (pct >= 0.6) { emoji = "👍"; msg = "Lumayan baik!"; sub = "Terus belajar, kamu pasti bisa lebih baik!"; }
-  else if (pct >= 0.4) { emoji = "📚"; msg = "Perlu belajar lebih!"; sub = "Masih banyak yang bisa dipelajari, semangat!"; }
-  else { emoji = "💪"; msg = "Jangan menyerah!"; sub = "Coba lagi, setiap percobaan membuatmu lebih pintar!"; }
+  if (pct === 1)       { emoji="🏆"; msg="Sempurna! Luar biasa!";  sub="Semua jawaban benar. Kamu jenius!"; }
+  else if (pct >= 0.8) { emoji="🎉"; msg="Bagus sekali!";          sub="Hampir sempurna, tinggal sedikit lagi!"; }
+  else if (pct >= 0.6) { emoji="👍"; msg="Lumayan baik!";          sub="Terus belajar, kamu pasti bisa lebih baik!"; }
+  else if (pct >= 0.4) { emoji="📚"; msg="Perlu belajar lebih!";   sub="Masih banyak yang bisa dipelajari, semangat!"; }
+  else                  { emoji="💪"; msg="Jangan menyerah!";       sub="Coba lagi, setiap percobaan membuatmu lebih pintar!"; }
 
   document.getElementById("quiz-result-emoji").textContent = emoji;
-  document.getElementById("quiz-result-msg").textContent = msg;
-  document.getElementById("quiz-result-sub").textContent = sub;
-
+  document.getElementById("quiz-result-msg").textContent   = msg;
+  document.getElementById("quiz-result-sub").textContent   = sub;
   if (pct >= 0.6) quizLaunchConfetti(pct === 1);
 }
 
 // ── CONFETTI ──────────────────────────────────────────────────────────────
 function quizLaunchConfetti(isPerfect) {
   const canvas = document.getElementById("quiz-confetti");
-  const ctx = canvas.getContext("2d");
-  canvas.width = canvas.offsetWidth;
+  const ctx    = canvas.getContext("2d");
+  canvas.width  = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
-  const COLORS = ["#4a7a38", "#EF9F27", "#D4537E", "#378ADD", "#E24B4A", "#1D9E75"];
+  const COLORS = ["#4a7a38","#EF9F27","#D4537E","#378ADD","#E24B4A","#1D9E75"];
   const pieces = [];
-  const count = isPerfect ? 100 : 60;
+  const count  = isPerfect ? 100 : 60;
   for (let i = 0; i < count; i++) {
     pieces.push({
       x: Math.random() * canvas.width, y: -10 - Math.random() * 60,
@@ -904,8 +928,8 @@ function quizLaunchConfetti(isPerfect) {
       ctx.translate(p.x, p.y); ctx.rotate(p.angle);
       ctx.globalAlpha = Math.max(0, 1 - frame / maxFrames);
       ctx.fillStyle = p.color;
-      if (p.shape === "rect") ctx.fillRect(-p.r / 2, -p.r / 2, p.r * 1.6, p.r * 0.55);
-      else { ctx.beginPath(); ctx.arc(0, 0, p.r / 2, 0, Math.PI * 2); ctx.fill(); }
+      if (p.shape === "rect") ctx.fillRect(-p.r/2, -p.r/2, p.r*1.6, p.r*0.55);
+      else { ctx.beginPath(); ctx.arc(0, 0, p.r/2, 0, Math.PI*2); ctx.fill(); }
       ctx.restore();
       p.y += p.speed; p.angle += p.angleSpeed;
       p.x += p.drift + Math.sin(p.angle) * 0.8;
@@ -918,92 +942,42 @@ function quizLaunchConfetti(isPerfect) {
   draw();
 }
 
-// ── NAVIGASI TOMBOL ───────────────────────────────────────────────────────
-function quizKeluar() {
-  if (confirm("Yakin ingin keluar dari quiz? Progresmu tidak akan tersimpan.")) {
-    window.location.href = "beranda.html";
-  }
-}
-
+// ── TOMBOL NAVIGASI ───────────────────────────────────────────────────────
 function quizBackToKategori() {
-  document.getElementById("quiz-card").style.display = "block";
-  document.getElementById("quiz-result-card").style.display = "none";
-  document.getElementById("quiz-main-screen").style.display = "none";
-  document.getElementById("quiz-kategori-screen").style.display = "block";
+  window.quizSedangBerjalan = false;
+  document.getElementById("quiz-card").style.display             = "block";
+  document.getElementById("quiz-result-card").style.display      = "none";
+  document.getElementById("quiz-main-screen").style.display      = "none";
+  document.getElementById("quiz-kategori-screen").style.display  = "block";
 }
 
 function quizRestart() {
   const ring = document.getElementById("quiz-ring-fill");
   ring.style.strokeDashoffset = 264;
   ring.classList.remove("quiz-ring-perfect", "quiz-ring-low");
-  document.getElementById("quiz-card").style.display = "block";
+  document.getElementById("quiz-card").style.display        = "block";
   document.getElementById("quiz-result-card").style.display = "none";
   quizMulai(quizKategoriAktif);
 }
 
-// ============================================================
-//  NAVBAR GUARD — tambahkan di bagian PALING BAWAH quiz.js
-//  Mencegat klik navbar saat quiz sedang berjalan
-// ============================================================
+// ── NAVBAR GUARD ──────────────────────────────────────────────────────────
+window.quizSedangBerjalan = false;
 
-(function () {
-  // Tandai apakah quiz sedang aktif (bukan di halaman kategori / hasil)
-  // quizSedangBerjalan = true saat soal sedang dikerjakan
-  window.quizSedangBerjalan = false;
+document.addEventListener("click", function (e) {
+  const link = e.target.closest("a");
+  if (!link) return;
+  if (!window.quizSedangBerjalan) return;
+  const href = link.getAttribute("href");
+  if (!href || href === "#" || href.startsWith("javascript")) return;
+  if (link.closest(".quiz-shell")) return;
 
-  // Override quizMulai agar set flag saat quiz dimulai
-  const _quizMulaiAsli = window.quizMulai;
-  window.quizMulai = function (kategori) {
-    window.quizSedangBerjalan = true;
-    _quizMulaiAsli(kategori);
-  };
+  e.preventDefault();
+  e.stopPropagation();
 
-  // Set flag false saat tampil hasil atau balik ke kategori
-  const _quizShowResultAsli = window.quizShowResult;
-  window.quizShowResult = function () {
+  const tujuan = link.textContent.trim() || href;
+  const yakin  = confirm(`Kamu sedang mengerjakan quiz.\nKeluar ke "${tujuan}"?\n\nProgresmu tidak akan tersimpan.`);
+  if (yakin) {
     window.quizSedangBerjalan = false;
-    _quizShowResultAsli();
-  };
-
-  const _quizBackToKategoriAsli = window.quizBackToKategori;
-  window.quizBackToKategori = function () {
-    window.quizSedangBerjalan = false;
-    _quizBackToKategoriAsli();
-  };
-
-  const _quizRestartAsli = window.quizRestart;
-  window.quizRestart = function () {
-    window.quizSedangBerjalan = true;
-    _quizRestartAsli();
-  };
-
-  // Intercept semua link navbar saat quiz aktif
-  document.addEventListener("click", function (e) {
-    // Cari elemen <a> yang diklik (bisa nested)
-    const link = e.target.closest("a");
-    if (!link) return;
-
-    // Hanya berlaku jika quiz sedang berjalan
-    if (!window.quizSedangBerjalan) return;
-
-    const href = link.getAttribute("href");
-    if (!href || href === "#" || href.startsWith("javascript")) return;
-
-    // Jangan intercept link di dalam quiz itu sendiri
-    if (link.closest(".quiz-shell")) return;
-
-    // Tampilkan konfirmasi
-    e.preventDefault();
-    e.stopPropagation();
-
-    const tujuan = link.textContent.trim() || href;
-    const yakin = confirm(
-      `Kamu sedang mengerjakan quiz.\nKeluar ke "${tujuan}"?\n\nProgresmu tidak akan tersimpan.`
-    );
-    if (yakin) {
-      window.quizSedangBerjalan = false;
-      window.location.href = href;
-    }
-  }, true); // capture phase agar tidak terblokir event lain
-
-})();
+    window.location.href = href;
+  }
+}, true);
