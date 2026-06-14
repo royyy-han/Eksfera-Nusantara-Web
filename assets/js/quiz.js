@@ -942,7 +942,17 @@ function quizLaunchConfetti(isPerfect) {
   draw();
 }
 
+<<<<<<< HEAD
 // ── TOMBOL NAVIGASI ───────────────────────────────────────────────────────
+=======
+// ── NAVIGASI TOMBOL ───────────────────────────────────────────────────────
+function quizKeluar() {
+  if (confirm("Yakin ingin keluar dari quiz? Progresmu tidak akan tersimpan.")) {
+    window.location.href = "quiz.html";
+  }
+}
+
+>>>>>>> 09352ce8dbca17630674d5168947c7162200f0d5
 function quizBackToKategori() {
   window.quizSedangBerjalan = false;
   document.getElementById("quiz-card").style.display             = "block";
@@ -980,4 +990,4 @@ document.addEventListener("click", function (e) {
     window.quizSedangBerjalan = false;
     window.location.href = href;
   }
-}, true);
+}, true);t
