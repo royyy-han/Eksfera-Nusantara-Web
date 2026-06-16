@@ -31,21 +31,21 @@ const quizBankBiota = [
   {
     kat: "biota",
     text: "Rehabilitasi satwa dilakukan ketika ...",
-    opts: ["Satwa akan diperdagangkan ke luar negeri", "Satwa sakit atau terluka dan perlu dirawat agar bisa kembali ke alam", "Habitat satwa dipindahkan ke lokasi baru", "Satwa dianggap terlalu banyak di suatu kawasan"],
+    opts: ["Satwa akan dipindahkan ke kebun binatang baru", "Satwa sakit atau terluka agar pulih dan kembali ke alam", "Populasi satwa meledak di kawasan tertentu", "Satwa hendak diteliti selama beberapa bulan"],
     ans: 1,
     exp: "Rehabilitasi satwa merawat satwa yang sakit atau terluka hingga pulih dan siap dikembalikan ke habitatnya."
   },
   {
     kat: "biota",
     text: "Status konservasi IUCN 'Critically Endangered' berarti ...",
-    opts: ["Spesies sudah punah di alam liar", "Spesies menghadapi risiko kepunahan sangat tinggi dalam waktu dekat", "Spesies masih aman tapi perlu dipantau", "Spesies rentan tapi populasinya stabil"],
+    opts: ["Spesies sudah punah total di seluruh dunia", "Spesies berisiko punah sangat tinggi dalam waktu dekat", "Spesies masih aman namun butuh pemantauan rutin", "Spesies rentan karena habitatnya mulai menyempit"],
     ans: 1,
     exp: "Critically Endangered (Kritis) adalah status IUCN untuk spesies yang menghadapi risiko kepunahan sangat tinggi dalam waktu dekat jika ancaman tidak dihentikan."
   },
   {
     kat: "biota",
     text: "Restorasi habitat bertujuan untuk ...",
-    opts: ["Memindahkan satwa ke kebun binatang yang lebih modern", "Mendirikan pusat penelitian di dalam hutan", "Mengembalikan ekosistem yang rusak agar satwa punya tempat hidup", "Memperluas wilayah pertanian di sekitar hutan"],
+    opts: ["Memindahkan satwa ke penangkaran sementara", "Mendirikan pos penelitian di tepi kawasan hutan", "Memulihkan ekosistem rusak agar layak dihuni kembali", "Menambah jalur patroli di kawasan hutan lindung"],
     ans: 2,
     exp: "Restorasi habitat memperbaiki ekosistem yang rusak agar dapat kembali mendukung kehidupan satwa dan tumbuhan."
   },
@@ -53,7 +53,7 @@ const quizBankBiota = [
   {
     kat: "biota",
     text: "Rafflesia disebut tanaman parasit karena ...",
-    opts: ["Menghasilkan racun yang mematikan inangnya", "Tumbuh sangat cepat melebihi pohon sekitarnya", "Tidak memiliki daun, batang, atau akar dan bergantung sepenuhnya pada inang", "Menyerap semua cahaya matahari dari tumbuhan di sekitarnya"],
+    opts: ["Menghasilkan racun yang perlahan mematikan inangnya", "Tumbuh jauh lebih cepat dari pohon di sekitarnya", "Tak punya daun, batang, akar, hidup bergantung pada inang", "Menyerap seluruh cahaya sehingga tanaman lain mati"],
     ans: 2,
     exp: "Rafflesia tidak memiliki daun, batang, atau akar yang jelas dan sepenuhnya bergantung pada inang Tetrastigma untuk bertahan hidup."
   },
@@ -89,7 +89,7 @@ const quizBankBiota = [
   {
     kat: "biota",
     text: "Ciri khas fisik Harimau Sumatera yang membedakannya dari harimau lain adalah ...",
-    opts: ["Warna bulu seluruhnya hitam tanpa loreng", "Loreng hitam lebih rapat dan tebal serta surai pendek di wajah", "Ukuran kaki belakang yang sangat besar", "Memiliki dua ekor sebagai ciri endemik Sumatera"],
+    opts: ["Bulu seluruh tubuh berwarna hitam pekat tanpa corak", "Loreng lebih rapat dan tebal, surai pendek di wajah", "Ukuran kaki belakang jauh lebih besar dari harimau lain", "Berekor dua sebagai penanda subspesies Sumatera"],
     ans: 1,
     exp: "Harimau Sumatera memiliki corak loreng hitam yang lebih rapat dan tebal serta surai pendek di sekitar wajah yang memberi kesan garang."
   },
@@ -110,7 +110,7 @@ const quizBankBiota = [
   {
     kat: "biota",
     text: "Peran ekologis Gajah Sumatera dalam ekosistem hutan adalah ...",
-    opts: ["Sebagai predator puncak yang mengendalikan populasi rusa", "Menyebarkan biji dan membuka jalur di hutan untuk regenerasi vegetasi", "Menguraikan pohon mati menjadi pupuk alami", "Menjaga populasi serangga agar tidak meledak"],
+    opts: ["Predator puncak yang mengendalikan populasi rusa hutan", "Menyebar biji dan membuka jalur untuk regenerasi hutan", "Menguraikan batang pohon mati menjadi kompos alami", "Mengontrol populasi serangga agar tidak berkembang liar"],
     ans: 1,
     exp: "Gajah Sumatera menyebarkan biji melalui kotorannya dan membuka jalur di hutan, sehingga membantu regenerasi vegetasi hutan."
   },
@@ -175,7 +175,7 @@ const quizBankBiota = [
   {
     kat: "biota",
     text: "Status konservasi Gajah Kalimantan (Elephas maximus borneensis) menurut IUCN adalah ...",
-    opts: ["Least Concern karena populasinya stabil", "Near Threatened karena mulai berkurang", "Endangered (Terancam Punah) akibat deforestasi dan konflik dengan manusia", "Critically Endangered karena hampir punah total"],
+    opts: ["Least Concern karena jumlahnya masih banyak", "Near Threatened karena habitatnya mulai terganggu", "Endangered karena deforestasi dan konflik dengan manusia", "Critically Endangered karena populasinya di bawah 50 ekor"],
     ans: 2,
     exp: "Gajah Kalimantan berstatus Endangered (Terancam Punah) akibat deforestasi, fragmentasi habitat, dan konflik dengan manusia terutama dari perkebunan kelapa sawit."
   },
@@ -190,7 +190,7 @@ const quizBankBiota = [
   {
     kat: "biota",
     text: "Edelweis Jawa tumbuh di habitat dengan kondisi ...",
-    opts: ["Pesisir pantai dengan angin laut dan pasir", "Rawa gambut dataran rendah yang selalu tergenang", "Pegunungan pada ketinggian 1.800–3.000 meter dengan tanah berpasir", "Hutan mangrove di tepi sungai yang payau"],
+    opts: ["Pesisir pantai berkarang dengan angin laut kencang", "Rawa gambut dataran rendah yang selalu tergenang air", "Pegunungan 1.800–3.000 meter dengan tanah berpasir", "Hutan mangrove di muara sungai berair payau"],
     ans: 2,
     exp: "Edelweis Jawa tumbuh di pegunungan Jawa pada ketinggian 1.800–3.000 meter, di tanah berpasir atau berbatu dengan suhu sejuk."
   },
@@ -247,7 +247,7 @@ const quizBankBiota = [
   {
     kat: "biota",
     text: "Banteng Jawa (Bos javanicus) memiliki ciri khas berupa ...",
-    opts: ["Tubuh selalu berwarna coklat pucat sepanjang hidupnya", "Jantan muda berwarna coklat kemerahan yang berubah hitam pekat saat dewasa", "Memiliki punuk besar seperti sapi zebu", "Ukuran tubuh yang jauh lebih kecil dari sapi biasa"],
+    opts: ["Tubuh berwarna coklat pucat dari muda hingga tua", "Jantan muda coklat kemerahan, berubah hitam pekat dewasa", "Punya punuk besar di punggung seperti sapi zebu", "Bertubuh sangat kecil, lebih kecil dari kambing dewasa"],
     ans: 1,
     exp: "Banteng Jawa jantan muda berwarna coklat kemerahan yang secara bertahap berubah menjadi hitam pekat saat dewasa, sementara betina tetap berwarna coklat."
   },
@@ -262,7 +262,7 @@ const quizBankBiota = [
   {
     kat: "biota",
     text: "Burung Maleo bertelur dengan cara yang unik, yaitu ...",
-    opts: ["Mengerami telurnya selama tiga bulan di sarang pohon tinggi", "Mengubur telurnya di pasir pantai atau tanah vulkanik agar menetas dengan panas alami", "Menitipkan telurnya ke sarang burung lain agar dierami", "Menetaskan telurnya dalam kantong perut seperti kanguru"],
+    opts: ["Mengerami telurnya tiga bulan di puncak pohon tinggi", "Mengubur telur di pasir pantai agar menetas oleh panas alami", "Menitipkan telur ke sarang burung lain untuk dierami", "Menetaskan telur dalam kantong perut seperti marsupial"],
     ans: 1,
     exp: "Maleo mengubur telurnya di pasir pantai atau tanah vulkanik untuk memanfaatkan panas alami sebagai pengganti pengeraman oleh induknya."
   },
@@ -326,7 +326,7 @@ const quizBankBiota = [
   {
     kat: "biota",
     text: "Kuskus Waigeo (Spilocuscus papuensis) memiliki ciri khas berupa ...",
-    opts: ["Bulu hitam pekat tanpa corak apapun", "Tubuh putih keabu-abuan dengan tutul hitam dan mata kuning-oranye", "Ukuran sangat kecil seperti tikus pohon", "Ekor yang sangat panjang melebihi panjang tubuhnya"],
+    opts: ["Berbulu hitam legam tanpa corak apapun di tubuh", "Tubuh putih keabu-abuan bertutul hitam, mata kuning-oranye", "Berukuran sangat mungil layaknya tikus pohon biasa", "Berekor sangat panjang jauh melebihi panjang tubuhnya"],
     ans: 1,
     exp: "Kuskus Waigeo memiliki tubuh putih keabu-abuan dengan tutul hitam khas serta mata kuning-oranye yang mencolok, menjadikannya mudah dikenali."
   },
@@ -395,7 +395,7 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Yang membedakan sampah anorganik dari sampah organik adalah ...",
-    opts: ["Anorganik lebih ringan dan mudah dibawa", "Anorganik berasal dari bahan sintetis dan sulit terurai di alam", "Anorganik selalu berbau tidak sedap", "Anorganik berwarna gelap dan organik berwarna cerah"],
+    opts: ["Anorganik lebih ringan dan mudah diangkat tangan", "Anorganik dari bahan sintetis dan sulit terurai alami", "Anorganik selalu mengeluarkan bau tidak sedap", "Anorganik gelap warnanya, organik selalu terang"],
     ans: 1,
     exp: "Sampah anorganik seperti plastik dan kaca sulit terurai di alam karena berasal dari bahan sintetis yang tidak dapat diurai oleh mikroorganisme."
   },
@@ -481,14 +481,14 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Sampah organik yang menumpuk bisa menjadi sarang penyakit karena ...",
-    opts: ["Menghasilkan radiasi berbahaya saat membusuk", "Menjadi tempat berkembang biak lalat, tikus, dan nyamuk pembawa penyakit", "Meracuni air tanah dengan logam berat", "Menghasilkan gas beracun yang langsung mematikan"],
+    opts: ["Menghasilkan radiasi berbahaya yang menyebar ke udara", "Jadi sarang lalat, tikus, nyamuk pembawa bibit penyakit", "Mencemari air tanah dengan kandungan logam berat", "Melepas gas beracun yang langsung mematikan makhluk hidup"],
     ans: 1,
     exp: "Sampah organik yang membusuk menjadi tempat berkembang biak lalat, tikus, dan nyamuk yang dapat memicu penyakit diare, malaria, dan leptospirosis."
   },
   {
     kat: "sampah",
     text: "Gas metana yang dihasilkan dari sampah organik berbahaya karena ...",
-    opts: ["Mematikan semua tanaman yang ada di dekatnya", "Berkontribusi pada efek rumah kaca dan berpotensi menimbulkan ledakan", "Mengubah warna tanah menjadi hitam pekat", "Langsung meracuni hewan yang menghirupnya"],
+    opts: ["Membunuh semua tanaman di radius beberapa meter", "Memperkuat efek rumah kaca dan bisa memicu ledakan", "Mengubah warna tanah menjadi hitam pekat permanen", "Langsung meracuni hewan yang secara tak sengaja menghirupnya"],
     ans: 1,
     exp: "Gas metana dari sampah organik yang membusuk berkontribusi pada efek rumah kaca yang memperparah perubahan iklim, dan pada konsentrasi tinggi berpotensi menyebabkan ledakan."
   },
@@ -509,21 +509,21 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Plastik yang dibuang ke laut paling berbahaya bagi ...",
-    opts: ["Ombak laut yang menjadi lebih kecil", "Satwa laut seperti penyu, ikan, dan burung yang memakan atau terlilit plastik", "Kapal nelayan yang sulit bergerak", "Bakteri laut yang tidak bisa mengurai sampah"],
+    opts: ["Tinggi ombak laut yang berangsur semakin kecil", "Penyu, ikan, burung laut yang menelan atau terlilit plastik", "Kapal nelayan kecil yang kesulitan bergerak bebas", "Bakteri laut yang terhambat menguraikan bahan organik"],
     ans: 1,
     exp: "Plastik di laut sangat berbahaya bagi satwa laut seperti penyu, ikan, dan burung yang bisa memakan plastik atau terlilit di dalamnya hingga mati."
   },
   {
     kat: "sampah",
     text: "Dampak ekonomi dari pengelolaan sampah B3 yang buruk adalah ...",
-    opts: ["Harga makanan menjadi lebih murah", "Membutuhkan biaya besar untuk penanganan dan berisiko menimbulkan krisis kesehatan", "Mengurangi lapangan kerja di sektor formal", "Mempercepat pertumbuhan industri daur ulang"],
+    opts: ["Membuat harga pangan di pasar semakin murah", "Butuh biaya sangat besar dan rawan picu krisis kesehatan", "Menyebabkan pengangguran massal di sektor industri", "Justru mempercepat pertumbuhan industri daur ulang"],
     ans: 1,
     exp: "Pengelolaan sampah B3 yang buruk membutuhkan biaya besar untuk penanganan khusus dan berisiko menimbulkan krisis kesehatan masyarakat yang lebih mahal lagi."
   },
   {
     kat: "sampah",
     text: "Puntung rokok termasuk sampah residu yang berbahaya karena ...",
-    opts: ["Ukurannya kecil sehingga mudah tersapu masuk ke saluran air", "Mengandung zat beracun dari tembakau dan filter plastik yang sulit terurai", "Mudah terbakar kembali dan menyebabkan kebakaran", "Warnanya menarik sehingga dimakan oleh hewan"],
+    opts: ["Ukurannya kecil dan mudah tersapu ke saluran drainase", "Berisi racun tembakau dan filter plastik yang susah terurai", "Rentan terbakar kembali dan memicu kebakaran lahan", "Warnanya mencolok sehingga sering dimakan oleh burung"],
     ans: 1,
     exp: "Puntung rokok mengandung zat beracun dari tembakau dan filternya terbuat dari plastik yang sangat sulit terurai, mencemari lingkungan jangka panjang."
   },
@@ -531,14 +531,14 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Prinsip Reduce dalam pengelolaan sampah berarti kita harus ...",
-    opts: ["Mengumpulkan sampah sebanyak mungkin untuk didaur ulang", "Mengurangi penggunaan barang sekali pakai agar sampah tidak dihasilkan", "Mengolah kembali sampah menjadi energi", "Membagi sampah kepada tetangga untuk dikelola"],
+    opts: ["Mengumpulkan sampah lalu menyerahkan ke bank sampah", "Menekan pemakaian barang sekali pakai dari sumbernya", "Mengubah sampah menjadi energi listrik terbarukan", "Mendistribusikan sampah ke tetangga untuk dikelola bersama"],
     ans: 1,
     exp: "Reduce berarti mengurangi penggunaan barang yang menghasilkan sampah dari sumbernya, misalnya menghindari produk sekali pakai."
   },
   {
     kat: "sampah",
     text: "Contoh penerapan Reuse yang paling tepat dalam kehidupan sehari-hari adalah ...",
-    opts: ["Membuang tas plastik lama dan membeli tas baru yang ramah lingkungan", "Membawa tumbler sendiri dan menggunakannya berulang kali alih-alih membeli air kemasan", "Mendaur ulang botol plastik menjadi pot bunga", "Memisahkan sampah organik dan anorganik di rumah"],
+    opts: ["Membuang tas plastik lama lalu membeli tas baru hijau", "Membawa tumbler sendiri yang dipakai berulang kali", "Mendaur ulang botol bekas menjadi pot bunga hias", "Memilah sampah organik dan anorganik sejak di dapur"],
     ans: 1,
     exp: "Reuse berarti menggunakan kembali barang yang masih layak seperti membawa tumbler sendiri, sehingga tidak perlu membeli air kemasan plastik baru."
   },
@@ -559,7 +559,7 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Bank Sampah berbeda dari tempat pembuangan biasa karena ...",
-    opts: ["Bank Sampah hanya menerima sampah organik", "Warga bisa menabung sampah anorganik bernilai ekonomis dan mendapat imbalan", "Bank Sampah membakar semua sampah secara terpusat", "Bank Sampah dikelola oleh bank pemerintah"],
+    opts: ["Bank Sampah hanya menampung sampah jenis organik saja", "Warga menabung sampah anorganik dan mendapat imbalan uang", "Bank Sampah membakar semua jenis sampah secara terpusat", "Bank Sampah adalah unit milik bank pemerintah daerah"],
     ans: 1,
     exp: "Di Bank Sampah, warga mengumpulkan dan menabung sampah anorganik bernilai ekonomis (plastik, kertas, logam) untuk ditukar dengan uang atau barang kebutuhan."
   },
@@ -567,28 +567,28 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Waste to Energy adalah metode yang mengubah sampah menjadi ...",
-    opts: ["Pupuk kompos untuk pertanian organik", "Bahan baku kertas daur ulang", "Energi listrik atau bahan bakar yang dapat dimanfaatkan", "Air bersih yang aman dikonsumsi"],
+    opts: ["Pupuk kompos siap pakai untuk pertanian organik", "Bahan baku utama industri kertas daur ulang", "Energi listrik atau bahan bakar yang bisa digunakan", "Air bersih yang telah difilter dan aman diminum"],
     ans: 2,
     exp: "Waste to Energy mengubah sampah menjadi energi listrik atau bahan bakar melalui proses pembakaran atau gasifikasi yang terkontrol."
   },
   {
     kat: "sampah",
     text: "Sanitary Landfill lebih baik dari tempat pembuangan terbuka karena ...",
-    opts: ["Tidak menerima sampah B3 dan residu", "Dilengkapi sistem lapisan pelindung agar tidak mencemari air tanah", "Sampah langsung didaur ulang di lokasi", "Tidak mengeluarkan gas metana sama sekali"],
+    opts: ["Hanya menerima sampah organik dan kertas saja", "Punya sistem lapisan pelindung cegah pencemaran air tanah", "Semua sampah langsung didaur ulang di tempat yang sama", "Tidak menghasilkan gas metana karena tertutup sempurna"],
     ans: 1,
     exp: "Sanitary Landfill memiliki sistem lapisan pelindung tanah yang mencegah cairan lindi (leachate) dari sampah mencemari air tanah di sekitarnya."
   },
   {
     kat: "sampah",
     text: "Incinerasi dalam pengelolaan sampah adalah proses ...",
-    opts: ["Mengubur sampah dalam lapisan tanah yang berlapis-lapis", "Membakar sampah dengan teknologi tinggi sambil mengendalikan emisi polutan", "Mengolah sampah dengan cairan kimia pelarut", "Menghancurkan sampah dengan gelombang ultrasonik"],
+    opts: ["Mengubur sampah dalam lapisan-lapisan tanah tebal", "Membakar sampah berteknologi tinggi sambil kontrol emisi", "Melarutkan sampah menggunakan cairan kimia khusus", "Menghancurkan sampah menggunakan gelombang ultrasonik"],
     ans: 1,
     exp: "Incinerasi membakar sampah dengan teknologi tinggi untuk mengurangi volume sampah secara drastis, sambil mengendalikan emisi polutan yang dihasilkan."
   },
   {
     kat: "sampah",
     text: "Pemilahan sampah sejak dari rumah penting karena ...",
-    opts: ["Membuat rumah tampak lebih rapi dan bersih", "Memudahkan pengelolaan dan memaksimalkan nilai daur ulang setiap jenis sampah", "Mengurangi frekuensi petugas sampah datang ke rumah", "Diwajibkan oleh undang-undang di semua daerah"],
+    opts: ["Membuat rumah tampak jauh lebih rapi dan estetis", "Mempermudah pengelolaan dan tingkatkan nilai daur ulang", "Mengurangi frekuensi kunjungan petugas sampah harian", "Sudah diwajibkan undang-undang di seluruh wilayah Indonesia"],
     ans: 1,
     exp: "Pemilahan sampah dari sumber memudahkan pengelolaan selanjutnya dan memaksimalkan nilai daur ulang karena sampah tidak tercampur dan terkontaminasi."
   },
@@ -596,14 +596,14 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Alasan sampah anorganik harus dibilas dan dikeringkan sebelum dibuang adalah ...",
-    opts: ["Agar lebih mudah dibakar saat diproses", "Agar tidak berbau dan tidak mengotori sampah lain di tempat penampungan", "Supaya lebih ringan dan mudah diangkut petugas sampah", "Agar terurai lebih cepat di tempat pembuangan akhir"],
+    opts: ["Agar lebih mudah terbakar saat masuk tungku insinerator", "Agar tak berbau busuk dan tak cemari sampah lain", "Supaya bobotnya berkurang sehingga mudah diangkut truk", "Agar proses pengurainya di TPA menjadi lebih cepat"],
     ans: 1,
     exp: "Sampah anorganik perlu dibilas dan dikeringkan agar tidak berbau busuk dan tidak mengotori atau mencemari jenis sampah lain yang ada di tempat penampungan."
   },
   {
     kat: "sampah",
     text: "Untuk mencegah gas metana berbau di komposter sampah organik, yang harus dilakukan adalah ...",
-    opts: ["Menutup rapat komposter tanpa lubang udara apapun", "Memastikan ada aliran udara (aerasi) yang cukup dan sering membalik kompos", "Menambahkan air sebanyak mungkin ke dalam komposter", "Mencampur sampah plastik agar mempercepat proses penguraian"],
+    opts: ["Menutup rapat komposter tanpa celah udara apapun", "Menjaga aliran udara cukup dan sering membalik kompos", "Menambahkan air sebanyak-banyaknya ke dalam wadah", "Mencampurkan plastik tipis agar penguraian makin cepat"],
     ans: 1,
     exp: "Aerasi yang cukup dan pembalikan rutin pada komposter mencegah pembusukan anaerob yang menghasilkan gas metana berbau, dan mendorong penguraian aerob yang lebih bersih."
   },
@@ -617,14 +617,14 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Prinsip Reduce dapat diterapkan dengan cara ...",
-    opts: ["Mendaur ulang botol plastik menjadi pot bunga di rumah", "Menabung sampah di bank sampah terdekat setiap minggu", "Membawa kantong belanja sendiri sehingga tidak butuh kantong plastik baru", "Memilah sampah organik dan anorganik sejak di dapur"],
+    opts: ["Mendaur ulang botol bekas menjadi pot bunga unik", "Rutin menabung sampah ke bank sampah tiap minggu", "Bawa kantong sendiri sehingga tak perlu plastik baru", "Memilah sampah organik dan anorganik sejak dari dapur"],
     ans: 2,
     exp: "Membawa kantong belanja sendiri adalah contoh Reduce karena kita mengurangi produksi sampah kantong plastik dari sumbernya sebelum sampah itu tercipta."
   },
   {
     kat: "sampah",
     text: "Gas metana dari penguraian sampah organik dapat dimanfaatkan sebagai ...",
-    opts: ["Bahan pewarna alami untuk tekstil", "Sumber energi biogas untuk memasak atau pembangkit listrik", "Pupuk gas yang disemprotkan ke tanaman", "Bahan pengawet alami untuk makanan"],
+    opts: ["Bahan pewarna alami ramah lingkungan untuk tekstil", "Energi biogas untuk keperluan memasak atau listrik", "Pupuk berbentuk gas yang disemprotkan ke lahan pertanian", "Bahan pengawet alami untuk makanan dan minuman"],
     ans: 1,
     exp: "Gas metana yang dihasilkan dari penguraian sampah organik dapat dikumpulkan dan dimanfaatkan sebagai biogas untuk memasak atau menghasilkan listrik."
   },
@@ -638,14 +638,14 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Dampak negatif sampah residu terhadap lingkungan adalah ...",
-    opts: ["Menambah kesuburan tanah karena mengandung nutrisi", "Menumpuk di TPA dan mencemari tanah serta air karena tidak bisa didaur ulang", "Menyebabkan banjir besar di kota karena beratnya", "Menghasilkan racun yang langsung membunuh pohon di sekitarnya"],
+    opts: ["Menambah kesuburan tanah karena kaya kandungan nutrisi", "Menumpuk di TPA, cemarkan tanah dan air karena tak bisa daur ulang", "Menyebabkan banjir parah di perkotaan karena bobotnya", "Menghasilkan racun yang seketika membunuh pohon sekitarnya"],
     ans: 1,
     exp: "Sampah residu tidak bisa didaur ulang sehingga menumpuk di TPA dan dalam jangka panjang mencemari tanah dan air di sekitarnya."
   },
   {
     kat: "sampah",
     text: "Manfaat kompos dari sampah organik bagi tanaman adalah ...",
-    opts: ["Menambah kelembapan tanah saja tanpa nutrisi tambahan", "Menyuburkan tanah secara alami dengan meningkatkan kandungan humus dan nutrisi", "Membuat tanah menjadi lebih keras sehingga tahan erosi", "Mengusir hama tanaman secara kimia"],
+    opts: ["Hanya menambah kelembapan tanah tanpa memberi nutrisi", "Menyuburkan tanah secara alami, tingkatkan humus dan nutrisi", "Membuat struktur tanah lebih padat dan tahan erosi", "Mengusir hama dari tanaman melalui reaksi kimia alami"],
     ans: 1,
     exp: "Kompos menyuburkan tanah secara alami dengan meningkatkan kandungan humus, memperbaiki struktur tanah, dan menyediakan nutrisi penting bagi tanaman."
   },
@@ -673,14 +673,14 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Penggunaan sedotan plastik sebaiknya dihindari karena ...",
-    opts: ["Sedotan plastik mahal dan tidak efisien secara ekonomi", "Plastik sedotan sulit terurai dan sering berakhir di laut membahayakan satwa", "Sedotan mengurangi kualitas rasa minuman", "Produksi sedotan mencemari udara secara langsung"],
+    opts: ["Sedotan plastik mahal dan tidak efisien dari sisi ekonomi", "Sulit terurai dan sering bermuara di laut membahayakan satwa", "Pemakaian sedotan menurunkan kualitas cita rasa minuman", "Proses produksi sedotan mencemari udara secara langsung"],
     ans: 1,
     exp: "Sedotan plastik sulit terurai dan sering berakhir di laut, di mana dapat termakan atau meluka satwa laut seperti penyu."
   },
   {
     kat: "sampah",
     text: "Minyak goreng bekas sebaiknya dikelola dengan cara ...",
-    opts: ["Dibuang ke saluran air agar tidak mencemari lingkungan sekitar rumah", "Dibakar bersama sampah organik di halaman", "Dikumpulkan dan diserahkan ke pengepul untuk didaur ulang menjadi biodiesel", "Dicampur tanah dan dikubur di halaman belakang"],
+    opts: ["Dibuang ke saluran air supaya tidak cemari lingkungan rumah", "Dibakar langsung bersama sampah organik di halaman", "Dikumpulkan lalu diserahkan pengepul untuk jadi biodiesel", "Dicampur tanah dan dikubur di sudut halaman belakang"],
     ans: 2,
     exp: "Minyak goreng bekas sebaiknya dikumpulkan dan diserahkan ke pengepul yang dapat mendaur ulangnya menjadi biodiesel, bukan dibuang ke saluran air."
   },
@@ -694,7 +694,7 @@ const quizBankSampah = [
   {
     kat: "sampah",
     text: "Perbedaan utama antara 'Sampah' dan 'Limbah' dalam konteks pengelolaan lingkungan adalah ...",
-    opts: ["Keduanya identik dan tidak ada perbedaan apapun", "Sampah dari aktivitas rumah tangga, limbah dari proses industri atau produksi", "Sampah dari makhluk hidup, limbah dari benda mati", "Sampah berbahaya, limbah tidak berbahaya"],
+    opts: ["Keduanya sama persis, tidak ada perbedaan apapun", "Sampah dari rumah tangga, limbah dari industri atau produksi", "Sampah dari makhluk hidup, limbah dari material mati", "Sampah selalu berbahaya, sedangkan limbah tidak berbahaya"],
     ans: 1,
     exp: "Sampah umumnya berasal dari aktivitas sehari-hari rumah tangga, sedangkan limbah dihasilkan dari proses industri atau kegiatan produksi tertentu."
   },
@@ -720,7 +720,7 @@ const quizBankPemeliharaan = [
   {
     kat: "pemeliharaan",
     text: "Tujuan pemangkasan (pruning) pada pohon adalah ...",
-    opts: ["Mengurangi tinggi pohon agar mudah dipanen", "Memotong cabang kering dan mati agar energi fokus ke pertumbuhan sehat", "Membentuk pohon menjadi berbagai model hias", "Mempercepat gugurnya daun di musim kemarau"],
+    opts: ["Memperpendek pohon agar hasil panen lebih mudah dijangkau", "Pangkas cabang kering dan mati agar energi ke bagian sehat", "Membentuk pohon menjadi berbagai model tanaman hias", "Mempercepat proses gugur daun saat memasuki musim kemarau"],
     ans: 1,
     exp: "Pruning bertujuan memotong cabang yang kering dan mati sehingga energi pohon dapat difokuskan ke pertumbuhan bagian yang sehat."
   },
@@ -800,7 +800,7 @@ const quizBankPemeliharaan = [
   {
     kat: "pemeliharaan",
     text: "Eceng gondok sebagai tumbuhan air perlu dikendalikan pertumbuhannya karena ...",
-    opts: ["Bunga eceng gondok sangat beracun bagi ikan", "Tumbuh terlalu cepat dan bisa menutup permukaan air menghalangi cahaya", "Akarnya merusak dinding kolam beton", "Menghasilkan bau yang tidak sedap bagi lingkungan sekitar"],
+    opts: ["Bunganya mengandung racun yang membunuh ikan di kolam", "Tumbuh sangat cepat, bisa menutup permukaan air dan halangi cahaya", "Sistem akarnya merusak dinding kolam yang terbuat dari beton", "Menghasilkan bau sangat menyengat yang mengganggu sekitar"],
     ans: 1,
     exp: "Eceng gondok tumbuh sangat cepat dan jika tidak dikendalikan bisa menutup seluruh permukaan air sehingga menghalangi cahaya matahari masuk ke dalam air."
   },
@@ -822,7 +822,7 @@ const quizBankPemeliharaan = [
   {
     kat: "pemeliharaan",
     text: "Kalium (K) dalam pupuk berguna terutama untuk ...",
-    opts: ["Mempercepat pertumbuhan tinggi batang", "Menghasilkan warna hijau cerah pada daun", "Mendukung pertumbuhan buah dan ketahanan tanaman terhadap penyakit", "Mempercepat pembentukan akar adventif"],
+    opts: ["Mempercepat laju pertumbuhan tinggi batang tanaman", "Menghasilkan warna hijau cerah dan mengkilap pada daun", "Mendukung pertumbuhan buah dan daya tahan terhadap penyakit", "Mempercepat pembentukan akar adventif di batang"],
     ans: 2,
     exp: "Kalium berperan dalam pertumbuhan buah dan meningkatkan ketahanan tanaman terhadap penyakit, kekeringan, dan kondisi lingkungan yang tidak menguntungkan."
   },
@@ -865,7 +865,7 @@ const quizBankPemeliharaan = [
   {
     kat: "pemeliharaan",
     text: "Mengapa hewan domestik seperti kucing dan anjing butuh stimulasi mental?",
-    opts: ["Agar pertumbuhan otaknya lebih cepat dari normal", "Untuk menjaga kesehatan psikologis dan mencegah stres dan perilaku merusak", "Supaya nafsu makannya meningkat dan berat badan naik", "Agar warna bulunya lebih cerah dan mengkilap"],
+    opts: ["Agar perkembangan otak hewan lebih pesat dari biasa", "Menjaga kesehatan psikis dan cegah stres serta perilaku rusak", "Supaya nafsu makan naik sehingga berat badannya bertambah", "Agar warna bulu hewan menjadi lebih cerah dan bersinar"],
     ans: 1,
     exp: "Stimulasi mental dan interaksi sosial penting untuk menjaga kesehatan psikologis hewan domestik dan mencegah stres yang dapat menyebabkan perilaku merusak."
   },
@@ -887,7 +887,7 @@ const quizBankPemeliharaan = [
   {
     kat: "pemeliharaan",
     text: "Aerasi pada akuarium berfungsi untuk ...",
-    opts: ["Menghasilkan suara gemericik yang menenangkan ikan", "Memastikan oksigen terlarut cukup tersedia bagi ikan dan organisme akuatik", "Mengaduk makanan agar merata di seluruh akuarium", "Menjaga suhu air tetap stabil di semua bagian"],
+    opts: ["Menghasilkan suara gemericik yang menenangkan ikan peliharaan", "Memastikan oksigen terlarut cukup bagi ikan dan biota air", "Mengaduk pakan agar tersebar merata di seluruh akuarium", "Menstabilkan suhu air di semua sudut akuarium setiap saat"],
     ans: 1,
     exp: "Aerasi memompa oksigen ke dalam air sehingga kadar oksigen terlarut tetap cukup untuk kebutuhan pernapasan ikan dan organisme akuatik lainnya."
   },
@@ -901,7 +901,7 @@ const quizBankPemeliharaan = [
   {
     kat: "pemeliharaan",
     text: "Pakan ikan akuatik harus sesuai dengan ukuran bukaan mulut mereka agar ...",
-    opts: ["Makanan terlihat lebih menarik di dalam air", "Ikan bisa mencerna makanan dengan efisien dan tidak ada sisa berlebih", "Biaya pakan bisa dikurangi secara signifikan", "Warna ikan menjadi lebih cerah dan menarik"],
+    opts: ["Pakan lebih menarik secara visual di dalam air", "Ikan dapat mencerna efisien dan minim sisa pakan terbuang", "Pengeluaran biaya pakan dapat ditekan secara signifikan", "Warna sisik ikan menjadi lebih cerah dan menarik dipandang"],
     ans: 1,
     exp: "Pakan yang sesuai ukuran mulut memastikan ikan bisa memakannya dengan efisien, mengurangi sisa makanan yang mencemari air dan menjaga kualitas akuarium."
   },
@@ -952,7 +952,7 @@ const quizBankPemeliharaan = [
   {
     kat: "pemeliharaan",
     text: "Sistem penguncian kandang hewan eksotik harus sangat aman karena ...",
-    opts: ["Hewan eksotik sering mencoba menjual diri ke tetangga", "Mencegah hewan melarikan diri demi keselamatan hewan dan manusia sekitar", "Pengunci mahal menunjukkan kualitas kandang yang baik", "Hukum mewajibkan kandang dengan kunci berlapis"],
+    opts: ["Hewan eksotik kerap mencari perhatian tetangga di sekitar", "Cegah hewan kabur demi keselamatan hewan dan manusia", "Kunci mahal membuktikan kualitas premium kandang tersebut", "Peraturan hukum mewajibkan kandang dengan sistem kunci ganda"],
     ans: 1,
     exp: "Kandang hewan eksotik harus memiliki sistem penguncian yang sangat aman untuk mencegah hewan melarikan diri, yang berbahaya bagi hewan itu sendiri maupun manusia di sekitarnya."
   },
@@ -960,7 +960,7 @@ const quizBankPemeliharaan = [
   {
     kat: "pemeliharaan",
     text: "Perbedaan Reboisasi dan Aforestasi dalam upaya konservasi vegetasi adalah ...",
-    opts: ["Reboisasi di darat, Aforestasi di laut", "Reboisasi menanam di hutan gundul, Aforestasi membuat hutan di lahan kosong baru", "Reboisasi menggunakan pohon impor, Aforestasi pohon lokal", "Reboisasi program pemerintah, Aforestasi program swasta"],
+    opts: ["Reboisasi dilakukan di darat, Aforestasi di kawasan laut", "Reboisasi di hutan gundul, Aforestasi di lahan yang belum berhutan", "Reboisasi pakai pohon impor, Aforestasi pakai pohon lokal", "Reboisasi dikelola pemerintah, Aforestasi oleh swasta saja"],
     ans: 1,
     exp: "Reboisasi menanam kembali di kawasan hutan yang telah gundul, sedangkan Aforestasi membuat hutan baru di lahan yang sebelumnya tidak berhutan."
   },
@@ -1002,7 +1002,7 @@ const quizBankPemeliharaan = [
   {
     kat: "pemeliharaan",
     text: "Cahaya matahari untuk tanaman dibagi menjadi tiga kategori, yaitu ...",
-    opts: ["Merah, kuning, dan biru sesuai panjang gelombang", "Full sun, partial shade, dan teduh penuh sesuai kebutuhan jenis tanaman", "Pagi, siang, dan sore sesuai waktu penyinaran", "Alami, buatan, dan gabungan sesuai sumbernya"],
+    opts: ["Merah, kuning, biru sesuai panjang gelombang cahaya", "Full sun, partial shade, dan teduh penuh sesuai jenis tanaman", "Pagi hari, siang hari, dan sore hari sesuai waktu", "Cahaya alami, buatan, dan gabungan keduanya"],
     ans: 1,
     exp: "Kebutuhan cahaya tanaman dibagi menjadi full sun (sinar penuh), partial shade (sebagian teduh), dan teduh penuh sesuai karakteristik masing-masing jenis tanaman."
   },
